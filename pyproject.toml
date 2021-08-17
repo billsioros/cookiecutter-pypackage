@@ -3,14 +3,14 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "{{cookiecutter.project_name}}"
-version = "{{cookiecutter.version}}"
-description = "🐍 {{cookiecutter.friendly_name}}"
+name = "cookiecutter-pypackage"
+version = "0.0.0"
+description = "🐍🍪 Another Python Cookiecutter"
 readme = "README.md"
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+authors = ["billsioros <billsioros97@gmail.com>"]
 license = "{{cookiecutter.license}}"
-homepage = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}"
-repository = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+homepage = "https://billsioros.github.io/cookiecutter-pypackage"
+repository = "https://github.com/billsioros/cookiecutter-pypackage"
 keywords = []
 classifiers = [
     "Programming Language :: Python",
@@ -23,8 +23,8 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues"
-"Changelog" = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases"
+"Bug Tracker" = "https://github.com/billsioros/cookiecutter-pypackage/issues"
+"Changelog" = "https://github.com/billsioros/cookiecutter-pypackage/releases"
 
 [tool.poetry.dependencies]
 python = "^3.7"
@@ -63,13 +63,13 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["{{cookiecutter.project_name}}", "tests", "examples"]
+paths = ["cookiecutter-pypackage", "tests", "examples"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
-test = { cmd = "poetry run pytest --cov={{cookiecutter.project_name}}", help = "Run the test suite and produce a coverage report" }
+test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite and produce a coverage report" }
 type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
 lint = { cmd = "poetry run flake8 .", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
@@ -85,11 +85,11 @@ python_functions = "test_*"
 testpaths = "tests"
 
 [tool.coverage.paths]
-source = ["{{cookiecutter.project_name}}"]
+source = ["cookiecutter-pypackage"]
 
 [tool.coverage.run]
 branch = true
-source = ["{{cookiecutter.project_name}}"]
+source = ["cookiecutter-pypackage"]
 
 [tool.coverage.report]
 show_missing = true
@@ -100,16 +100,16 @@ omit = ["tests/*"]
 
 [tool.isort]
 profile = "black"
-src_paths = ["{{cookiecutter.project_name}}", "tests"]
+src_paths = ["cookiecutter-pypackage", "tests"]
 line_length = 99
-known_first_party = "{{cookiecutter.project_name}}"
+known_first_party = "cookiecutter-pypackage"
 
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
 
 [tool.mypy]
-files = ["{{cookiecutter.project_name}}"]
+files = ["cookiecutter-pypackage"]
 warn_unused_configs = true
 warn_return_any = true
 ignore_missing_imports = true

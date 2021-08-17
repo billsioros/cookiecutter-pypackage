@@ -6,7 +6,7 @@ on:
       - master
     types: [opened, synchronize, reopened, closed]
     paths:
-      - '{{cookiecutter.project_name}}/**/*.py'
+      - 'cookiecutter-pypackage/**/*.py'
       - 'docs/**'
       - '*.md'
 

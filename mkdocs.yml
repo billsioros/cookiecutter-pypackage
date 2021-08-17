@@ -1,0 +1,74 @@
+site_name: {{cookiecutter.project_name}}
+site_description: "🐍🎶 Yet another Spotify Web API Python library."
+site_url: "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/"
+repo_url: "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+edit_uri: "edit/master/docs/"
+repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+copyright: |
+  Copyright &copy; 2021 <a href="https://github.com/{{cookiecutter.github_user}}"  target="_blank" rel="noopener">Vasileios Sioros</a>
+
+nav:
+  - Overview: index.md
+  - Code Reference:
+    - {{cookiecutter.project_name}}: {{cookiecutter.project_name}}.md
+    - Models:
+      - Model: model.md
+      - Album: models/album.md
+      - Playlist: models/playlist.md
+      - Track: models/track.md
+  - Contributing:
+    - Contributing Guidelines: CONTRIBUTING.md
+    - Code Of Conduct: CODE_OF_CONDUCT.md
+  - Changelog: CHANGELOG.md
+  - License: LICENSE.md
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+- search
+- mkdocstrings:
+    default_handler: python
+    handlers:
+      python:
+        rendering:
+          show_source: false
+- minify:
+    minify_html: true
+
+markdown_extensions:
+- admonition
+- pymdownx.emoji
+- pymdownx.magiclink
+- pymdownx.snippets:
+    check_paths: true
+- pymdownx.superfences
+- pymdownx.tabbed
+- pymdownx.tasklist
+- toc:
+    permalink: "¤"
+- mdx_truly_sane_lists
+
+extra:
+  version:
+    provider: mike

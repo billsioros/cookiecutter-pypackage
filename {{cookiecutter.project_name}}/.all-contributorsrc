@@ -1,0 +1,15 @@
+{
+    "files": [
+        "README.md"
+    ],
+    "imageSize": 100,
+    "commit": false,
+    "contributors": [
+    ],
+    "contributorsPerLine": 7,
+    "projectName": "{{cookiecutter.project_name}}",
+    "projectOwner": "{{cookiecutter.github_user}}",
+    "repoType": "github",
+    "repoHost": "https://github.com",
+    "skipCi": true
+}

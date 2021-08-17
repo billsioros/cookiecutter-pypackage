@@ -1,0 +1,13 @@
+{
+  "labels": [
+    ":game_die: dependencies"
+  ],
+  "extends": [
+    "config:base",
+    "schedule:weekly"
+  ],
+  "assignees": [
+    "{{cookiecutter.github_user}}"
+  ],
+  "automerge": true
+}

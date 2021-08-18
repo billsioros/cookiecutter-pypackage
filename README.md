@@ -1,18 +1,6 @@
 # 🍪 Python Cookiecutter 🍪
 
 <p align="center">
-  <a href="https://www.python.org/">
-    <img
-      src="https://img.shields.io/pypi/pyversions/cookiecutter-pypackage"
-      alt="PyPI - Python Version"
-    />
-  </a>
-  <a href="https://pypi.org/project/cookiecutter-pypackage/">
-    <img
-      src="https://img.shields.io/pypi/v/cookiecutter-pypackage"
-      alt="PyPI"
-    />
-  </a>
   <a href="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/ci.yml">
     <img
       src="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/ci.yml/badge.svg"
@@ -34,23 +22,34 @@
   <a href="https://codecov.io/gh/billsioros/cookiecutter-pypackage">
     <img
       src="https://codecov.io/gh/billsioros/cookiecutter-pypackage/branch/master/graph/badge.svg?token=coLOL0j6Ap"
-      alt="Test Coverage"/>
+      alt="Test Coverage"
+    />
   </a>
   <a href="https://opensource.org/licenses/MIT">
     <img
-      src="https://img.shields.io/pypi/l/cookiecutter-pypackage"
-      alt="PyPI - License"
-    />
-  </a>
-  <a href="https://gitpod.io/from-referrer/">
-    <img
-      src="https://img.shields.io/badge/Gitpod-Open-blue?logo=gitpod"
-      alt="Open on Gitpod"
+      src="https://img.shields.io/github/license/billsioros/cookiecutter-pypackage"
+      alt="GitHub"
     />
   </a>
 </p>
 
+## Quickstart
+
+Install the latest Cookiecutter
+
+```
+pip install -U cookiecutter
+```
+
+and generate a `Python` package project:
+
+```
+cookiecutter gh:billsioros/cookiecutter-pypackage
+```
+
 ## Features
+
+- TODO
 
 ## Documentation
 

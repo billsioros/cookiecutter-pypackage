@@ -60,8 +60,7 @@ Feel free to check the [examples](https://github.com/{{cookiecutter.github_user}
 
 ## Features
 
-- Feature #1
-- Feature #2
+- TODO
 
 ## Documentation
 
@@ -76,6 +75,10 @@ pip install {{cookiecutter.project_name}}
 ## Supporting the project
 
 Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) project template.
 
 ## Contributing
 

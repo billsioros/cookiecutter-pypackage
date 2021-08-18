@@ -2,9 +2,9 @@
   "project_name": "cookiecutter-pypackage",
   "package_name": "{{ cookiecutter.project_name.replace('-', '_') }}",
   "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
-  "author": "{{cookiecutter.author}}",
-  "email": "{{cookiecutter.github_user}}97@gmail.com",
-  "github_user": "{{cookiecutter.github_user}}",
+  "author": "Vasilis Sioros",
+  "email": "billsioros97@gmail.com",
+  "github_user": "billsioros",
   "version": "0.0.0",
   "license": ["MIT", "Apache-2.0", "GPL-3.0"]
 }

@@ -34,7 +34,7 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: .venv
-          key: venv-${{ hashFiles('**/poetry.lock') }}
+          key: venv-${{ '{{' }} hashFiles('**/poetry.lock') {{ '}}' }}
 
       - name: Install dependencies
         run: |
@@ -42,8 +42,8 @@ jobs:
 
       - uses: afc163/surge-preview@v1
         with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          surge_token: ${{ '{{' }} secrets.SURGE_TOKEN {{ '}}' }}
+          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
           dist: site
           teardown: 'true'
           build: |

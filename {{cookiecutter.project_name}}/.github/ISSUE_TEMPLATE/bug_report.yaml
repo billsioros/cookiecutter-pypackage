@@ -21,9 +21,6 @@ body:
       placeholder: Provide us with some python code!
       value: |
         from {{cookiecutter.project_name}} import {{cookiecutter.project_name}}
-
-        with {{cookiecutter.project_name}}(SPOTIFY_ID, SPOTIFY_SECRET):
-          pass
       render: python
     validations:
       required: true

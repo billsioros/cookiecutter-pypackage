@@ -8,7 +8,7 @@ version = "0.0.0"
 description = "🐍🍪 Another Python Cookiecutter"
 readme = "README.md"
 authors = ["billsioros <billsioros97@gmail.com>"]
-license = "{{cookiecutter.license}}"
+license = "MIT"
 homepage = "https://billsioros.github.io/cookiecutter-pypackage"
 repository = "https://github.com/billsioros/cookiecutter-pypackage"
 keywords = []
@@ -34,7 +34,6 @@ python-semantic-release = "^7.15.3"
 flake8 = "^3.9.2"
 wemake-python-styleguide = "^0.15.2"
 isort = "^5.9.3"
-mypy = "^0.910"
 black = "^20.8b1"
 pre-commit = "^2.12.1"
 poethepoet = "^0.10.0"
@@ -42,7 +41,6 @@ coverage = {extras = ["toml"], version = "^5.5"}
 pytest = "^6.2.4"
 pytest-cov = "^2.12.1"
 pytest-sugar = "^0.9.4"
-pytest-rerunfailures = "^10.1"
 pytest-clarity = "^1.0.1"
 tox = "^3.23.0"
 tox-poetry-installer = { extras = ["poetry"], version = "^0.8.0" }
@@ -55,6 +53,7 @@ mkdocs-redirects = "^1.0.3"
 mkdocstrings = "^0.15.0"
 mdx-truly-sane-lists = "^1.2"
 mike = "^1.0.1"
+pytest-cookies = "^0.6.1"
 
 [tool.semantic_release]
 upload_to_pypi = false
@@ -67,16 +66,15 @@ min_confidence = 95
 paths = ["cookiecutter-pypackage", "tests", "examples"]
 
 [tool.poe.tasks]
-clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
+clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .coverage", help = "Clean up any auxiliary files" }
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
 test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite and produce a coverage report" }
-type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
 lint = { cmd = "poetry run flake8 .", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 
 [tool.pytest.ini_options]
-addopts = "-vv --reruns 3 --color=yes"
+addopts = "-vv --color=yes"
 log_cli = false
 log_cli_date_format = "%Y-%m-%d %H:%M:%S"
 log_cli_format = "%(asctime)s %(levelname)s %(message)s"
@@ -94,7 +92,7 @@ source = ["cookiecutter-pypackage"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 80
+fail_under = 100
 exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
 ignore_errors = true
 omit = ["tests/*"]
@@ -108,15 +106,3 @@ known_first_party = "cookiecutter-pypackage"
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
-
-[tool.mypy]
-files = ["cookiecutter-pypackage"]
-warn_unused_configs = true
-warn_return_any = true
-ignore_missing_imports = true
-pretty = true
-color_output = true
-show_column_numbers = true
-show_error_codes = true
-show_error_context = true
-strict = true

@@ -39,9 +39,6 @@ jobs:
             poetry install
 
         - name: Generate the coverage report
-          env:
-            SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
-            SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
           run: |
             poetry run python -m pytest -p no:sugar --cov=./cookiecutter-pypackage --cov-report=xml
 

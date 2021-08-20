@@ -1,6 +1,6 @@
 # Security Policy
 
-If you believe you have identified a security issue, **do not open a public issue**. To  report a security issue, please contact {{cookiecutter.github_user}}97@gmail.com.
+If you believe you have identified a security issue, **do not open a public issue**. To  report a security issue, please contact billsioros97@gmail.com.
 
 Be sure to include as much detail as necessary in your report. As with
 reporting normal issues, a minimal reproducible example will help the
@@ -9,4 +9,4 @@ include a fix for the issue generated with `git format-patch`. You may
 include a name and link, if you would like to be credited for the report.
 
 After fixing the issue, we will make a security release along with an
-announcement on [GitHub Discussions](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/discussions).
+announcement on [GitHub Discussions](https://github.com/billsioros/cookiecutter-pypackage/discussions).

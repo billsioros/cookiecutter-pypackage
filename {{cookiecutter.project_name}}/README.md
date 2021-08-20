@@ -48,6 +48,12 @@
       alt="Open on Gitpod"
     />
   </a>
+  <a href="https://github.com/billsioros/cookiecutter-pypackage">
+    <img
+      src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat-square&logo=cookiecutter"
+      alt="Cookiecutter Template">
+  </a>
+
 </p>
 
 ## Example Usage
@@ -60,8 +66,7 @@ Feel free to check the [examples](https://github.com/{{cookiecutter.github_user}
 
 ## Features
 
-- Feature #1
-- Feature #2
+- TODO
 
 ## Documentation
 
@@ -76,6 +81,10 @@ pip install {{cookiecutter.project_name}}
 ## Supporting the project
 
 Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) project template.
 
 ## Contributing
 

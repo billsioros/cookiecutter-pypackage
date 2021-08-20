@@ -32,16 +32,13 @@ jobs:
           uses: actions/cache@v2.1.6
           with:
             path: .venv
-            key: venv-${{ hashFiles('**/poetry.lock') }}
+            key: venv-${{ '{{' }} hashFiles('**/poetry.lock') {{ '}}' }}
 
         - name: Install dependencies
           run: |
             poetry install
 
         - name: Generate the coverage report
-          env:
-            SPOTIFY_ID: ${{ secrets.SPOTIFY_ID }}
-            SPOTIFY_SECRET: ${{ secrets.SPOTIFY_SECRET }}
           run: |
             poetry run python -m pytest -p no:sugar --cov=./{{cookiecutter.project_name}} --cov-report=xml
 

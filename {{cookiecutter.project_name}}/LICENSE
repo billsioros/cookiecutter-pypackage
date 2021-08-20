@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2021-2021 Vasileios Sioros ({{cookiecutter.github_user}})
+Copyright (c) {% now 'utc', '%Y' %}-{% now 'utc', '%Y' %} {{ cookiecutter.author }} ({{cookiecutter.github_user}})
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

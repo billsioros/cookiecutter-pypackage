@@ -18,8 +18,8 @@ jobs:
 
       - uses: relekang/python-semantic-release@v7.17.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pypi_token: ${{ secrets.PYPI_TOKEN }}
+          github_token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
+          pypi_token: ${{ '{{' }} secrets.PYPI_TOKEN {{ '}}' }}
 
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -39,7 +39,7 @@ jobs:
         uses: actions/cache@v2.1.6
         with:
           path: .venv
-          key: venv-${{ hashFiles('**/poetry.lock') }}
+          key: venv-${{ '{{' }} hashFiles('**/poetry.lock') {{ '}}' }}
 
       - name: Install dependencies
         run: |

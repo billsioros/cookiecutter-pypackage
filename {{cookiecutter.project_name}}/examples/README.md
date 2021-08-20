@@ -1,5 +1,0 @@
-# Examples
-
-## Contents
-
-## Getting Started

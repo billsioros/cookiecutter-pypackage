@@ -59,7 +59,7 @@ repos:
         name: export-requirements
         language: system
         pass_filenames: false
-        entry: poetry export --without-hashes -o requirements.txt
+        entry: poetry export --without-hashes --dev -o requirements.txt
         files: ^(pyproject.toml|poetry.lock)$
   - repo: meta
     hooks:

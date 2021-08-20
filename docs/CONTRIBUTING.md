@@ -59,10 +59,6 @@ The following sections assume that you have already locally [cloned the reposito
 
 The **cookiecutter-pypackage** project utilizes the [Poetry](https://python-poetry.org/) Python package manager. [Having installed Poetry](https://python-poetry.org/docs/#installation) in the **global** namespace you may now run `poetry shell` to create a brand new [virtual environment](https://docs.python.org/3/tutorial/venv.html) and `poetry install`, in order to install the project's dependencies (development dependencies as well).
 
-### Creating & Using Spotify client credentials
-
-Start by visiting the [Spotify Developer Portal](https://developer.spotify.com/dashboard/login) and creating an account. You are also required to [create a Spotify client ID](https://developer.spotify.com/documentation/general/guides/app-settings/#register-your-app), which you will be using during development. You may reed more [here](https://developer.spotify.com/documentation/web-api/quick-start/).
-
 ### Installing pre-commit hooks
 
 The project utilizes the [pre-commit](https://pre-commit.com/) framework. Having [created a virtual environment and installed the required dependencies](#installing-poetry), you may run `pre-commit install --install-hooks` to install the [git hook scripts](https://github.com/billsioros/cookiecutter-pypackage/blob/master/.pre-commit-config.yaml).
@@ -76,17 +72,6 @@ The project utilizes the [pre-commit](https://pre-commit.com/) framework. Having
 - Checking if your changes follow the project's formatting standard can be done via `tox -e fmt-check`
 - You may run `tox -e py38` to run the library's unit tests using Python 3.8 (the `py37`, `py38` and `py39` test environments assume, you have installed **Python 3.7, 3.8 or 3.9** accordingly)
 - Alternatively, you may simply run `tox` to execute all of the above
-
-Note that in order to run the test suite, you must export your client credentials beforehand, as such
-
-```bash
-export SPOTIFY_ID="<SPOTIFY_ID>"
-export SPOTIFY_SECRET="<SPOTIFY_SECRET>"
-```
-
-You may also utilize [direnv](https://direnv.net/), so that you avoid re-exporting them every time you spawn a new shell instance.
-
-_**ATTENTION**: Even though, using a `.envrc` file is far more convenient than re-exporting  environment variables each and every time you open up a new shell, it is **strongly** recommended that, you prefer the first approach as you risk compromising your client credentials otherwise._
 
 #### (Optional) Installing pyenv
 

@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
-description = "🐍 {{cookiecutter.friendly_name}}"
+description = "{{cookiecutter.project_description}}"
 readme = "README.md"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
 license = "{{cookiecutter.license}}"
@@ -42,7 +42,6 @@ coverage = {extras = ["toml"], version = "^5.5"}
 pytest = "^6.2.4"
 pytest-cov = "^2.12.1"
 pytest-sugar = "^0.9.4"
-pytest-rerunfailures = "^10.1"
 pytest-clarity = "^1.0.1"
 tox = "^3.23.0"
 tox-poetry-installer = { extras = ["poetry"], version = "^0.8.0" }
@@ -93,7 +92,7 @@ source = ["{{cookiecutter.project_name}}"]
 
 [tool.coverage.report]
 show_missing = true
-fail_under = 80
+fail_under = 100
 exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
 ignore_errors = true
 omit = ["tests/*"]

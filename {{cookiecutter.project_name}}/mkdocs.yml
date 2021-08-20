@@ -1,5 +1,5 @@
 site_name: {{cookiecutter.project_name}}
-site_description: "🐍🎶 Yet another Spotify Web API Python library."
+site_description: "{{cookiecutter.project_description}}"
 site_url: "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/"
 repo_url: "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
 edit_uri: "edit/master/docs/"

@@ -32,6 +32,7 @@ python = "^3.7"
 [tool.poetry.dev-dependencies]
 python-semantic-release = "^7.15.3"
 flake8 = "^3.9.2"
+flakehell = "^0.9.0"
 wemake-python-styleguide = "^0.15.2"
 isort = "^5.9.3"
 black = "^20.8b1"
@@ -70,7 +71,7 @@ clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .coverage", hel
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
 test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite and produce a coverage report" }
-lint = { cmd = "poetry run flake8 .", help = "Lint your code for errors" }
+lint = { cmd = "poetry run flakehell lint", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 
 [tool.pytest.ini_options]
@@ -106,3 +107,35 @@ known_first_party = "cookiecutter-pypackage"
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
+
+[tool.flakehell]
+exclude = [
+  ".git",
+  ".github",
+  ".pytest_cache",
+  ".tox",
+  ".vscode",
+  ".venv",
+  "docs",
+  "tests",
+  "__pycache__",
+  "README.md"
+]
+format = "colored"
+show_source = false
+statistics = false
+docstring-convention = "google"
+
+accept_encodings = "utf-8"
+max_line_length = 99
+
+extended_default_ignore = []
+
+[tool.flakehell.plugins]
+"flake8-*" = ["+*"]
+mccabe = ["+*"]
+nitpick = ["+*"]
+"pep8-naming" = ["+*"]
+pycodestyle = ["+*"]
+pyflakes = ["+*"]
+"wemake-python-styleguide" = ["+*"]

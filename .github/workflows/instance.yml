@@ -12,15 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - name: Check out cookiecutter-pypackage
-        uses: actions/checkout@v2
-        with:
-          path: cookiecutter-pypackage
-      - name: Check out cookiecutter-pypackage-instance
-        uses: actions/checkout@v2
-        with:
-          repository: "billsioros/cookiecutter-pypackage-instance"
-          path: cookiecutter-pypackage-instance
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
@@ -28,6 +19,10 @@ jobs:
       - name: Install cookiecutter
         run: |
           pip install -U pip cookiecutter
+      - name: Check out cookiecutter-pypackage-instance
+        uses: actions/checkout@v2
+        with:
+          repository: "billsioros/cookiecutter-pypackage-instance"
       - name: Remove working tree
         run: |
           mv cookiecutter-pypackage-instance/.git tmp.git
@@ -35,12 +30,9 @@ jobs:
           mkdir cookiecutter-pypackage-instance
           mv tmp.git cookiecutter-pypackage-instance/.git
       - name: Invoke cookiecutter
-        run: >-
-          cookiecutter
-          https://github.com/${GITHUB_REPOSITORY}
-          --overwrite-if-exists
-          --no-input
-          project_name=cookiecutter-pypackage-instance
+        run: |
+          cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance
+          cd cookiecutter-pypackage-instance
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:

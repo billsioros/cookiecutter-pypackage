@@ -23,13 +23,14 @@ repos:
     rev: v.0.8.0
     hooks:
     - id: flakehell
-      exclude: ^docs|examples|tests
+      exclude: ^docs|tests|{{cookiecutter.project_name}}
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+        exclude: ^{{cookiecutter.project_name}}
       - id: check-json
       - id: check-toml
       - id: debug-statements
@@ -52,6 +53,7 @@ repos:
     rev: 0.5.1
     hooks:
       - id: tox-ini-fmt
+        exclude: ^{{cookiecutter.project_name}}
   - repo: local
     hooks:
       - id: export-requirements

@@ -1,4 +1,4 @@
-![{{cookiecutter.project_name}}](https://raw.githubusercontent.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/master/docs/img/logo.png)
+<h1 align="center">🐍 {{cookiecutter.friendly_name}}</h1>
 
 <p align="center">
   <a href="https://www.python.org/">
@@ -22,7 +22,7 @@
   <a href="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml">
     <img
       src="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml/badge.svg"
-      alt="CI"
+      alt="CD"
     />
   </a>
   <a href="https://results.pre-commit.ci/latest/github/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/master">
@@ -44,13 +44,13 @@
   </a>
   <a href="https://gitpod.io/from-referrer/">
     <img
-      src="https://img.shields.io/badge/Gitpod-Open-blue?logo=gitpod"
+      src="https://img.shields.io/badge/Open%20on-Gitpod-blue?logo=gitpod&style=flat"
       alt="Open on Gitpod"
     />
   </a>
   <a href="https://github.com/billsioros/cookiecutter-pypackage">
     <img
-      src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat-square&logo=cookiecutter"
+      src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat&logo=cookiecutter"
       alt="Cookiecutter Template">
   </a>
 
@@ -61,8 +61,6 @@
 ```python
 >>> from {{cookiecutter.project_name}} import {{cookiecutter.project_name}}
 ```
-
-Feel free to check the [examples](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/tree/master/examples) folder for more use cases!
 
 ## Features
 
@@ -82,10 +80,6 @@ pip install {{cookiecutter.project_name}}
 
 Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
 
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) project template.
-
 ## Contributing
 
 If you would like to contribute to the project, please go through the [Contributing Guidelines](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/latest/CONTRIBUTING/) first.
@@ -103,3 +97,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/billsioros/cookiecutter-pypackage) cookiecutter template.

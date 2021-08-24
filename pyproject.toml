@@ -64,7 +64,7 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["cookiecutter-pypackage", "tests", "examples"]
+paths = ["cookiecutter-pypackage", "tests"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .coverage", help = "Clean up any auxiliary files" }
@@ -119,7 +119,8 @@ exclude = [
   "docs",
   "tests",
   "__pycache__",
-  "README.md"
+  "README.md",
+  "{{cookiecutter.project_name}}"
 ]
 format = "colored"
 show_source = false

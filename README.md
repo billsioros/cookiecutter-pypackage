@@ -1,4 +1,4 @@
-<h1 align="center">🍪 Python Cookiecutter 🍪</h1>
+<h1 align="center">🐍🍪 Yet another Python cookiecutter</h1>
 
 <p align="center">
   <a href="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/ci.yml">
@@ -10,7 +10,7 @@
   <a href="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/cd.yml">
     <img
       src="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/cd.yml/badge.svg"
-      alt="CI"
+      alt="CD"
     />
   </a>
   <a href="https://results.pre-commit.ci/latest/github/billsioros/cookiecutter-pypackage/master">

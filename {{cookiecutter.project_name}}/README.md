@@ -80,10 +80,6 @@ pip install {{cookiecutter.project_name}}
 
 Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
 
-## Credits
-
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) cookiecutter template.
-
 ## Contributing
 
 If you would like to contribute to the project, please go through the [Contributing Guidelines](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/latest/CONTRIBUTING/) first.
@@ -101,3 +97,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/billsioros/cookiecutter-pypackage) cookiecutter template.

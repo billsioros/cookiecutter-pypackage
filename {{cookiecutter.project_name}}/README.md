@@ -44,13 +44,13 @@
   </a>
   <a href="https://gitpod.io/from-referrer/">
     <img
-      src="https://img.shields.io/badge/Open%20on-Gitpod-blue?logo=gitpod"
+      src="https://img.shields.io/badge/Open%20on-Gitpod-blue?logo=gitpod&style=flat"
       alt="Open on Gitpod"
     />
   </a>
   <a href="https://github.com/billsioros/cookiecutter-pypackage">
     <img
-      src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat-square&logo=cookiecutter"
+      src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat&logo=cookiecutter"
       alt="Cookiecutter Template">
   </a>
 

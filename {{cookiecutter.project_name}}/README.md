@@ -22,7 +22,7 @@
   <a href="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml">
     <img
       src="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml/badge.svg"
-      alt="CI"
+      alt="CD"
     />
   </a>
   <a href="https://results.pre-commit.ci/latest/github/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/master">
@@ -44,7 +44,7 @@
   </a>
   <a href="https://gitpod.io/from-referrer/">
     <img
-      src="https://img.shields.io/badge/Gitpod-Open-blue?logo=gitpod"
+      src="https://img.shields.io/badge/Open%20on-Gitpod-blue?logo=gitpod"
       alt="Open on Gitpod"
     />
   </a>
@@ -84,7 +84,7 @@ Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecut
 
 ## Credits
 
-This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) project template.
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [billsioros/cookiecutter-pypackage](https://github.com/fedejaure/cookiecutter-modern-pypackage) cookiecutter template.
 
 ## Contributing
 

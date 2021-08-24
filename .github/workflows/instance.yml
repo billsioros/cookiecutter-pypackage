@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: "billsioros/cookiecutter-pypackage-instance"
+          ref: master
       - name: Remove working tree
         run: |
           mv .git tmp.git

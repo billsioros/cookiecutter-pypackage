@@ -1,4 +1,4 @@
-![{{cookiecutter.project_name}}](https://raw.githubusercontent.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/master/docs/img/logo.png)
+<h1 align="center">🐍 {{cookiecutter.friendly_name}}</h1>
 
 <p align="center">
   <a href="https://www.python.org/">

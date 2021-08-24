@@ -62,8 +62,6 @@
 >>> from {{cookiecutter.project_name}} import {{cookiecutter.project_name}}
 ```
 
-Feel free to check the [examples](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/tree/master/examples) folder for more use cases!
-
 ## Features
 
 - TODO

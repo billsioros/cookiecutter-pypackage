@@ -63,7 +63,7 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["{{cookiecutter.project_name}}", "tests", "examples"]
+paths = ["{{cookiecutter.project_name}}", "tests"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }

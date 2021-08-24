@@ -6,7 +6,6 @@ on:
     paths:
       - 'cookiecutter-pypackage/**/*.py'
       - 'tests/**/*.py'
-      - 'examples/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'
   pull_request:
@@ -14,7 +13,6 @@ on:
     paths:
       - 'cookiecutter-pypackage/**/*.py'
       - 'tests/**/*.py'
-      - 'examples/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'
 

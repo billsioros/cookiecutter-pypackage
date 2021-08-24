@@ -6,6 +6,20 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.0.2 (2021-08-24)
+### Fix
+* **main:** `skip_install` by default ([`44e1e5d`](https://github.com/billsioros/cookiecutter-pypackage/commit/44e1e5d12e261aae4d4dd6720eba678b5ce4479a))
+
+### Documentation
+* **template:** Move `Credits` to the end ([`c4ea9d5`](https://github.com/billsioros/cookiecutter-pypackage/commit/c4ea9d58c6ad6e8f47c295bca45bc8bbe6156770))
+* **template:** Change badge style to `flat` ([`476977a`](https://github.com/billsioros/cookiecutter-pypackage/commit/476977a668b558715d5951cd39c8e46be2e84fc5))
+* **template:** Change title ([`765b262`](https://github.com/billsioros/cookiecutter-pypackage/commit/765b262dcfb99bbabad4ae7d84dc1d35520fe5ca))
+* **main:** Change title ([`d421ee3`](https://github.com/billsioros/cookiecutter-pypackage/commit/d421ee38d1274e1f30717ebbcd0c248a5e458816))
+* **template:** Change `Gitpod` badge ([`6902d68`](https://github.com/billsioros/cookiecutter-pypackage/commit/6902d6818c3e478f78636146483c86866f611527))
+* **main:** Center align title ([`f313476`](https://github.com/billsioros/cookiecutter-pypackage/commit/f313476af4e8ca20ea8c365785c111ca717762ab))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.0.1...v0.0.2)**
+
 ## v0.0.1 (2021-08-20)
 ### Fix
 * **main:** Docs not rendering correctly ([`997a87d`](https://github.com/billsioros/cookiecutter-pypackage/commit/997a87da42b689cb77a2657d7bf283aaf933462d))

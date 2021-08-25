@@ -27,7 +27,7 @@ jobs:
       - name: Remove working tree
         run: |
           mv .git ../tmp.git
-          rm -rf .
+          rm -rf ./*
           mv ../tmp.git .git
           pwd
           ls -R

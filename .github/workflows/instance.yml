@@ -26,22 +26,18 @@ jobs:
           ref: master
       - name: Remove working tree
         run: |
-          mv .git ../tmp.git
-          rm -rf ./*
-          mv ../tmp.git .git
-          pwd
-          ls -R
+          mv .git tmp.git
+          rm -rf cookiecutter-pypackage-instance
+          mkdir cookiecutter-pypackage-instance
+          mv tmp.git .git
       - name: Invoke cookiecutter
         run: |
-          cd ../
           cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance
-          cd cookiecutter-pypackage-instance
-          pwd
-          ls -R
+          mv -f cookiecutter-pypackage-instance/* .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token:  ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+          token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           title: 'Reset Instance'
           commit-message: 'feat: reset instance based on https://github.com/billsioros/cookiecutter-pypackage'
           labels: ":bulb: feature request"

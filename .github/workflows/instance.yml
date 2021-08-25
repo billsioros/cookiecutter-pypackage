@@ -33,7 +33,9 @@ jobs:
       - name: Invoke cookiecutter
         run: |
           cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance
+      - name: Move files outside the subdirectory
           mv -f cookiecutter-pypackage-instance/* .
+          mv cookiecutter-pypackage/.[!.]* .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:

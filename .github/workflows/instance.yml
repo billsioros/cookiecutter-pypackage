@@ -36,7 +36,7 @@ jobs:
       - name: Move files outside the subdirectory
         run: |
           mv -f cookiecutter-pypackage-instance/* .
-          mv cookiecutter-pypackage/.[!.]* .
+          mv cookiecutter-pypackage-instance/.[!.]* .
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:

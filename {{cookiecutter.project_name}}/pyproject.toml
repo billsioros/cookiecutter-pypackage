@@ -63,7 +63,7 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["{{cookiecutter.project_name}}", "tests"]
+paths = ["src/{{cookiecutter.project_name}}", "tests"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
@@ -85,11 +85,11 @@ python_functions = "test_*"
 testpaths = "tests"
 
 [tool.coverage.paths]
-source = ["{{cookiecutter.project_name}}"]
+source = ["src/{{cookiecutter.project_name}}"]
 
 [tool.coverage.run]
 branch = true
-source = ["{{cookiecutter.project_name}}"]
+source = ["src/{{cookiecutter.project_name}}"]
 
 [tool.coverage.report]
 show_missing = true
@@ -100,7 +100,7 @@ omit = ["tests/*"]
 
 [tool.isort]
 profile = "black"
-src_paths = ["{{cookiecutter.project_name}}", "tests"]
+src_paths = ["src/{{cookiecutter.project_name}}", "tests"]
 line_length = 99
 known_first_party = "{{cookiecutter.project_name}}"
 
@@ -109,7 +109,7 @@ line-length = 99
 target-version = ["py37", "py38"]
 
 [tool.mypy]
-files = ["{{cookiecutter.project_name}}"]
+files = ["src/{{cookiecutter.project_name}}"]
 warn_unused_configs = true
 warn_return_any = true
 ignore_missing_imports = true

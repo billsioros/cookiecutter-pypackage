@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.0.3 (2021-08-26)
+### Fix
+* **template:** Follow the `src` standard layout ([`8f7927b`](https://github.com/billsioros/cookiecutter-pypackage/commit/8f7927bc7cd24e605f0930d36719e4fef26affb9))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.0.2...v0.0.3)**
+
 ## v0.0.2 (2021-08-24)
 ### Fix
 * **main:** `skip_install` by default ([`44e1e5d`](https://github.com/billsioros/cookiecutter-pypackage/commit/44e1e5d12e261aae4d4dd6720eba678b5ce4479a))

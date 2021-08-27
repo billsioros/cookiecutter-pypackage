@@ -1,5 +1,6 @@
 {
   "project_name": "cookiecutter-pypackage",
+  "package_name": "{{ cookiecutter.project_name.replace('-', '_').replace(' ', '_').lower() }}",
   "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
   "project_description": "🐍 An awesome python package by the name `{{ cookiecutter.friendly_name }}`",
   "author": "Vasilis Sioros",

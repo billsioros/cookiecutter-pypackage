@@ -59,7 +59,7 @@
 ## Example Usage
 
 ```python
->>> from {{cookiecutter.project_name}} import {{cookiecutter.project_name}}
+>>> from {{cookiecutter.package_name}} import {{cookiecutter.package_name}}
 ```
 
 ## Features

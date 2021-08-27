@@ -63,13 +63,13 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["src/{{cookiecutter.project_name}}", "tests"]
+paths = ["src/{{cookiecutter.package_name}}", "tests"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
-test = { cmd = "poetry run pytest --cov={{cookiecutter.project_name}}", help = "Run the test suite and produce a coverage report" }
+test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
 type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
 lint = { cmd = "poetry run flakehell lint", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
@@ -85,11 +85,11 @@ python_functions = "test_*"
 testpaths = "tests"
 
 [tool.coverage.paths]
-source = ["src/{{cookiecutter.project_name}}"]
+source = ["src/{{cookiecutter.package_name}}"]
 
 [tool.coverage.run]
 branch = true
-source = ["src/{{cookiecutter.project_name}}"]
+source = ["src/{{cookiecutter.package_name}}"]
 
 [tool.coverage.report]
 show_missing = true
@@ -100,16 +100,16 @@ omit = ["tests/*"]
 
 [tool.isort]
 profile = "black"
-src_paths = ["src/{{cookiecutter.project_name}}", "tests"]
+src_paths = ["src/{{cookiecutter.package_name}}", "tests"]
 line_length = 99
-known_first_party = "{{cookiecutter.project_name}}"
+known_first_party = "{{cookiecutter.package_name}}"
 
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
 
 [tool.mypy]
-files = ["src/{{cookiecutter.project_name}}"]
+files = ["src/{{cookiecutter.package_name}}"]
 warn_unused_configs = true
 warn_return_any = true
 ignore_missing_imports = true

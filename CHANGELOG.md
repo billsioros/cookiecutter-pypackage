@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.0.7 (2021-08-27)
+### Fix
+* **template:** `flakehell` & `mypy` errors ([`84bda24`](https://github.com/billsioros/cookiecutter-pypackage/commit/84bda247d36bc509205d6d02aee0b9a0d16ff836))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.0.6...v0.0.7)**
+
 ## v0.0.6 (2021-08-27)
 ### Fix
 * **global:** `mypy` and `flakehell` invocation errors ([`fbdc7ae`](https://github.com/billsioros/cookiecutter-pypackage/commit/fbdc7aec0eb5283c443434da069513da1b403c04))

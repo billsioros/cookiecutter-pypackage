@@ -13,15 +13,15 @@
       alt="PyPI"
     />
   </a>
-  <a href="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/ci.yml">
+  <a href="{{ cookiecutter.github_repository }}/actions/workflows/ci.yml">
     <img
-      src="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/ci.yml/badge.svg"
+      src="{{ cookiecutter.github_repository }}/actions/workflows/ci.yml/badge.svg"
       alt="CI"
     />
   </a>
-  <a href="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml">
+  <a href="{{ cookiecutter.github_repository }}/actions/workflows/cd.yml">
     <img
-      src="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/actions/workflows/cd.yml/badge.svg"
+      src="{{ cookiecutter.github_repository }}/actions/workflows/cd.yml/badge.svg"
       alt="CD"
     />
   </a>

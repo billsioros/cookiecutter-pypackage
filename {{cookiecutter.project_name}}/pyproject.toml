@@ -10,7 +10,7 @@ readme = "README.md"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
 license = "{{cookiecutter.license}}"
 homepage = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}"
-repository = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
+repository = "{{ cookiecutter.github_repository }}"
 keywords = []
 classifiers = [
     "Programming Language :: Python",
@@ -23,8 +23,8 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/issues"
-"Changelog" = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/releases"
+"Bug Tracker" = "{{ cookiecutter.github_repository }}/issues"
+"Changelog" = "{{ cookiecutter.github_repository }}/releases"
 
 [tool.poetry.dependencies]
 python = "^3.7"

@@ -85,11 +85,11 @@ python_functions = "test_*"
 testpaths = "tests"
 
 [tool.coverage.paths]
-source = ["src/{{cookiecutter.package_name}}"]
+source = ["src"]
 
 [tool.coverage.run]
 branch = true
-source = ["src/{{cookiecutter.package_name}}"]
+source = ["{{cookiecutter.package_name}}"]
 
 [tool.coverage.report]
 show_missing = true

@@ -61,7 +61,6 @@ upload_to_pypi = false
 version_toml = "pyproject.toml:tool.poetry.version"
 changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
 build_command = false
-dist_path = "."
 
 [tool.vulture]
 min_confidence = 95

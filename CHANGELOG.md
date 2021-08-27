@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.1.0 (2021-08-27)
+### Feature
+* Add the `github_repository` input variable ([`dbf23f4`](https://github.com/billsioros/cookiecutter-pypackage/commit/dbf23f4e1a271f09ca0f895c390407aee52ff9e2))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.0.10...v0.1.0)**
+
 ## v0.0.10 (2021-08-27)
 ### Fix
 * **template:** `mypy does not apply to this repository` ([`f8623e6`](https://github.com/billsioros/cookiecutter-pypackage/commit/f8623e6a2acb27a6e8205025ef24f173b054d52f))

@@ -1,5 +1,5 @@
 """{{cookiecutter.friendly_name}}"""
 
 __all__ = [
-    "{{cookiecutter.project_name}}",
+    "{{cookiecutter.package_name}}",
 ]

@@ -5,7 +5,7 @@ repo_url: "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.projec
 edit_uri: "edit/master/docs/"
 repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
 copyright: |
-  Copyright &copy; 2021 <a href="https://github.com/{{cookiecutter.github_user}}"  target="_blank" rel="noopener">Vasileios Sioros</a>
+  Copyright &copy; 2021 <a href="https://github.com/{{cookiecutter.github_user}}"  target="_blank" rel="noopener">{{cookiecutter.author}}</a>
 
 nav:
   - Overview: index.md

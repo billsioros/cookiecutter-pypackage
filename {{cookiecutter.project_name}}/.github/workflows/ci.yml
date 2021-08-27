@@ -4,14 +4,14 @@ on:
   push:
     branches: [master]
     paths:
-      - '{{cookiecutter.project_name}}/**/*.py'
+      - '{{cookiecutter.package_name}}/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'
   pull_request:
     branches: [master]
     paths:
-      - '{{cookiecutter.project_name}}/**/*.py'
+      - '{{cookiecutter.package_name}}/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'

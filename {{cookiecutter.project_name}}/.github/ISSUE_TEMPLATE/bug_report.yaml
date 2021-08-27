@@ -20,7 +20,7 @@ body:
       description: Please provide the reproduction steps corresponding to the bug.
       placeholder: Provide us with some python code!
       value: |
-        from {{cookiecutter.project_name}} import {{cookiecutter.project_name}}
+        from {{cookiecutter.package_name}} import {{cookiecutter.package_name}}
       render: python
     validations:
       required: true

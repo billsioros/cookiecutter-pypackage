@@ -9,14 +9,14 @@ on:
   push:
     branches: [master]
     paths:
-      - '{{cookiecutter.project_name}}/**/*.py'
+      - '{{cookiecutter.package_name}}/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [master]
     paths:
-      - '{{cookiecutter.project_name}}/**/*.py'
+      - '{{cookiecutter.package_name}}/**/*.py'
       - 'pyproject.toml'
       - 'poetry.lock'
   schedule:

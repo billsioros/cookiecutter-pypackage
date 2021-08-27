@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.0.10 (2021-08-27)
+### Fix
+* **template:** `mypy does not apply to this repository` ([`f8623e6`](https://github.com/billsioros/cookiecutter-pypackage/commit/f8623e6a2acb27a6e8205025ef24f173b054d52f))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.0.9...v0.0.10)**
+
 ## v0.0.9 (2021-08-27)
 ### Fix
 * **main:** Create empty `dist` folder on ci ([`48ca83a`](https://github.com/billsioros/cookiecutter-pypackage/commit/48ca83af46a5ab3fa176121dbf8b07b89ce846af))

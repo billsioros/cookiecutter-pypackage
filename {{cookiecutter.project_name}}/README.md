@@ -1,4 +1,4 @@
-<h1 align="center">🐍 {{cookiecutter.friendly_name}}</h1>
+<h1 align="center">🐍 {{ cookiecutter.project_name.replace('-', ' ').title() }}</h1>
 
 <p align="center">
   <a href="https://www.python.org/">

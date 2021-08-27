@@ -1,1 +1,1 @@
-"""{{cookiecutter.friendly_name}}."""
+"""{{cookiecutter.project_description}}."""

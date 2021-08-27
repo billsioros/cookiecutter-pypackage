@@ -1,11 +1,11 @@
 {
   "project_name": "cookiecutter-pypackage",
   "package_name": "{{ cookiecutter.project_name.replace('-', '_').replace(' ', '_').lower() }}",
-  "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
-  "project_description": "🐍 An awesome python package by the name `{{ cookiecutter.friendly_name }}`",
+  "project_description": "🐍 An awesome python package by the name `{{ cookiecutter.project_name.replace('-', ' ').title() }}`",
   "author": "Vasilis Sioros",
   "email": "billsioros97@gmail.com",
   "github_user": "billsioros",
+  "github_repository": "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}.git",
   "version": "0.0.0",
   "license": ["MIT", "Apache-2.0", "GPL-3.0"]
 }

@@ -44,8 +44,6 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
-
-            _Automated changes by [create-pull-request](https://github.com/peter-evans/create-pull-request) GitHub action_
           commit-message: 'feat: reset instance based on https://github.com/billsioros/cookiecutter-pypackage'
           labels: ":bulb: feature request"
           assignees: billsioros

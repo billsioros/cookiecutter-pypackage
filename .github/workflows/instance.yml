@@ -26,10 +26,10 @@ jobs:
           ref: master
       - name: Remove working tree
         run: |
-          mv .git tmp.git
-          rm -rf cookiecutter-pypackage-instance
-          mkdir cookiecutter-pypackage-instance
-          mv tmp.git .git
+          mv .git ../tmp.git
+          rm -rf ./*
+          rm -rf ./.[!.]*
+          mv ../tmp.git .git
       - name: Invoke cookiecutter
         run: |
           cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance

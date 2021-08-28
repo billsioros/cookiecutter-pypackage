@@ -14,12 +14,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 5
+          fetch-depth: 2
 
       - name: Get latest cookiecutter-pypackage commit message
+        id: get-commit-message
         run: |
-          export commit_message="$(git log --format=%B --skip=1 --max-count=1)"
-          echo "Latest commit message: '${commit_message}'"
+          echo '::set-output commit_message=COMMIT_MESSAGE::"$(git log --format=%B --skip=1 --max-count=1)"'
+          echo 'Latest commit message: "${commit_message}"'
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -53,7 +54,7 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
-          commit-message: 'chore: reset instance for commit `${{ env.commit_message }}`'
+          commit-message: 'chore: reset instance for commit `${{ steps.get-commit-message.outputs.COMMIT_MESSAGE }}`'
           labels: ":sparkles: enhancement"
           assignees: billsioros
           branch: development

@@ -16,7 +16,7 @@ jobs:
 
       - name: Get latest cookiecutter-pypackage commit message
         run: |
-          echo ::set-env name=commit_message::$(git log --format=%B -n 1 ${{ github.event.after }})
+          export commit_message="$(git log --format=%B -n 1 ${{ github.event.after }})"
           echo "Latest commit message: '${commit_message}'
 
       - name: Set up Python

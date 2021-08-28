@@ -51,7 +51,7 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
-          commit-message: 'chore: reset instance for commit `${{ commit_message }}`'
+          commit-message: 'chore: reset instance for commit `${{ env.commit_message }}`'
           labels: ":sparkles: enhancement"
           assignees: billsioros
           branch: development

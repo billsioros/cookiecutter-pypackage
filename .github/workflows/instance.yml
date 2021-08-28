@@ -19,8 +19,7 @@ jobs:
       - name: Get latest cookiecutter-pypackage commit message
         id: get-commit-message
         run: |
-          echo '::set-output commit_message=COMMIT_MESSAGE::"$(git log --format=%B --skip=1 --max-count=1)"'
-          echo 'Latest commit message: "${commit_message}"'
+          echo '::set-output name=COMMIT_MESSAGE::"$(git log --format=%B --skip=1 --max-count=1)"'
 
       - name: Set up Python
         uses: actions/setup-python@v2

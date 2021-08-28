@@ -12,6 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
+      - uses: actions/checkout@v2
+
+      - name: Get latest cookiecutter-pypackage commit message
+        run: |
+          echo ::set-env name=commit_message::$(git log --format=%B -n 1 ${{ github.event.after }})
+          echo "Latest commit message: '${commit_message}'
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -44,8 +51,7 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
-          commit-message: 'feat: reset instance based on https://github.com/billsioros/cookiecutter-pypackage'
-          labels: ":bulb: feature request"
+          commit-message: 'chore: reset instance for commit `${commit_message}`'
+          labels: ":sparkles: enhancement"
           assignees: billsioros
-          reviewers: billsioros
           branch: development

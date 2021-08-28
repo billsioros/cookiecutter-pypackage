@@ -5,7 +5,7 @@
   "author": "Vasilis Sioros",
   "email": "billsioros97@gmail.com",
   "github_user": "billsioros",
-  "github_repository": "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}.git",
+  "github_repository": "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}",
   "version": "0.0.0",
   "license": ["MIT", "Apache-2.0", "GPL-3.0"]
 }

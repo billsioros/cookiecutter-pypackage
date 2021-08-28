@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.1.2 (2021-08-28)
+### Fix
+* Remove `.git` from `github_repository` input variable ([`41cc778`](https://github.com/billsioros/cookiecutter-pypackage/commit/41cc778c1325637692d7b65fbe3fc2122d5c5535))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.1.1...v0.1.2)**
+
 ## v0.1.1 (2021-08-28)
 ### Fix
 * **main:** Unable to process command `set-output` ([`101e234`](https://github.com/billsioros/cookiecutter-pypackage/commit/101e234d2003ca46e436ad504ee14707546bfa76))

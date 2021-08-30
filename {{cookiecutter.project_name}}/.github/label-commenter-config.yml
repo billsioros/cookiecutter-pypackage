@@ -12,10 +12,10 @@ labels:
   - name: ":no_entry_sign: invalid"
     labeled:
       issue:
-        body: Thank you @{{ issue.user.login }} for reporting this issue! Please follow the issue templates, as well as the [Contributing Guidelines]({{ cookiecutter.github_repository }}/blob/master/docs/CONTRIBUTING.md).
+        body: Thank you @{{ '{{' }} issue.user.login {{ '}}' }} for reporting this issue! Please follow the issue templates, as well as the [Contributing Guidelines]({{ cookiecutter.github_repository }}/blob/master/docs/CONTRIBUTING.md).
         action: close
       pr:
-        body: Thank you @{{ pull_request.user.login }} for suggesting this. Please follow the pull request templates, as well as the [Contributing Guidelines]({{ cookiecutter.github_repository }}/blob/master/docs/CONTRIBUTING.md).
+        body: Thank you @{{ '{{' }} pull_request.user.login {{ '}}' }} for suggesting this. Please follow the pull request templates, as well as the [Contributing Guidelines]({{ cookiecutter.github_repository }}/blob/master/docs/CONTRIBUTING.md).
         action: close
     unlabeled:
       issue:

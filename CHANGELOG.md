@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.1.3 (2021-09-01)
+### Fix
+* **template:** `black` & `isort` failing due to missing newline ([`86981f1`](https://github.com/billsioros/cookiecutter-pypackage/commit/86981f15e74395d505b853fb334e94efd54ab678))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.1.2...v0.1.3)**
+
 ## v0.1.2 (2021-08-28)
 ### Fix
 * Remove `.git` from `github_repository` input variable ([`41cc778`](https://github.com/billsioros/cookiecutter-pypackage/commit/41cc778c1325637692d7b65fbe3fc2122d5c5535))

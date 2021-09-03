@@ -1,4 +1,4 @@
-<a href="https://opensource.org/licenses/MIT">
+<a href="https://opensource.org/licenses/{{cookiecutter.license}}">
 <img align="right" src="http://opensource.org/trademarks/opensource/OSI-Approved-License-100x137.png">
 </a>
 

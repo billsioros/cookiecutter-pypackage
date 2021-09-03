@@ -36,7 +36,7 @@
       src="https://codecov.io/gh/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/branch/master/graph/badge.svg?token=coLOL0j6Ap"
       alt="Test Coverage"/>
   </a>
-  <a href="https://opensource.org/licenses/MIT">
+  <a href="https://opensource.org/licenses/{{cookiecutter.license}}">
     <img
       src="https://img.shields.io/pypi/l/{{cookiecutter.project_name}}"
       alt="PyPI - License"
@@ -53,7 +53,6 @@
       src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat&logo=cookiecutter"
       alt="Cookiecutter Template">
   </a>
-
 </p>
 
 ## Example Usage

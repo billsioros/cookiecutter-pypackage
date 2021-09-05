@@ -53,6 +53,16 @@
       src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat&logo=cookiecutter"
       alt="Cookiecutter Template">
   </a>
+  <a href="https://app.renovatebot.com/dashboard#github/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}">
+    <img
+      src="https://img.shields.io/badge/renovate-enabled-brightgreen.svg?style=flat&logo=renovatebot"
+      alt="Renovate - Enabled">
+  </a>
+  <a href="https://app.renovatebot.com/dashboard#github/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}">
+    <img
+      src="https://img.shields.io/badge/Buy%20me%20a-coffee-FFDD00.svg?style=flat&logo=buymeacoffee"
+      alt="Buy me a coffee">
+  </a>
 </p>
 
 ## Example Usage

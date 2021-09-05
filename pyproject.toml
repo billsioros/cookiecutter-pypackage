@@ -107,6 +107,7 @@ known_first_party = "cookiecutter-pypackage"
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
+skip-string-normalization = true
 
 [tool.flakehell]
 exclude = [

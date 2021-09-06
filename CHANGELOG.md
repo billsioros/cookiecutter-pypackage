@@ -6,6 +6,22 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.2.0 (2021-09-06)
+### Feature
+* **main:** Add `validate_project_name` validator ([`eb535a9`](https://github.com/billsioros/cookiecutter-pypackage/commit/eb535a99bd8aba2d8f13391436188318fb61cf1e))
+* Add `generate_license` task ([`365e0e0`](https://github.com/billsioros/cookiecutter-pypackage/commit/365e0e05448424d1ff438d2eb6c156bbe2b2955a))
+* **main:** Add cookiecutter pre/post gen `hooks` ([`c1aeac8`](https://github.com/billsioros/cookiecutter-pypackage/commit/c1aeac84eca4098bab0a083e651a4a3bf893474a))
+
+### Fix
+* **main:** `skip_setup` when creating a pull request ([`108ef3f`](https://github.com/billsioros/cookiecutter-pypackage/commit/108ef3f1d296f389c03ea57bb90edecdc8c169bc))
+
+### Documentation
+* **template:** Add `renovate` and `buymeacoffee` badges ([`de2c7cd`](https://github.com/billsioros/cookiecutter-pypackage/commit/de2c7cd6d3d131b8cd67c382867f4da040730c8f))
+* **template:** Add custom license url ([`1f7deba`](https://github.com/billsioros/cookiecutter-pypackage/commit/1f7deba0d6003cd520d24925d13b32f09cb2196c))
+* **template:** Add basic module documentation ([`bd61f81`](https://github.com/billsioros/cookiecutter-pypackage/commit/bd61f81530ba02844c5ba825a508bd85b1d6cf04))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.1.3...v0.2.0)**
+
 ## v0.1.3 (2021-09-01)
 ### Fix
 * **template:** `black` & `isort` failing due to missing newline ([`86981f1`](https://github.com/billsioros/cookiecutter-pypackage/commit/86981f15e74395d505b853fb334e94efd54ab678))

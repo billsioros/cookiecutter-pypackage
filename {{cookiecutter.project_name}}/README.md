@@ -36,7 +36,7 @@
       src="https://codecov.io/gh/{{cookiecutter.github_user}}/{{cookiecutter.project_name}}/branch/master/graph/badge.svg?token=coLOL0j6Ap"
       alt="Test Coverage"/>
   </a>
-  <a href="https://opensource.org/licenses/{{cookiecutter.license}}">
+  <a href="https://opensource.org/licenses/{{cookiecutter.license.upper()}}">
     <img
       src="https://img.shields.io/pypi/l/{{cookiecutter.project_name}}"
       alt="PyPI - License"

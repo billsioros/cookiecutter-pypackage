@@ -19,12 +19,6 @@
       alt="pre-commit.ci status"
     />
   </a>
-  <a href="https://codecov.io/gh/billsioros/cookiecutter-pypackage">
-    <img
-      src="https://codecov.io/gh/billsioros/cookiecutter-pypackage/branch/master/graph/badge.svg?token=coLOL0j6Ap"
-      alt="Test Coverage"
-    />
-  </a>
   <a href="https://opensource.org/licenses/MIT">
     <img
       src="https://img.shields.io/github/license/billsioros/cookiecutter-pypackage"

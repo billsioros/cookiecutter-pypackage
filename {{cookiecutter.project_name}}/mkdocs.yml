@@ -1,14 +1,16 @@
-site_name: {{cookiecutter.project_name}}
+site_name: {{ cookiecutter.project_name.replace('-', ' ').title() }}
 site_description: "{{cookiecutter.project_description}}"
 site_url: "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/"
 repo_url: "{{ cookiecutter.github_repository }}"
 edit_uri: "edit/master/docs/"
 repo_name: "{{cookiecutter.github_user}}/{{cookiecutter.project_name}}"
 copyright: |
-  Copyright &copy; 2021 <a href="https://github.com/{{cookiecutter.github_user}}"  target="_blank" rel="noopener">{{cookiecutter.author}}</a>
+  Copyright &copy; {% now 'utc', '%Y' %}-{% now 'utc', '%Y' %} <a href="https://github.com/{{cookiecutter.github_user}}" target="_blank" rel="noopener">{{cookiecutter.author}}</a>
 
 nav:
   - Overview: index.md
+  - Code Reference:
+    - {{ cookiecutter.project_name.replace('-', ' ').title() }}: src/{{cookiecutter.package_name}}.md
   - Contributing:
     - Contributing Guidelines: CONTRIBUTING.md
     - Code Of Conduct: CODE_OF_CONDUCT.md

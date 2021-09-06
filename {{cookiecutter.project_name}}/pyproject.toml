@@ -8,7 +8,7 @@ version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.project_description}}"
 readme = "README.md"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
-license = "{{cookiecutter.license}}"
+license = "{{cookiecutter.license.upper()}}"
 homepage = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}"
 repository = "{{ cookiecutter.github_repository }}"
 keywords = []
@@ -107,6 +107,7 @@ known_first_party = "{{cookiecutter.package_name}}"
 [tool.black]
 line-length = 99
 target-version = ["py37", "py38"]
+skip-string-normalization = true
 
 [tool.mypy]
 files = ["src/{{cookiecutter.package_name}}"]

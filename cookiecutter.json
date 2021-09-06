@@ -7,5 +7,20 @@
   "github_user": "billsioros",
   "github_repository": "https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}",
   "version": "0.0.0",
-  "license": ["MIT", "Apache-2.0", "GPL-3.0"]
+  "license": [
+    "mit",
+    "agpl-3.0",
+    "apache-2.0",
+    "bsd-2-clause",
+    "bsd-3-clause",
+    "bsl-1.0",
+    "cc0-1.0",
+    "epl-2.0",
+    "gpl-2.0",
+    "gpl-3.0",
+    "lgpl-2.1",
+    "mpl-2.0",
+    "unlicense"
+  ],
+  "skip_setup": false
 }

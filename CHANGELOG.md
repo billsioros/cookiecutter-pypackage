@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2021-09-06)
+### Fix
+* Set `skip_setup` to `True` when creating a PR ([`b2c028f`](https://github.com/billsioros/cookiecutter-pypackage/commit/b2c028fc180aed70aafda2a7fde6a10c63b33ad5))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.2.0...v0.2.1)**
+
 ## v0.2.0 (2021-09-06)
 ### Feature
 * **main:** Add `validate_project_name` validator ([`eb535a9`](https://github.com/billsioros/cookiecutter-pypackage/commit/eb535a99bd8aba2d8f13391436188318fb61cf1e))

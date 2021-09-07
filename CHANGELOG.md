@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.3.1 (2021-09-07)
+### Fix
+* Get rid of `DeprecationWarning` error(s) ([`f231ce4`](https://github.com/billsioros/cookiecutter-pypackage/commit/f231ce4b51fd0d722c356fc8dbde89185c403fe7))
+* Generate license regardless of `skip_setup` ([`b49fa86`](https://github.com/billsioros/cookiecutter-pypackage/commit/b49fa865c59441b1c072dc0d3eee8c1a5689bfaf))
+
+### Documentation
+* **main:** Remove `all-contributors` section ([`0a09992`](https://github.com/billsioros/cookiecutter-pypackage/commit/0a099923bf4e40d1f286102840d46350c97ff394))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.3.0...v0.3.1)**
+
 ## v0.3.0 (2021-09-07)
 ### Feature
 * **main:** Include tests ([`47657e0`](https://github.com/billsioros/cookiecutter-pypackage/commit/47657e0f7b8d5536438e567d21009ec24350b3b8))

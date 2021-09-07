@@ -6,6 +6,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.3.0 (2021-09-07)
+### Feature
+* **main:** Include tests ([`47657e0`](https://github.com/billsioros/cookiecutter-pypackage/commit/47657e0f7b8d5536438e567d21009ec24350b3b8))
+
+### Documentation
+* **template:** Uppercase `license` in URLs ([`76a38eb`](https://github.com/billsioros/cookiecutter-pypackage/commit/76a38eb28c8541399c5da9e6e2bac81f483ce367))
+* **main:** Remove `codecov` badge ([`261f944`](https://github.com/billsioros/cookiecutter-pypackage/commit/261f944941e1f745f787991c9e514c4d65c4ccf9))
+* **template:** Update `buymeacoffee` badge href ([`e1645a3`](https://github.com/billsioros/cookiecutter-pypackage/commit/e1645a33ec08ae3cd16b6948a02a5e78fea29606))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.2.1...v0.3.0)**
+
 ## v0.2.1 (2021-09-06)
 ### Fix
 * Set `skip_setup` to `True` when creating a PR ([`b2c028f`](https://github.com/billsioros/cookiecutter-pypackage/commit/b2c028fc180aed70aafda2a7fde6a10c63b33ad5))

@@ -25,27 +25,44 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
+
       - name: Install cookiecutter
         run: |
           pip install -U pip cookiecutter
+
       - name: Check out cookiecutter-pypackage-instance
         uses: actions/checkout@v2
         with:
           repository: "billsioros/cookiecutter-pypackage-instance"
           ref: master
+
       - name: Remove working tree
         run: |
           mv .git ../tmp.git
           rm -rf ./*
           rm -rf ./.[!.]*
           mv ../tmp.git .git
+
+      - name: Get the latest release of cookiecutter-pypackage-instance
+        id: get-latest-release
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          repository: billsioros/cookiecutter-pypackage-instance
+
+      - name: Remove the leading 'v' from the latest release name
+        run: |
+          export RELEASE_TAG_VERSION="${{ steps.get-latest-release.outputs.release }}"
+          echo "RELEASE_TAG_VERSION=${RELEASE_TAG_VERSION##v}" >> $GITHUB_ENV
+
       - name: Invoke cookiecutter
         run: |
-          cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance skip_setup=True
+          cookiecutter https://github.com/${GITHUB_REPOSITORY} --overwrite-if-exists --no-input project_name=cookiecutter-pypackage-instance skip_setup=True version=${RELEASE_TAG_VERSION}
+
       - name: Move files outside the subdirectory
         run: |
           mv -f cookiecutter-pypackage-instance/* .
           mv cookiecutter-pypackage-instance/.[!.]* .
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
@@ -53,10 +70,11 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
-          commit-message: '${{ env.COMMIT_MESSAGE }} `[template commit mirror]`'
+          commit-message: '${{ env.COMMIT_MESSAGE }} `mirror`'
           labels: ":sparkles: enhancement"
           assignees: billsioros
           branch: development
+
       - name: Enable Pull Request Auto-merge
         if: steps.cpr.outputs.pull-request-operation == 'created'
         uses: peter-evans/enable-pull-request-automerge@v1

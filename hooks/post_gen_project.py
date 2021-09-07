@@ -82,9 +82,10 @@ def generate_license():
         raise ValueError(exception)
 
 
+generate_license()
+
 if '{{cookiecutter.skip_setup}}' == 'False':
     for task in [
-        generate_license,
         install_dependencies,
         initialize_repository,
         install_precommit_hooks,

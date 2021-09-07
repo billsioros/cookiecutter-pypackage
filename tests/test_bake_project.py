@@ -51,7 +51,7 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
 
 def test_bake_with_defaults(cookies):
     with bake_in_temp_dir(cookies) as result:
-        assert result.project_path.isdir()
+        assert result.project_path.is_dir()
         assert result.exit_code == 0
         assert result.exception is None
 
@@ -91,18 +91,17 @@ def test_bake_with_apostrophe(cookies):
 
 def test_year_compute_in_license_file(cookies):
     with bake_in_temp_dir(cookies) as result:
-        license_file_path = result.project_path.join / "LICENSE"
-        now = datetime.datetime.now()
-        assert (
-            '{0}-{0}'.format(
-                now.year,
-            )
-            in license_file_path.read()
+        timespan = '{0}-{0}'.format(
+            datetime.datetime.utcnow().year,
         )
+
+        license_text = (result.project_path / "LICENSE").read_text()
+
+        assert timespan in license_text
 
 
 @pytest.mark.parametrize(
-    "license_name,license_text",
+    "license_name,license_text_span",
     [
         ("mit", "MIT"),
         (
@@ -113,10 +112,15 @@ def test_year_compute_in_license_file(cookies):
         ("gpl-3.0", "GNU GENERAL PUBLIC LICENSE"),
     ],
 )
-def test_bake_selecting_license(cookies, license_name, license_text):
+def test_bake_selecting_license(cookies, license_name, license_text_span):
     with bake_in_temp_dir(cookies, extra_context={"license": license_name}) as result:
-        assert license_text in (result.project_path.join / "LICENSE").read()
-        assert license_name.upper() in (result.project_path.join / "pyproject.toml").read()
+        license_text = (result.project_path / "LICENSE").read_text()
+
+        assert license_text_span in license_text
+
+        pyproject_toml_text = (result.project_path / "pyproject.toml").read_text()
+
+        assert license_name.upper() in pyproject_toml_text
 
 
 @pytest.mark.parametrize(
@@ -124,5 +128,5 @@ def test_bake_selecting_license(cookies, license_name, license_text):
 )
 def test_various_commands(cookies, command):
     with bake_in_temp_dir(cookies) as result:
-        assert result.project_path.isdir()
+        assert result.project_path.is_dir()
         assert run_inside_dir(command, str(result.project_path)) == 0

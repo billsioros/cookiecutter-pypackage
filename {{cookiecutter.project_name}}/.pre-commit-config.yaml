@@ -2,7 +2,7 @@ ci:
   skip: [export-requirements, hadolint-docker]
   autofix_commit_msg: 'refactor: `pre-commit.ci` auto fix'
   autofix_prs: true
-  autoupdate_commit_msg: 'refactor: `pre-commit.ci` auto update'
+  autoupdate_commit_msg: 'ci: `pre-commit.ci` auto update'
 
 repos:
   - repo: https://github.com/humitos/mirrors-autoflake.git

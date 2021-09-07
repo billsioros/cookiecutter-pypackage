@@ -46,16 +46,16 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
     finally:
         if result.exception is not None:
             with contextlib.suppress(FileNotFoundError):
-                rmtree(str(result.project))
+                rmtree(str(result.project_path))
 
 
 def test_bake_with_defaults(cookies):
     with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
+        assert result.project_path.isdir()
         assert result.exit_code == 0
         assert result.exception is None
 
-        found_toplevel_files = [f.basename for f in result.project.listdir()]
+        found_toplevel_files = [f.basename for f in result.project_path.listdir()]
         assert ".github" in found_toplevel_files
         assert "docs" in found_toplevel_files
         assert "src" in found_toplevel_files
@@ -91,7 +91,7 @@ def test_bake_with_apostrophe(cookies):
 
 def test_year_compute_in_license_file(cookies):
     with bake_in_temp_dir(cookies) as result:
-        license_file_path = result.project.join("LICENSE")
+        license_file_path = result.project_path.join / "LICENSE"
         now = datetime.datetime.now()
         assert (
             '{0}-{0}'.format(
@@ -115,8 +115,8 @@ def test_year_compute_in_license_file(cookies):
 )
 def test_bake_selecting_license(cookies, license_name, license_text):
     with bake_in_temp_dir(cookies, extra_context={"license": license_name}) as result:
-        assert license_text in result.project.join("LICENSE").read()
-        assert license_name.upper() in result.project.join("pyproject.toml").read()
+        assert license_text in (result.project_path.join / "LICENSE").read()
+        assert license_name.upper() in (result.project_path.join / "pyproject.toml").read()
 
 
 @pytest.mark.parametrize(
@@ -124,5 +124,5 @@ def test_bake_selecting_license(cookies, license_name, license_text):
 )
 def test_various_commands(cookies, command):
     with bake_in_temp_dir(cookies) as result:
-        assert result.project.isdir()
-        assert run_inside_dir(command, str(result.project)) == 0
+        assert result.project_path.isdir()
+        assert run_inside_dir(command, str(result.project_path)) == 0

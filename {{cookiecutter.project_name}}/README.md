@@ -63,6 +63,12 @@
       src="https://img.shields.io/badge/Buy%20me%20a-coffee-FFDD00.svg?style=flat&logo=buymeacoffee"
       alt="Buy me a coffee">
   </a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2F{{cookiecutter.github_user}}%2F{{cookiecutter.project_name}}?ref=badge_shield">
+    <img
+      src="https://app.fossa.com/api/projects/git%2Bgithub.com%2F{{cookiecutter.github_user}}%2F{{cookiecutter.project_name}}.svg?type=shield"
+      alt="FOSSA Status"
+    />
+  </a>
 </p>
 
 ## Example Usage

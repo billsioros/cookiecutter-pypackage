@@ -25,6 +25,12 @@
       alt="GitHub"
     />
   </a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage-instance?ref=badge_shield">
+    <img
+      src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage-instance.svg?type=shield"
+      alt="FOSSA Status"
+    />
+  </a>
 </p>
 
 ## Quickstart

@@ -13,6 +13,7 @@
       alt="CD"
     />
   </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage.svg?type=shield"/></a>
   <a href="https://results.pre-commit.ci/latest/github/billsioros/cookiecutter-pypackage/master">
     <img
       src="https://results.pre-commit.ci/badge/github/billsioros/cookiecutter-pypackage/master.svg"
@@ -26,6 +27,9 @@
     />
   </a>
 </p>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage?ref=badge_large)
 
 ## Quickstart
 

@@ -127,7 +127,14 @@ def test_bake_selecting_license(cookies, license_name, license_text_span):
 
 
 @pytest.mark.parametrize(
-    "command", ["black --check .", "isort --check .", "flakehell lint", "pytest"]
+    "command",
+    [
+        "poetry run black --check .",
+        "poetry run isort --check .",
+        "poetry run flakehell lint",
+        "poetry run pytest",
+        "poetry run mypy",
+    ],
 )
 def test_various_commands(cookies, command):
     with bake_in_temp_dir(cookies) as result:

@@ -41,10 +41,17 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
         cookie to be baked and its temporal files will be removed
     """
     result = cookies.bake(*args, **kwargs)
+
     try:
         yield result
     finally:
         if result.exception is not None:
+            print(
+                "ERROR: {0}".format(
+                    result.exception,
+                )
+            )  # noqa: WPS421
+
             with contextlib.suppress(FileNotFoundError):
                 rmtree(str(result.project_path))
 

@@ -91,6 +91,7 @@ line_length = 99
 line-length = 99
 target-version = ["py37", "py38"]
 skip-string-normalization = true
+exclude = "{{cookiecutter.project_name}}"
 
 [tool.flakehell]
 exclude = [

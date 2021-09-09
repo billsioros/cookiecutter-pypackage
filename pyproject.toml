@@ -101,7 +101,6 @@ exclude = [
   ".vscode",
   ".venv",
   "docs",
-  "tests",
   "__pycache__",
   "README.md",
   "{{cookiecutter.project_name}}"

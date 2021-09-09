@@ -55,7 +55,7 @@ def test_bake_with_defaults(cookies):
         assert result.exit_code == 0
         assert result.exception is None
 
-        found_toplevel_files = [f.basename for f in result.project_path.listdir()]
+        found_toplevel_files = [f.name for f in result.project_path.iterdir()]
         assert ".github" in found_toplevel_files
         assert "docs" in found_toplevel_files
         assert "src" in found_toplevel_files
@@ -68,6 +68,7 @@ def test_bake_with_defaults(cookies):
         assert ".gitpod.yml" in found_toplevel_files
         assert ".pre-commit-config.yaml" in found_toplevel_files
         assert "CHANGELOG.md" in found_toplevel_files
+        assert "LICENSE" in found_toplevel_files
         assert "mkdocs.yml" in found_toplevel_files
         assert "pyproject.toml" in found_toplevel_files
         assert "README.md" in found_toplevel_files

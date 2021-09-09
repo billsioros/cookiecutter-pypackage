@@ -14,9 +14,9 @@ def transactional(method):
             for cmd in method(*args, **kwargs):
                 subprocess.run(cmd, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError) as expected_error:
-            error_message = 'Skipping \'%s\'... (%r)'.format(' '.join(args), expected_error)
+            error_message = 'Skipping \'{0}\'... ({1})'.format(' '.join(args), expected_error)
         except Exception as unexpected_error:
-            error_message = 'An unexpected error occurred! (%r)'.format(
+            error_message = 'An unexpected error occurred! ({0})'.format(
                 unexpected_error,
             )
         finally:
@@ -35,6 +35,8 @@ def install_dependencies():
 @transactional
 def initialize_repository():
     yield 'git', 'init'
+    yield 'git', 'config', '--local', 'user.name', '{{cookiecutter.author}}'
+    yield 'git', 'config', '--local', 'user.email', '{{cookiecutter.email}}'
     yield 'git', 'add', '.'
     yield 'git', 'commit', '-m', '\'feat: initial commit\''
     yield 'git', 'remote', 'add', 'origin', '{{cookiecutter.github_repository}}'
@@ -49,11 +51,11 @@ def generate_license():
     try:
         cwd = pathlib.Path.cwd()
 
-        shutil.move(str(cwd / 'licenses' / '{{cookiecutter.license}}.txt'), str(cwd / "LICENSE"))
+        shutil.move(str(cwd / 'licenses' / '{{cookiecutter.license}}.txt'), str(cwd / 'LICENSE'))
         shutil.rmtree(str(cwd / 'licenses'))
     except Exception as exception:
         raise ValueError(
-            "License generation failed ({0})".format(
+            'License generation failed ({0})'.format(
                 exception,
             )
         )
@@ -70,5 +72,9 @@ if '{{cookiecutter.skip_setup}}' == 'False':
         try:
             task()
         except ValueError as value_error:
-            print(value_error)  # noqa: WPS421
+            print(
+                'ERROR: {0}'.format(
+                    value_error,
+                )
+            )  # noqa: WPS421
             sys.exit(1)

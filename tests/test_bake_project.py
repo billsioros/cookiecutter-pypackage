@@ -46,21 +46,16 @@ def bake_in_temp_dir(cookies, *args, **kwargs):
         yield result
     finally:
         if result.exception is not None:
-            print(
-                "ERROR: {0}".format(
-                    result.exception,
-                )
-            )  # noqa: WPS421
-
             with contextlib.suppress(FileNotFoundError):
                 rmtree(str(result.project_path))
 
 
 def test_bake_with_defaults(cookies):
     with bake_in_temp_dir(cookies) as result:
-        assert result.project_path.is_dir()
-        assert result.exit_code == 0
         assert result.exception is None
+        assert result.exit_code == 0
+        assert result.project_path is not None
+        assert result.project_path.is_dir()
 
         found_toplevel_files = [f.name for f in result.project_path.iterdir()]
         assert ".github" in found_toplevel_files
@@ -136,5 +131,8 @@ def test_bake_selecting_license(cookies, license_name, license_text_span):
 )
 def test_various_commands(cookies, command):
     with bake_in_temp_dir(cookies) as result:
+        assert result.exception is None
+        assert result.exit_code == 0
+        assert result.project_path is not None
         assert result.project_path.is_dir()
         assert run_inside_dir(command, str(result.project_path)) == 0

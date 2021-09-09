@@ -34,7 +34,7 @@ def validate_project_name() -> None:
         ValueError: If `project` is not a valid Python module name
     """
     if PROJECT_REGEX.fullmatch('{{cookiecutter.project_name}}') is None:
-        message = 'ERROR: `{0}` is not a valid GitHub repository name.'.format(
+        message = '`{0}` is not a valid GitHub repository name.'.format(
             '{{cookiecutter.project_name}}',
         )
         raise ValueError(message)
@@ -50,7 +50,7 @@ def validate_package_name() -> None:
         ValueError: If `package_name` is not a valid Python module name
     """
     if PACKAGE_REGEX.fullmatch('{{cookiecutter.package_name}}') is None:
-        message = 'ERROR: `{0}` is not a valid Python package name.'.format(
+        message = '`{0}` is not a valid Python package name.'.format(
             '{{cookiecutter.package_name}}',
         )
         raise ValueError(message)
@@ -63,7 +63,7 @@ def validate_semver() -> None:
         ValueError: If `version` is not in semver notation
     """
     if SEMVER_REGEX.fullmatch('{{cookiecutter.version}}') is None:
-        message = 'ERROR: `{0}` is not in semver notation (https://semver.org/)'.format(
+        message = '`{0}` is not in semver notation (https://semver.org/)'.format(
             '{{cookiecutter.version}}',
         )
         raise ValueError(message)
@@ -76,7 +76,7 @@ def validate_skip_setup() -> None:
         ValueError: If `skip_setup` is not boolean
     """
     if '{{cookiecutter.skip_setup}}' not in {'False', 'True'}:
-        message = 'ERROR: `{0}` is not a boolean value'.format(
+        message = '`{0}` is not a boolean value'.format(
             '{{cookiecutter.skip_setup}}',
         )
         raise ValueError(message)
@@ -93,5 +93,9 @@ for validator in VALIDATORS:
     try:
         validator()
     except ValueError as ex:
-        print(ex)  # noqa: WPS421
+        print(
+            'ERROR: {0}'.format(
+                ex,
+            )
+        )  # noqa: WPS421
         sys.exit(1)

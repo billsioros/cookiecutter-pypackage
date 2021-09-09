@@ -6,6 +6,17 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.3.2 (2021-09-09)
+### Fix
+* **main:** Remove invalid `type-check` testenv from `tox.ini` ([`591e270`](https://github.com/billsioros/cookiecutter-pypackage/commit/591e27041393c123440de756d5140dc363943de2))
+* **main:** Test commands via `poetry` on test suite ([`92cc32b`](https://github.com/billsioros/cookiecutter-pypackage/commit/92cc32ba961523409d16836b0162def299f5abda))
+* **main:** Assert `result.exception` is None before proceeding ([`f3a103e`](https://github.com/billsioros/cookiecutter-pypackage/commit/f3a103eb676dabf0aa5b4ae79bbd9e9ec1537aa2))
+* **main:** `PosixPath` attribute errors ([`e9a1458`](https://github.com/billsioros/cookiecutter-pypackage/commit/e9a145889217327c83176391b6b6e844e3f39166))
+* **template:** Generate license locally ([`6b1de5b`](https://github.com/billsioros/cookiecutter-pypackage/commit/6b1de5b92432118f19f32b8791c741b3f9527444))
+* **main:** Invalid `pathlib.Path` usage ([`d1df22b`](https://github.com/billsioros/cookiecutter-pypackage/commit/d1df22bc04ca9be18d477d3421d39262fe4f496c))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.3.1...v0.3.2)**
+
 ## v0.3.1 (2021-09-07)
 ### Fix
 * Get rid of `DeprecationWarning` error(s) ([`f231ce4`](https://github.com/billsioros/cookiecutter-pypackage/commit/f231ce4b51fd0d722c356fc8dbde89185c403fe7))

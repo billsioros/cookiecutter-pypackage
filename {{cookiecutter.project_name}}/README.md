@@ -1,5 +1,7 @@
 <h1 align="center">🐍 {{ cookiecutter.project_name.replace('-', ' ').title() }}</h1>
 
+<h2 align="center">🐍 {{ cookiecutter.project_description }}</h2>
+
 <p align="center">
   <a href="https://www.python.org/">
     <img

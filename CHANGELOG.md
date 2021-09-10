@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.3.3 (2021-09-10)
+### Fix
+* **main:** Print actual `cmd` on `post_gen_hooks` error ([`aca2b29`](https://github.com/billsioros/cookiecutter-pypackage/commit/aca2b29f934b95dc91e9b641cfaba4c3649dab22))
+
+### Documentation
+* **main:** Add license scanning badge to `README` ([`fed96ac`](https://github.com/billsioros/cookiecutter-pypackage/commit/fed96ac0826faf246010a3420c397ba0238fec1f))
+* **template:** Add license scanning badge to `README` ([`e1a5f11`](https://github.com/billsioros/cookiecutter-pypackage/commit/e1a5f11c004c33f8f84a298fcb03ef4f8606df4a))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.3.2...v0.3.3)**
+
 ## v0.3.2 (2021-09-09)
 ### Fix
 * **main:** Remove invalid `type-check` testenv from `tox.ini` ([`591e270`](https://github.com/billsioros/cookiecutter-pypackage/commit/591e27041393c123440de756d5140dc363943de2))

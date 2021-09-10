@@ -14,7 +14,7 @@ def transactional(method):
             for cmd in method(*args, **kwargs):
                 subprocess.run(cmd, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError) as expected_error:
-            error_message = 'Skipping \'{0}\'... ({1})'.format(' '.join(args), expected_error)
+            error_message = 'Skipping \'{0}\'... ({1})'.format(' '.join(cmd), expected_error)
         except Exception as unexpected_error:
             error_message = 'An unexpected error occurred! ({0})'.format(
                 unexpected_error,

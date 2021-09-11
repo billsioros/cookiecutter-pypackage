@@ -60,7 +60,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 
 * Dependency tracking using [`Poetry`](https://python-poetry.org/)
 * Test automation with [`Tox`](https://github.com/tox-dev/tox)
-* Documentation with [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`GitHub Pages`](https://pages.github.com/)
+* Documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/) and [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and hosted on [`GitHub Pages`](https://pages.github.com/)
 * Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/)
 * Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
 * Testing setup with [`pytest`](https://github.com/pytest-dev/pytest)
@@ -68,7 +68,6 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Static type checking by [`mypy`](https://github.com/python/mypy)
 * Security checks with [`CodeQL`](https://github.com/github/codeql-action)
 * Linting provided by [`Flakehell`](https://github.com/flakehell/flakehell) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
-* Automatic documentation from source code via [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/)
 * Git hooks managed by [`pre-commit`](https://pre-commit.com/).
 * Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet)
 * CI facilitated by [`Github Actions`](https://github.com/features/actions)

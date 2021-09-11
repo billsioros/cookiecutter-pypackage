@@ -1,6 +1,6 @@
-<h1 align="center">🐍 {{ cookiecutter.project_name.replace('-', ' ').title() }}</h1>
+<h1 align="center">{{ cookiecutter.project_name.replace('-', ' ').title() }}</h1>
 
-<h2 align="center">🐍 {{ cookiecutter.project_description }}</h2>
+<p align="center"><em>{{ cookiecutter.project_description }}</em></p>
 
 <p align="center">
   <a href="https://www.python.org/">
@@ -73,35 +73,33 @@
   </a>
 </p>
 
-## Example Usage
+## :bulb: Example
 
 ```python
 >>> from {{cookiecutter.package_name}} import {{cookiecutter.package_name}}
 ```
 
-## Features
+## :rocket: Features
 
 - TODO
 
-## Documentation
+## :book: Documentation
 
 The project's documentation can be found [here](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/).
 
-## Installation
+## :cd: Installation
 
 ```bash
-pip install {{cookiecutter.project_name}}
+pip install {{cookiecutter.package_name}}
 ```
 
-## Supporting the project
+## :heart: Support the project
 
 Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
 
-## Contributing
+## :sparkles: Contributing
 
 If you would like to contribute to the project, please go through the [Contributing Guidelines](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/latest/CONTRIBUTING/) first.
-
-## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -115,7 +113,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
-## 📃 Citation
+## :bookmark_tabs: Citation
 
 ```bibtex
 {% raw %}@misc{{% endraw %}{{ cookiecutter.project_name }},
@@ -128,6 +126,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 }
 ```
 
-## 🚀 Credits
+## :label: Credits
 
 This project was generated with [`billsioros/cookiecutter-pypackage`](https://github.com/billsioros/cookiecutter-pypackage) cookiecutter template.

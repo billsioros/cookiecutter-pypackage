@@ -1,7 +1,7 @@
 {
   "project_name": "cookiecutter-pypackage",
   "package_name": "{{ cookiecutter.project_name.replace('-', '_').replace(' ', '_').lower() }}",
-  "project_description": "🐍 An awesome python package by the name `{{ cookiecutter.project_name.replace('-', ' ').title() }}`",
+  "project_description": "🐍 An awesome python package by the name {{ cookiecutter.project_name.replace('-', ' ').title() }}",
   "author": "Vasilis Sioros",
   "email": "billsioros97@gmail.com",
   "github_user": "billsioros",

@@ -90,7 +90,7 @@ The project's documentation can be found [here](https://{{cookiecutter.github_us
 ## :cd: Installation
 
 ```bash
-pip install {{cookiecutter.package_name}}
+pip install {{cookiecutter.project_name}}
 ```
 
 ## :heart: Support the project

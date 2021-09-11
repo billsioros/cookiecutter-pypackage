@@ -64,6 +64,7 @@ jobs:
           mv cookiecutter-pypackage-instance/.[!.]* .
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}

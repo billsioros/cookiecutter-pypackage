@@ -64,19 +64,19 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/)
 * Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
 * Testing setup with [`pytest`](https://github.com/pytest-dev/pytest)
-* Coverage reports with [Coverage.py](https://github.com/nedbat/coveragepy) and [Codecov](https://docs.codecov.com/docs)
+* Coverage reports with [`Coverage.py`](https://github.com/nedbat/coveragepy) and [`Codecov`](https://docs.codecov.com/docs)
 * Static type checking by [`mypy`](https://github.com/python/mypy)
 * Security checks with [`CodeQL`](https://github.com/github/codeql-action)
 * Linting provided by [`Flakehell`](https://github.com/flakehell/flakehell) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
 * Automatic documentation from source code via [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/)
 * Git hooks managed by [`pre-commit`](https://pre-commit.com/).
 * Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet)
-* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1)
 * CI facilitated by [`Github Actions`](https://github.com/features/actions)
-* CD facilitated by [`Github Actions`](https://github.com/features/actions) and [`Python Semantic Release`](https://github.com/relekang/python-semantic-release)
-  * Automated CHANGELOG auto-generation
-  * Automated [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
-  * Automated releases to [`PyPI`](https://pypi.org/)
+* Automated CHANGELOG generation, [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) and [`PyPI releases`](https://pypi.org/) facilitated by [`Python Semantic Release`](https://github.com/relekang/python-semantic-release)
+* License scanning provided by [`FOSSA`](https://fossa.com/)
+* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1)
+* Preview documentation changes introduced via a PR on [`surge`](https://surge.sh/)
+* Automatically fix typos in your source code and documentation via [`Misspell Fixer`](https://github.com/sobolevn/misspell-fixer-action)
 
 > The template supports Python 3.7 or higher.
 

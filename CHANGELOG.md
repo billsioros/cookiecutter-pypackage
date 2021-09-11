@@ -6,6 +6,21 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.3.4 (2021-09-11)
+### Fix
+* **main:** Add cpr `id` to `peter-evans/create-pull-request` ([`0f56e29`](https://github.com/billsioros/cookiecutter-pypackage/commit/0f56e29edfa302089f28e9d5d4707df1df24b4bf))
+
+### Documentation
+* **main:** Mention some more features ([`4ae367c`](https://github.com/billsioros/cookiecutter-pypackage/commit/4ae367ccd2d10443128d50c6e89646332b981dd9))
+* **template:** Change `pip install` directive ([`cf8cb37`](https://github.com/billsioros/cookiecutter-pypackage/commit/cf8cb37325288b0e6d3719bc2aa18b43de1a2935))
+* **main:** Add missing feature links ([`46d8cbe`](https://github.com/billsioros/cookiecutter-pypackage/commit/46d8cbe2bb4b80e9c820f9b14d6d7516a3045459))
+* **template:** Add icons ([`af8d403`](https://github.com/billsioros/cookiecutter-pypackage/commit/af8d40383402963d4716b6c2c70b5e0d568ca604))
+* **main:** Include features section ([`f379f55`](https://github.com/billsioros/cookiecutter-pypackage/commit/f379f55c8c71229ded7e1ead0362387ab24a5c7a))
+* **template:** Add citation ([`50323eb`](https://github.com/billsioros/cookiecutter-pypackage/commit/50323ebc9f220a54c34c9636f020401d916d3b12))
+* **template:** Add project description ([`5c0b05a`](https://github.com/billsioros/cookiecutter-pypackage/commit/5c0b05ad17aedbc67ecd5f021537f688868c1baa))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.3.3...v0.3.4)**
+
 ## v0.3.3 (2021-09-10)
 ### Fix
 * **main:** Print actual `cmd` on `post_gen_hooks` error ([`aca2b29`](https://github.com/billsioros/cookiecutter-pypackage/commit/aca2b29f934b95dc91e9b641cfaba4c3649dab22))

@@ -54,16 +54,18 @@ and generate a `Python` package project:
 cookiecutter gh:billsioros/cookiecutter-pypackage
 ```
 
+> An up-to-date instance of the cookicutter template can be found [here](https://github.com/billsioros/cookiecutter-pypackage-instance)
+
 ## :rocket: Features
 
 * Dependency tracking using [`Poetry`](https://python-poetry.org/)
 * Test automation with [`Tox`](https://github.com/tox-dev/tox)
 * Documentation with [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`GitHub Pages`](https://pages.github.com/)
 * Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/)
-* Formatting provided by [Black][black] and [Isort][isort]
-* Testing setup with [Pytest][pytest]
-* Coverage reports on [Codecov][codecov]
-* Static type checking by [Mypy][mypy]
+* Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
+* Testing setup with [`pytest`](https://github.com/pytest-dev/pytest)
+* Coverage reports with [Coverage.py](https://github.com/nedbat/coveragepy) and [Codecov](https://docs.codecov.com/docs)
+* Static type checking by [`mypy`](https://github.com/python/mypy)
 * Security checks with [`CodeQL`](https://github.com/github/codeql-action)
 * Linting provided by [`Flakehell`](https://github.com/flakehell/flakehell) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
 * Automatic documentation from source code via [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/)
@@ -76,7 +78,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
   * Automated [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
   * Automated releases to [`PyPI`](https://pypi.org/)
 
-The template supports Python 3.6, 3.7, 3.8, and 3.9.
+> The template supports Python 3.7 or higher.
 
 ## :book: Documentation
 

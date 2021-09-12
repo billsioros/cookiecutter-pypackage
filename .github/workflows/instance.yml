@@ -71,6 +71,8 @@ jobs:
           title: '🚀 Reset the cookiecutter template instance'
           body: >
             Resetting the instance of my [**Cookiecutter template**](https://github.com/billsioros/cookiecutter-pypackage)!
+
+            > The corresponding workflow run can be found [here](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
           commit-message: '${{ env.COMMIT_MESSAGE }} `mirror`'
           labels: ":sparkles: enhancement"
           assignees: billsioros

@@ -60,7 +60,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 
 * Dependency tracking using [`Poetry`](https://python-poetry.org/)
 * Test automation with [`Tox`](https://github.com/tox-dev/tox)
-* Documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/) and [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and hosted on [`GitHub Pages`](https://pages.github.com/)
+* Multi-version documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`mike`](https://github.com/jimporter/mike) and hosted on [`GitHub Pages`](https://pages.github.com/)
 * Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/)
 * Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
 * Testing setup with [`pytest`](https://github.com/pytest-dev/pytest)

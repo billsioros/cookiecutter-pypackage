@@ -72,10 +72,21 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet)
 * CI facilitated by [`Github Actions`](https://github.com/features/actions)
 * Automated CHANGELOG generation, [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) and [`PyPI releases`](https://pypi.org/) facilitated by [`Python Semantic Release`](https://github.com/relekang/python-semantic-release)
-* License scanning provided by [`FOSSA`](https://fossa.com/)
-* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1)
 * Preview documentation changes introduced via a PR on [`surge`](https://surge.sh/)
 * Automatically fix typos in your source code and documentation via [`Misspell Fixer`](https://github.com/sobolevn/misspell-fixer-action)
+* Beautiful [`YAML issue templates`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms)
+* Informative [`PR template`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) and [`Security Policy`](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
+* Inform new contributors about the project's guidelines using [`First Interaction`](https://github.com/actions/first-interaction)
+* Add informative comments on issues & PRs based on assigned labels using [`Label Commenter`](https://github.com/peaceiris/actions-label-commenter)
+* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1)
+* License scanning provided by [`FOSSA`](https://fossa.com/)
+* Automatically update the copyright year span using [`Update License Year`](https://github.com/FantasticFiasco/action-update-license-year)
+* Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/)
+* Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale)
+* Ready-to-use configuration to recognize the effors of [`All Contributors`](https://allcontributors.org/)
+* Ready-to-use configuration to automate code reviews using [`deepsource`](https://deepsource.io/)
+* Ready-to-use `.editorconfig` and `.gitignore`
+* Be always ready to code using automated dev environments hosted on [`Gitpod`](https://www.gitpod.io/)
 
 > The template supports Python 3.7 or higher.
 

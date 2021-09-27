@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2021-09-27)
+### Feature
+* **main:** Update `pre-commit` hooks on cookiecutter generation ([`1ebaeee`](https://github.com/billsioros/cookiecutter-pypackage/commit/1ebaeee507e3895e95d0c7e903906d69e88a744e))
+
+### Documentation
+* **main:** Mentioned `dependabot` ([`560c8ee`](https://github.com/billsioros/cookiecutter-pypackage/commit/560c8ee3db0869c74f0fdd0c72c2ef85d0733a5a))
+* **main:** Reference `mike` in features ([`fc50f59`](https://github.com/billsioros/cookiecutter-pypackage/commit/fc50f598de34da4514c67c736773d84ed2644320))
+* **main:** Mention a few more features ([`a70a390`](https://github.com/billsioros/cookiecutter-pypackage/commit/a70a390e7baf8095357a7ab19f5d19011bde3d60))
+* **main:** Mention `mkdocstrings` ([`ea529fa`](https://github.com/billsioros/cookiecutter-pypackage/commit/ea529fac1b69a7158b43fc8658b55386d5ec3e1f))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.3.4...v0.4.0)**
+
 ## v0.3.4 (2021-09-11)
 ### Fix
 * **main:** Add cpr `id` to `peter-evans/create-pull-request` ([`0f56e29`](https://github.com/billsioros/cookiecutter-pypackage/commit/0f56e29edfa302089f28e9d5d4707df1df24b4bf))

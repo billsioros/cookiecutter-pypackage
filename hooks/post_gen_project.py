@@ -45,6 +45,7 @@ def initialize_repository():
 @transactional
 def install_precommit_hooks():
     yield 'pre-commit', 'install', '--install-hooks'
+    yield 'pre-commit', 'autoupdate'
 
 
 def generate_license():

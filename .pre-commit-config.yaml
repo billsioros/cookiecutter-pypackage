@@ -58,14 +58,6 @@ repos:
     hooks:
       - id: tox-ini-fmt
         exclude: ^{{cookiecutter.project_name}}
-  - repo: local
-    hooks:
-      - id: export-requirements
-        name: export-requirements
-        language: system
-        pass_filenames: false
-        entry: poetry export --without-hashes --dev -o requirements.txt
-        files: ^(pyproject.toml|poetry.lock)$
   - repo: meta
     hooks:
       - id: check-hooks-apply

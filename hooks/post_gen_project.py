@@ -30,6 +30,7 @@ def transactional(method):
 def install_dependencies():
     yield 'poetry', 'shell'
     yield 'poetry', 'install'
+    yield 'poetry', 'update'
 
 
 @transactional

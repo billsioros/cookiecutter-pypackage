@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2022-05-12)
+### Feature
+* `post_gen` hook now updates deps ([`4b1a964`](https://github.com/billsioros/cookiecutter-pypackage/commit/4b1a9645ba94966bcb8dc0f042a7fd0e3f899e4c))
+
+### Documentation
+* **license:** Update copyright year(s) ([`2a839c3`](https://github.com/billsioros/cookiecutter-pypackage/commit/2a839c31541d7ea032d490cdb4837c110c7ed008))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.4.0...v0.5.0)**
+
 ## v0.4.0 (2021-09-27)
 ### Feature
 * **main:** Update `pre-commit` hooks on cookiecutter generation ([`1ebaeee`](https://github.com/billsioros/cookiecutter-pypackage/commit/1ebaeee507e3895e95d0c7e903906d69e88a744e))

@@ -11,14 +11,12 @@ on:
     paths:
       - 'cookiecutter-pypackage/**/*.py'
       - 'pyproject.toml'
-      - 'poetry.lock'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [master]
     paths:
       - 'cookiecutter-pypackage/**/*.py'
       - 'pyproject.toml'
-      - 'poetry.lock'
   schedule:
     - cron: "0 23 * * *"
 

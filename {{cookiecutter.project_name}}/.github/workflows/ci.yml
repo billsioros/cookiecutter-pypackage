@@ -7,14 +7,12 @@ on:
       - '{{cookiecutter.package_name}}/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
-      - 'poetry.lock'
   pull_request:
     branches: [master]
     paths:
       - '{{cookiecutter.package_name}}/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
-      - 'poetry.lock'
 
 jobs:
   tox:

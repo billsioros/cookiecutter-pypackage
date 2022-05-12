@@ -1,5 +1,4 @@
 ci:
-  skip: [export-requirements]
   autofix_commit_msg: 'refactor: `pre-commit.ci` auto fix'
   autofix_prs: true
   autoupdate_commit_msg: 'ci: `pre-commit.ci` auto update'
@@ -39,7 +38,7 @@ repos:
       - id: debug-statements
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.24.0
+    rev: v2.25.0
     hooks:
       - id: commitizen
         stages: [commit-msg]
@@ -58,14 +57,6 @@ repos:
     hooks:
       - id: tox-ini-fmt
         exclude: ^{{cookiecutter.project_name}}
-  - repo: local
-    hooks:
-      - id: export-requirements
-        name: export-requirements
-        language: system
-        pass_filenames: false
-        entry: poetry export --without-hashes --dev -o requirements.txt
-        files: ^(pyproject.toml|poetry.lock)$
   - repo: meta
     hooks:
       - id: check-hooks-apply

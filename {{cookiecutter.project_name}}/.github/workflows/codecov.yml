@@ -6,7 +6,6 @@ on:
     - '{{cookiecutter.package_name}}/**/*.py'
     - 'tests/**/*.py'
     - 'pyproject.toml'
-    - 'poetry.lock'
 
 jobs:
   codecov:

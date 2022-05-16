@@ -131,7 +131,7 @@ def test_bake_selecting_license(cookies, license_name, license_text_span):
     [
         "poetry run black --check .",
         "poetry run isort --check .",
-        "poetry run flakehell lint",
+        "poetry run flakeheaven lint",
         "poetry run pytest",
         "poetry run mypy",
     ],

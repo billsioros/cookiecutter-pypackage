@@ -12,6 +12,8 @@ def transactional(method):
 
         try:
             for cmd in method(*args, **kwargs):
+                print('\n> Running \'{0}\''.format(' '.join(cmd)))
+
                 subprocess.run(cmd, check=True)
         except (subprocess.CalledProcessError, FileNotFoundError) as expected_error:
             error_message = 'Skipping \'{0}\'... ({1})'.format(' '.join(cmd), expected_error)
@@ -21,7 +23,7 @@ def transactional(method):
             )
         finally:
             if error_message is not None:
-                raise ValueError(error_message)
+                raise RuntimeError(error_message)
 
     return wrapper
 
@@ -56,7 +58,7 @@ def generate_license():
         shutil.move(str(cwd / 'licenses' / '{{cookiecutter.license}}.txt'), str(cwd / 'LICENSE'))
         shutil.rmtree(str(cwd / 'licenses'))
     except Exception as exception:
-        raise ValueError(
+        raise RuntimeError(
             'License generation failed ({0})'.format(
                 exception,
             )
@@ -73,7 +75,7 @@ if '{{cookiecutter.skip_setup}}' == 'False':
     ]:
         try:
             task()
-        except ValueError as value_error:
+        except (RuntimeError, KeyboardInterrupt) as value_error:
             print(
                 'ERROR: {0}'.format(
                     value_error,

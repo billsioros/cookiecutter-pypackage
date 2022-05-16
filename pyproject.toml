@@ -31,11 +31,9 @@ python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 python-semantic-release = "^7.15.3"
-flake8 = "^3.9.2"
-flakehell = "^0.9.0"
-wemake-python-styleguide = "^0.15.2"
+wemake-python-styleguide = "0.16.1"
+flakeheaven = "^0.11.1"
 isort = "^5.9.3"
-black = "^20.8b1"
 pre-commit = "^2.12.1"
 poethepoet = "^0.10.0"
 pytest = "^6.2.4"
@@ -53,6 +51,7 @@ mkdocstrings = "^0.15.0"
 mdx-truly-sane-lists = "^1.2"
 mike = "^1.0.1"
 pytest-cookies = "^0.6.1"
+black = "^22.3.0"
 
 [tool.semantic_release]
 upload_to_pypi = false
@@ -69,7 +68,7 @@ clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache", help = "Clean
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
 test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite" }
-lint = { cmd = "poetry run flakehell lint", help = "Lint your code for errors" }
+lint = { cmd = "poetry run flakeheaven lint", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
 
@@ -94,7 +93,7 @@ target-version = ["py37", "py38"]
 skip-string-normalization = true
 exclude = "{{cookiecutter.project_name}}"
 
-[tool.flakehell]
+[tool.flakeheaven]
 exclude = [
   ".git",
   ".github",
@@ -117,7 +116,7 @@ max_line_length = 99
 
 extended_default_ignore = []
 
-[tool.flakehell.plugins]
+[tool.flakeheaven.plugins]
 "flake8-*" = ["+*"]
 mccabe = ["+*"]
 nitpick = ["+*"]

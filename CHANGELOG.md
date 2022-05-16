@@ -6,6 +6,15 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2022-05-16)
+### Feature
+* Replace `flakehell` with `flakeheaven` ([`005278a`](https://github.com/billsioros/cookiecutter-pypackage/commit/005278a00fde4d2b435614812a03700d61b9f15e))
+
+### Fix
+* Update `black` formatter ([`79f602e`](https://github.com/billsioros/cookiecutter-pypackage/commit/79f602e20e9769d778273b34d3575a13330feda3))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.5.0...v0.6.0)**
+
 ## v0.5.0 (2022-05-12)
 ### Feature
 * `post_gen` hook now updates deps ([`4b1a964`](https://github.com/billsioros/cookiecutter-pypackage/commit/4b1a9645ba94966bcb8dc0f042a7fd0e3f899e4c))

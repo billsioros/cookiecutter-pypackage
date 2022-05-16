@@ -67,7 +67,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Coverage reports with [`Coverage.py`](https://github.com/nedbat/coveragepy) and [`Codecov`](https://docs.codecov.com/docs)
 * Static type checking by [`mypy`](https://github.com/python/mypy)
 * Security checks with [`CodeQL`](https://github.com/github/codeql-action)
-* Linting provided by [`Flakehell`](https://github.com/flakehell/flakehell) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
+* Linting provided by [`Flakeheaven`](https://github.com/flakeheaven/flakeheaven) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
 * Git hooks managed by [`pre-commit`](https://pre-commit.com/).
 * Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet)
 * CI facilitated by [`Github Actions`](https://github.com/features/actions)

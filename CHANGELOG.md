@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v0.7.0 (2022-05-17)
+### Feature
+* Add `check-jsonschema` hook ([`0bc2517`](https://github.com/billsioros/cookiecutter-pypackage/commit/0bc25171e043c603c6d9a3d5278ba6d62e7c89d4))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.6.0...v0.7.0)**
+
 ## v0.6.0 (2022-05-16)
 ### Feature
 * Replace `flakehell` with `flakeheaven` ([`005278a`](https://github.com/billsioros/cookiecutter-pypackage/commit/005278a00fde4d2b435614812a03700d61b9f15e))

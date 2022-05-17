@@ -57,6 +57,10 @@ repos:
     hooks:
       - id: tox-ini-fmt
         exclude: ^{{cookiecutter.project_name}}
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.15.0
+    hooks:
+      - id: check-github-workflows
   - repo: meta
     hooks:
       - id: check-hooks-apply

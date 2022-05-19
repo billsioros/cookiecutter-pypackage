@@ -55,7 +55,9 @@ def install_precommit_hooks():
 def clean_up_cli():
     try:
         if '{{cookiecutter.cli}}' == 'False':
-            os.remove('{{cookiecutter.project_name}}/src/{{cookiecutter.project_name}}/__main__.py')
+            os.remove(
+                '{{cookiecutter.project_name}}/src/{{cookiecutter.project_name}}/__main__.py'
+            )
     except Exception as exception:
         raise RuntimeError(
             'Cleaning up CLI components failed ({0})'.format(
@@ -76,6 +78,7 @@ def generate_license():
                 exception,
             )
         )
+
 
 for task in [generate_license, clean_up_cli]:
     try:

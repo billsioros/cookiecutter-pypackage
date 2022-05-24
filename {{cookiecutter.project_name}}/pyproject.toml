@@ -28,6 +28,13 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
+{%- if cookiecutter.cli|lower == 'yes' %}
+rich = "^12.4.0"
+click = "^8.0.0"
+requests = "^2.0.0"
+textual = "^0.1.18"
+rich-rst = "^1.1.7"
+{%- endif %}
 
 [tool.poetry.dev-dependencies]
 python-semantic-release = "^7.15.3"
@@ -54,6 +61,11 @@ mkdocs-redirects = "^1.0.3"
 mkdocstrings = "^0.15.0"
 mdx-truly-sane-lists = "^1.2"
 mike = "^1.0.1"
+
+{% if cookiecutter.cli|lower == 'yes' -%}
+[tool.poetry.scripts]
+{{ cookiecutter.project_name }} = '{{ cookiecutter.project_name }}.__main__:main'
+{% endif -%}
 
 [tool.semantic_release]
 version_toml = "pyproject.toml:tool.poetry.version"

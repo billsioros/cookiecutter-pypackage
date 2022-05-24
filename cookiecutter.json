@@ -22,5 +22,6 @@
     "mpl-2.0",
     "unlicense"
   ],
-  "skip_setup": false
+  "skip_setup": false,
+  "cli": true
 }

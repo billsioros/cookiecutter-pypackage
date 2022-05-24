@@ -1,4 +1,5 @@
 import functools
+import os
 import pathlib
 import shutil
 import subprocess
@@ -51,6 +52,25 @@ def install_precommit_hooks():
     yield 'pre-commit', 'autoupdate'
 
 
+def clean_up_cli():
+    paths_to_remove = [
+        '{{cookiecutter.project_name}}/src/{{cookiecutter.project_name}}/__main__.py',
+        '{{cookiecutter.project_name}}/Dockerfile',
+        '{{cookiecutter.project_name}}/.dockerignore',
+    ]
+
+    try:
+        if '{{cookiecutter.cli}}' == 'False':
+            for path in paths_to_remove:
+                os.remove(path)
+    except Exception as exception:
+        raise RuntimeError(
+            'Cleaning up CLI components failed ({0})'.format(
+                exception,
+            )
+        )
+
+
 def generate_license():
     try:
         cwd = pathlib.Path.cwd()
@@ -65,7 +85,17 @@ def generate_license():
         )
 
 
-generate_license()
+for task in [generate_license, clean_up_cli]:
+    try:
+        task()
+    except (RuntimeError, KeyboardInterrupt) as value_error:
+        print(
+            'ERROR: {0}'.format(
+                value_error,
+            )
+        )  # noqa: WPS421
+        sys.exit(1)
+
 
 if '{{cookiecutter.skip_setup}}' == 'False':
     for task in [

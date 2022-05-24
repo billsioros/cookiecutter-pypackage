@@ -1,54 +1,55 @@
+---
 name: CI
 
 on:
-  push:
-    branches: [master]
-    paths:
-      - 'cookiecutter-pypackage/**/*.py'
-      - 'tests/**/*.py'
-      - 'pyproject.toml'
-  pull_request:
-    branches: [master]
-    paths:
-      - 'cookiecutter-pypackage/**/*.py'
-      - 'tests/**/*.py'
-      - 'pyproject.toml'
+    push:
+        branches: [master]
+        paths:
+            - cookiecutter-pypackage/**/*.py
+            - tests/**/*.py
+            - pyproject.toml
+    pull_request:
+        branches: [master]
+        paths:
+            - cookiecutter-pypackage/**/*.py
+            - tests/**/*.py
+            - pyproject.toml
 
 jobs:
-  tox:
-    runs-on: ${{ matrix.platform }}
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest]
-        python-version: [3.7, 3.8, 3.9]
-    steps:
-      - uses: actions/checkout@v2
+    tox:
+        runs-on: ${{ matrix.platform }}
+        strategy:
+            matrix:
+                platform: [ubuntu-latest, macos-latest]
+                python-version: [3.7, 3.8, 3.9]
+        steps:
+            - uses: actions/checkout@v2
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v2
+              with:
+                  python-version: ${{ matrix.python-version }}
 
-      - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.1.2
-        with:
-          poetry-version: 1.1.8
+            - name: Install Poetry
+              uses: abatilo/actions-poetry@v2.1.2
+              with:
+                  poetry-version: 1.1.8
 
-      - name: Configure Poetry
-        run: |
-          poetry config virtualenvs.in-project true
+            - name: Configure Poetry
+              run: |
+                  poetry config virtualenvs.in-project true
 
-      - name: Set up cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: |
-            .tox
-            .venv
-          key: ${{ matrix.platform }}-tox-venv-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
+            - name: Set up cache
+              uses: actions/cache@v2.1.6
+              with:
+                  path: |
+                      .tox
+                      .venv
+                  key: ${{ matrix.platform }}-tox-venv-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
 
-      - name: Install dependencies
-        run: |
-          poetry install
+            - name: Install dependencies
+              run: |
+                  poetry install
 
-      - name: Test with tox
-        run: poetry run python -m tox
+            - name: Test with tox
+              run: poetry run python -m tox

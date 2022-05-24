@@ -53,11 +53,16 @@ def install_precommit_hooks():
 
 
 def clean_up_cli():
+    paths_to_remove = [
+        '{{cookiecutter.project_name}}/src/{{cookiecutter.project_name}}/__main__.py',
+        '{{cookiecutter.project_name}}/Dockerfile',
+        '{{cookiecutter.project_name}}/.dockerignore',
+    ]
+
     try:
         if '{{cookiecutter.cli}}' == 'False':
-            os.remove(
-                '{{cookiecutter.project_name}}/src/{{cookiecutter.project_name}}/__main__.py'
-            )
+            for path in paths_to_remove:
+                os.remove(path)
     except Exception as exception:
         raise RuntimeError(
             'Cleaning up CLI components failed ({0})'.format(

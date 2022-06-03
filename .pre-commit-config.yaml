@@ -22,7 +22,7 @@ repos:
         language_version: python3
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/flakeheaven/flakeheaven
-    rev: 0.11.1
+    rev: 1.0.1
     hooks:
     - id: flakeheaven
       exclude: ^docs|tests|{{cookiecutter.project_name}}
@@ -38,7 +38,7 @@ repos:
       - id: debug-statements
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.27.0
+    rev: v2.27.1
     hooks:
       - id: commitizen
         stages: [commit-msg]
@@ -58,7 +58,7 @@ repos:
       - id: tox-ini-fmt
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.15.0
+    rev: 0.15.1
     hooks:
       - id: check-github-workflows
   - repo: meta

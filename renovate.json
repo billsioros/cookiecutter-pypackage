@@ -1,5 +1,13 @@
 {
+  "labels": [
+    ":game_die: dependencies"
+  ],
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "schedule:daily"
+  ],
+  "assignees": [
+    "billsioros"
+  ],
+  "automerge": true
 }

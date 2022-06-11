@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 2
 
@@ -31,7 +31,7 @@ jobs:
           pip install -U pip cookiecutter
 
       - name: Check out cookiecutter-pypackage-instance
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: "billsioros/cookiecutter-pypackage-instance"
           ref: master

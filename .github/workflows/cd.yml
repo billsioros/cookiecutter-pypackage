@@ -20,7 +20,7 @@ jobs:
         run: |
           mkdir dist
 
-      - uses: relekang/python-semantic-release@v7.29.4
+      - uses: relekang/python-semantic-release@v7.31.4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}

@@ -37,7 +37,7 @@ isort = "^5.9.3"
 mypy = "^0.991"
 black = "^22.3.0"
 pre-commit = "^2.12.1"
-poethepoet = "^0.10.0"
+poethepoet = "^0.20.0"
 coverage = {extras = ["toml"], version = "^7.0"}
 pytest = "^6.2.4"
 pytest-cov = "^4.0.0"

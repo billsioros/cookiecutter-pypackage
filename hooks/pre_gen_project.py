@@ -69,21 +69,7 @@ def validate_semver() -> None:
         raise ValueError(message)
 
 
-def validate_skip_setup() -> None:
-    """Ensure `skip_setup` is boolean.
-
-    Raises:
-        ValueError: If `skip_setup` is not boolean
-    """
-    if '{{cookiecutter.skip_setup}}' not in {'False', 'True'}:
-        message = '`{0}` is not a boolean value'.format(
-            '{{cookiecutter.skip_setup}}',
-        )
-        raise ValueError(message)
-
-
 VALIDATORS = [
-    validate_skip_setup,
     validate_project_name,
     validate_package_name,
     validate_semver,

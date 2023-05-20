@@ -1,7 +1,5 @@
 name: Greetings
-
 on: [issues]
-
 jobs:
   greeting:
     runs-on: ubuntu-latest

@@ -16,9 +16,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
 ]
 
@@ -27,41 +24,32 @@ classifiers = [
 "Changelog" = "https://github.com/billsioros/cookiecutter-pypackage/releases"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 
 [tool.poetry.dev-dependencies]
-python-semantic-release = "^7.15.3"
-wemake-python-styleguide = "0.16.1"
-flakeheaven = "^0.11.1"
-isort = "^5.9.3"
-pre-commit = "^2.12.1"
-poethepoet = "^0.10.0"
-pytest = "^6.2.4"
-pytest-sugar = "^0.9.4"
-pytest-clarity = "^1.0.1"
-tox = "^3.23.0"
-tox-poetry-installer = { extras = ["poetry"], version = "^0.8.0" }
-tox-gh-actions = "^3.0.0"
-tox-pyenv = "^1.1.0"
-mkdocs = "^1.3.0"
-mkdocs-material = "^7.1.3"
-mkdocs-minify-plugin = "^0.4.0"
-mkdocs-redirects = "^1.0.3"
-mkdocstrings = "^0.15.0"
-mdx-truly-sane-lists = "^1.2"
-mike = "^1.0.1"
-pytest-cookies = "^0.6.1"
-black = "^22.3.0"
+python-semantic-release = "*"
+wemake-python-styleguide = "*"
+flakeheaven = "*"
+isort = "*"
+pre-commit = "*"
+poethepoet = "*"
+pytest = "*"
+pytest-sugar = "*"
+pytest-clarity = "*"
+mkdocs = "*"
+mkdocs-material = "*"
+mkdocs-minify-plugin = "*"
+mkdocs-redirects = "*"
+mdx-truly-sane-lists = "*"
+mike = "*"
+pytest-cookies = "*"
+black = "*"
 
 [tool.semantic_release]
 upload_to_pypi = false
 version_toml = "pyproject.toml:tool.poetry.version"
 changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
 build_command = false
-
-[tool.vulture]
-min_confidence = 95
-paths = ["cookiecutter-pypackage", "hooks", "tests"]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache", help = "Clean up any auxiliary files" }
@@ -98,7 +86,6 @@ exclude = [
   ".git",
   ".github",
   ".pytest_cache",
-  ".tox",
   ".vscode",
   ".venv",
   "docs",

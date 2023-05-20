@@ -19,7 +19,26 @@ nav:
 
 theme:
   name: material
-
+  features:
+    - search.suggest
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -30,8 +49,8 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
-      accent: teal
+      primary: green
+      accent: green
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -40,29 +59,44 @@ theme:
     code: Roboto Mono
 
 plugins:
-- search
-- mkdocstrings:
-    default_handler: python
-    handlers:
-      python:
-        rendering:
-          show_source: false
-- minify:
-    minify_html: true
+  - search
+  - mkdocstrings:
+      watch:
+        - src/{{ cookiecutter.project_name }}
+      default_handler: python
+      handlers:
+        python:
+          paths:
+            - src
+          rendering:
+            show_source: true
+          options:
+            docstring_style: google
+            docstring_options:
+            ignore_init_summary: yes
+            merge_init_into_class: yes
+            show_submodules: no
+  - minify:
+      minify_html: true
 
 markdown_extensions:
-- admonition
-- pymdownx.emoji
-- pymdownx.magiclink
-- pymdownx.snippets:
-    check_paths: true
-- pymdownx.superfences
-- pymdownx.tabbed
-- pymdownx.tasklist
-- toc:
-    permalink: "¤"
-- mdx_truly_sane_lists
+  - admonition
+  - pymdownx.emoji
+  - pymdownx.magiclink
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - toc:
+      permalink: ¤
+  - mdx_truly_sane_lists
 
 extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/billsioros
   version:
     provider: mike

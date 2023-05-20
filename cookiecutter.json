@@ -21,6 +21,5 @@
     "lgpl-2.1",
     "mpl-2.0",
     "unlicense"
-  ],
-  "skip_setup": false
+  ]
 }

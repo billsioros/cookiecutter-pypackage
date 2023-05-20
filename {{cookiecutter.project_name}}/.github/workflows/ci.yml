@@ -1,57 +1,40 @@
 name: CI
-
 on:
   push:
     branches: [master]
     paths:
-      - '{{cookiecutter.package_name}}/**/*.py'
+      - 'src/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
   pull_request:
     branches: [master]
     paths:
-      - '{{cookiecutter.package_name}}/**/*.py'
+      - 'src/**/*.py'
       - 'tests/**/*.py'
       - 'pyproject.toml'
-
 jobs:
-  tox:
-    runs-on: ${{ '{{' }} matrix.platform {{ '}}' }}
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.7, 3.8, 3.9]
-        exclude:
-          - platform: windows-latest
-            python-version: 3.8
+  test:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python ${{ '{{' }} matrix.python-version {{ '}}' }}
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: ${{ '{{' }} matrix.python-version {{ '}}' }}
-
+          python-version: 3.9
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.1.2
+        uses: abatilo/actions-poetry@v2.3.0
         with:
-          poetry-version: 1.1.8
-
+          poetry-version: 1.2.2
       - name: Configure Poetry
         run: |
           poetry config virtualenvs.in-project true
-
       - name: Set up cache
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v3.3.1
         with:
-          path: |
-            .tox
-            .venv
-          key: ${{ '{{' }} matrix.platform {{ '}}' }}-tox-venv-${{ '{{' }} matrix.python-version {{ '}}' }}-${{ '{{' }} hashFiles('**/poetry.lock') {{ '}}' }}
-
+          path: .venv
+          key: venv-${{ '{{' }} hashFiles('**/poetry.lock') {{ '}}' }}
       - name: Install dependencies
         run: |
           poetry install
-
-      - name: Test with tox
-        run: poetry run python -m tox
+      - name: Run the test suite
+        run: poetry run pytest

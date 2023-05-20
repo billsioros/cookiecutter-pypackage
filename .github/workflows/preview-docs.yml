@@ -1,5 +1,4 @@
 name: Preview Docs
-
 on:
   pull_request:
     branches:
@@ -9,37 +8,30 @@ on:
       - 'cookiecutter-pypackage/**/*.py'
       - 'docs/**'
       - '*.md'
-
 jobs:
   preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8
-
+          python-version: 3.9
       - name: Install Poetry
-        uses: abatilo/actions-poetry@v2.2.0
+        uses: abatilo/actions-poetry@v2.3.0
         with:
-          poetry-version: 1.1.8
-
+          poetry-version: 1.2.2
       - name: Configure Poetry
         run: |
           poetry config virtualenvs.in-project true
-
       - name: Set up cache
         uses: actions/cache@v3.2.1
         with:
           path: .venv
           key: venv-${{ hashFiles('**/poetry.lock') }}
-
       - name: Install dependencies
         run: |
           poetry install
-
       - uses: afc163/surge-preview@v1
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}

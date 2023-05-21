@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.0.1 (2023-05-21)
+### Fix
+* Add `mkdocstrings` python handler ([`8fa2cc6`](https://github.com/billsioros/cookiecutter-pypackage/commit/8fa2cc679a9b9cd1578c1ec30bd3660118c7aa7e))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.0.0...v1.0.1)**
+
 ## v1.0.0 (2023-05-21)
 ### Feature
 * Drop support for python versions < 3.9 ([`814152f`](https://github.com/billsioros/cookiecutter-pypackage/commit/814152f6e58dbf8c043a273a6c9fa327e1ddb8e0))

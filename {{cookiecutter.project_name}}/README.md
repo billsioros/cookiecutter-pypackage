@@ -73,25 +73,34 @@
   </a>
 </p>
 
-## :bulb: Example
-
-```python
->>> from {{cookiecutter.package_name}} import {{cookiecutter.package_name}}
-```
-
-## :rocket: Features
-
-- TODO
-
-## :book: Documentation
-
-The project's documentation can be found [here](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/).
-
 ## :cd: Installation
 
 ```bash
 pip install {{cookiecutter.project_name}}
 ```
+
+In order to locally set up the project please follow the instructions below:
+
+```shell
+# Set up the GitHub repository
+git init
+git config --local user.name {{cookiecutter.author}}
+git config --local user.email {{cookiecutter.email}}
+git add .
+git commit -m "feat: initial commit"
+git remote add origin {{cookiecutter.github_repository}}
+
+# Create a virtual environment using poetry and install the required dependencies
+poetry shell
+poetry install
+
+# Install pre-commit hooks
+pre-commit install --install-hooks
+```
+
+## :book: Documentation
+
+The project's documentation can be found [here](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/).
 
 ## :heart: Support the project
 
@@ -100,31 +109,6 @@ Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecut
 ## :sparkles: Contributing
 
 If you would like to contribute to the project, please go through the [Contributing Guidelines](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/latest/CONTRIBUTING/) first.
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-## :bookmark_tabs: Citation
-
-```bibtex
-{% raw %}@misc{{% endraw %}{{ cookiecutter.project_name }},
-  author = {% raw %}{{% endraw %}{{ cookiecutter.author }}{% raw %}}{% endraw %},
-  title = {% raw %}{{% endraw %}{{ cookiecutter.project_description }}{% raw %}}{% endraw %},
-  year = {% raw %}{{% endraw %}{% now 'utc', '%Y' %}{% raw %}}{% endraw %},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.project_name }}{% raw %}}}{% endraw %}
-}
-```
 
 ## :label: Credits
 

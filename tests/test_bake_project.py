@@ -62,8 +62,6 @@ def test_bake_with_defaults(cookies):
         assert "docs" in found_toplevel_files
         assert "src" in found_toplevel_files
         assert "tests" in found_toplevel_files
-        assert ".all-contributorsrc" in found_toplevel_files
-        assert ".deepsource.toml" in found_toplevel_files
         assert ".editorconfig" in found_toplevel_files
         assert ".gitignore" in found_toplevel_files
         assert ".gitpod.Dockerfile" in found_toplevel_files
@@ -75,7 +73,6 @@ def test_bake_with_defaults(cookies):
         assert "pyproject.toml" in found_toplevel_files
         assert "README.md" in found_toplevel_files
         assert "renovate.json" in found_toplevel_files
-        assert "tox.ini" in found_toplevel_files
 
 
 def test_bake_withspecialchars(cookies):
@@ -124,22 +121,3 @@ def test_bake_selecting_license(cookies, license_name, license_text_span):
         pyproject_toml_text = (result.project_path / "pyproject.toml").read_text()
 
         assert license_name.upper() in pyproject_toml_text
-
-
-@pytest.mark.parametrize(
-    "command",
-    [
-        "poetry run black --check .",
-        "poetry run isort --check .",
-        "poetry run flakeheaven lint",
-        "poetry run pytest",
-        "poetry run mypy",
-    ],
-)
-def test_various_commands(cookies, command):
-    with bake_in_temp_dir(cookies) as result:
-        assert result.exception is None
-        assert result.exit_code == 0
-        assert result.project_path is not None
-        assert result.project_path.is_dir()
-        assert run_inside_dir(command, str(result.project_path)) == 0

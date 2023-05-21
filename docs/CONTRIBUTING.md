@@ -61,19 +61,15 @@ The **cookiecutter-pypackage** project utilizes the [Poetry](https://python-poet
 
 The project utilizes the [pre-commit](https://pre-commit.com/) framework. Having [created a virtual environment and installed the required dependencies](#installing-poetry), you may run `pre-commit install --install-hooks` to install the [git hook scripts](https://github.com/billsioros/cookiecutter-pypackage/blob/master/.pre-commit-config.yaml).
 
-### Testing via `tox`
+### Testing via `pytest`
 
-> We are using [tox](https://tox.readthedocs.io/en/latest/index.html) to automate testing on multiple environments.
+> We are using [pytest](https://github.com/pytest-dev/pytest) to automate testing on multiple environments.
 
-- You can lint the code by simply running `tox -e lint`
-- Checking for type errors, using [Mypy](https://mypy.readthedocs.io/en/stable/), can be achieved via `tox -e type-check`
-- Checking if your changes follow the project's formatting standard can be done via `tox -e fmt-check`
-- You may run `tox -e py38` to run the library's unit tests using Python 3.8 (the `py37`, `py38` and `py39` test environments assume, you have installed **Python 3.7, 3.8 or 3.9** accordingly)
-- Alternatively, you may simply run `tox` to execute all of the above
+The test suite can be run using `poetry run poe test`.
 
 #### (Optional) Installing pyenv
 
-[pyenv](https://github.com/pyenv/pyenv) is used, in the context of the **cookiecutter-pypackage** project, in order to determine the project's compatibility with various versions of Python. Installing `pyenv` is not strictly required, but it is **strongly** recommended.
+[pyenv](https://github.com/pyenv/pyenv) is used, in the context of the **cookiecutter-pypackage** project, in order to determine the project's compatibility with various versions of Python. Installing `pyenv` is not strictly required, but it is recommended.
 
 Having installed `pyenv` in the **global** namespace, you may now run the following snippet, in order to install Python 3.7, 3.8 and 3.9, which, at the time of writing this document, are the only Python versions, supported by **cookiecutter-pypackage**.
 
@@ -81,8 +77,6 @@ Having installed `pyenv` in the **global** namespace, you may now run the follow
 pyenv install 3.7.10 3.8.9 3.9.4
 pyenv local 3.7.10 3.8.9 3.9.4
 ```
-
-You will now be able to run `tox` (an as a result any test environment subset `py3[7|8|9]`), without any test environment being skipped due to [skip_missing_interpreters](https://tox.readthedocs.io/en/latest/config.html#conf-skip_missing_interpreters).
 
 Feel free to read more about using `pyenv`, in the context of `poetry`, [here](https://blog.jayway.com/2019/12/28/pyenv-poetry-saviours-in-the-python-chaos/).
 

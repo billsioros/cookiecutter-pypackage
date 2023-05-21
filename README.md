@@ -59,7 +59,6 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 ## :rocket: Features
 
 * Dependency tracking using [`Poetry`](https://python-poetry.org/)
-* Test automation with [`Tox`](https://github.com/tox-dev/tox)
 * Multi-version documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`mike`](https://github.com/jimporter/mike) and hosted on [`GitHub Pages`](https://pages.github.com/)
 * Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/) and [`Dependabot`](https://dependabot.com/)
 * Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
@@ -83,12 +82,23 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Automatically update the copyright year span using [`Update License Year`](https://github.com/FantasticFiasco/action-update-license-year)
 * Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/)
 * Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale)
-* Ready-to-use configuration to recognize the effors of [`All Contributors`](https://allcontributors.org/)
-* Ready-to-use configuration to automate code reviews using [`deepsource`](https://deepsource.io/)
 * Ready-to-use `.editorconfig` and `.gitignore`
 * Be always ready to code using automated dev environments hosted on [`Gitpod`](https://www.gitpod.io/)
 
 > The template supports Python 3.7 or higher.
+
+## :bookmark_tabs: Citation
+
+```bibtex
+@misc{cookiecutter-pypackage,
+  author = {Vasilis Sioros},
+  title = {cookiecutter-pypackage: A strongly opinionated, bleeding-edge Python template},
+  year = {2023},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/billsioros/cookiecutter-pypackage}}
+}
+```
 
 ## :book: Documentation
 

@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2023-05-21)
+### Feature
+* Drop support for python versions < 3.9 ([`814152f`](https://github.com/billsioros/cookiecutter-pypackage/commit/814152f6e58dbf8c043a273a6c9fa327e1ddb8e0))
+
+### Breaking
+* drop support for python versions < 3.9 ([`814152f`](https://github.com/billsioros/cookiecutter-pypackage/commit/814152f6e58dbf8c043a273a6c9fa327e1ddb8e0))
+
+### Documentation
+* **license:** Update copyright year(s) ([`7c64691`](https://github.com/billsioros/cookiecutter-pypackage/commit/7c64691f2a12b9e2f5c433dff314ba440ccac7af))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v0.7.0...v1.0.0)**
+
 ## v0.7.0 (2022-05-17)
 ### Feature
 * Add `check-jsonschema` hook ([`0bc2517`](https://github.com/billsioros/cookiecutter-pypackage/commit/0bc25171e043c603c6d9a3d5278ba6d62e7c89d4))

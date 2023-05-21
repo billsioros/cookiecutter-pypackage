@@ -44,7 +44,7 @@ mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-minify-plugin = "*"
 mkdocs-redirects = "*"
-mkdocstrings = "*"
+mkdocstrings = { extras = ["python"], version = "*" }
 mdx-truly-sane-lists = "*"
 mike = "*"
 

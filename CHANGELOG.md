@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.0.2 (2023-05-21)
+### Fix
+* Enclose `secrets` in braces ([`4465b7c`](https://github.com/billsioros/cookiecutter-pypackage/commit/4465b7c44e902a0cbc4c814a37faa319f09743d9))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.0.1...v1.0.2)**
+
 ## v1.0.1 (2023-05-21)
 ### Fix
 * Add `mkdocstrings` python handler ([`8fa2cc6`](https://github.com/billsioros/cookiecutter-pypackage/commit/8fa2cc679a9b9cd1578c1ec30bd3660118c7aa7e))

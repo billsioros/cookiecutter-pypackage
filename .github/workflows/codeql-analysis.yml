@@ -8,13 +8,13 @@ on:
   push:
     branches: [master]
     paths:
-      - 'cookiecutter-pypackage/**/*.py'
+      - '{{\{\{cookiecutter.project_name\}\}'
       - 'pyproject.toml'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [master]
     paths:
-      - 'cookiecutter-pypackage/**/*.py'
+      - '{{\{\{cookiecutter.project_name\}\}'
       - 'pyproject.toml'
   schedule:
     - cron: "0 23 * * *"

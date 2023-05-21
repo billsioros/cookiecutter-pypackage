@@ -3,13 +3,13 @@ on:
   push:
     branches: [master]
     paths:
-      - 'cookiecutter-pypackage/**/*.py'
+      - '{{\{\{cookiecutter.project_name\}\}'
       - 'tests/**/*.py'
       - 'pyproject.toml'
   pull_request:
     branches: [master]
     paths:
-      - 'cookiecutter-pypackage/**/*.py'
+      - '{{\{\{cookiecutter.project_name\}\}'
       - 'tests/**/*.py'
       - 'pyproject.toml'
 jobs:

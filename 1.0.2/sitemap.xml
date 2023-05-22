@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://billsioros.github.io/cookiecutter-pypackage/1.0.2/</loc>
-         <lastmod>2023-05-21</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://billsioros.github.io/cookiecutter-pypackage/1.0.2/CHANGELOG/</loc>
-         <lastmod>2023-05-21</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://billsioros.github.io/cookiecutter-pypackage/1.0.2/CODE_OF_CONDUCT/</loc>
-         <lastmod>2023-05-21</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://billsioros.github.io/cookiecutter-pypackage/1.0.2/CONTRIBUTING/</loc>
-         <lastmod>2023-05-21</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://billsioros.github.io/cookiecutter-pypackage/1.0.2/LICENSE/</loc>
-         <lastmod>2023-05-21</lastmod>
+         <lastmod>2023-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

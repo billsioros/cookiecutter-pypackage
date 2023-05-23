@@ -3,7 +3,7 @@ description: Suggest a feature or improvement
 title: "🎁 "
 labels: [":bulb: feature request"]
 assignees:
-  - {? {cookiecutter.github_user: ''} : ''}
+  - {{cookiecutter.github_user}}
 body:
   - type: textarea
     id: change-description

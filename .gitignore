@@ -163,7 +163,4 @@ Thumbs.db #thumbnail cache on Windows
 # Secrets/Credentials Files
 .envrc
 
-# Flakeheaven
-.flakeheaven_cache
-
 # Custom

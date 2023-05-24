@@ -58,32 +58,32 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 
 ## :rocket: Features
 
-* Dependency tracking using [`Poetry`](https://python-poetry.org/)
-* Multi-version documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`mike`](https://github.com/jimporter/mike) and hosted on [`GitHub Pages`](https://pages.github.com/)
-* Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/) and [`Dependabot`](https://dependabot.com/)
-* Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort)
-* Testing setup with [`pytest`](https://github.com/pytest-dev/pytest)
-* Coverage reports with [`Coverage.py`](https://github.com/nedbat/coveragepy) and [`Codecov`](https://docs.codecov.com/docs)
-* Static type checking by [`mypy`](https://github.com/python/mypy)
-* Security checks with [`CodeQL`](https://github.com/github/codeql-action)
-* Linting provided by [`Flakeheaven`](https://github.com/flakeheaven/flakeheaven) and [`wemake-python-styleguide`](https://github.com/wemake-services/wemake-python-styleguide)
+* Dependency tracking using [`Poetry`](https://python-poetry.org/).
+* Multi-version documentation extracted from source code provided by [`MkDocs`](https://github.com/mkdocs/mkdocs/), [`mkdocstrings`](https://github.com/mkdocstrings/mkdocstrings/), [`Material for MkDocs`](https://github.com/squidfunk/mkdocs-material) and [`mike`](https://github.com/jimporter/mike) and hosted on [`GitHub Pages`](https://pages.github.com/).
+* Automated dependency and security updates with [`Renovate`](https://renovate.whitesourcesoftware.com/) and [`Dependabot`](https://dependabot.com/).
+* Formatting provided by [`black`](https://github.com/psf/black) and [`isort`](https://github.com/PyCQA/isort).
+* Testing setup with [`pytest`](https://github.com/pytest-dev/pytest).
+* Coverage reports with [`Coverage.py`](https://github.com/nedbat/coveragepy) and [`Codecov`](https://docs.codecov.com/docs).
+* Static type checking by [`mypy`](https://github.com/python/mypy).
+* Security checks with [`CodeQL`](https://github.com/github/codeql-action).
+* Linting provided by [`Ruff`](https://github.com/charliermarsh/ruff).
 * Git hooks managed by [`pre-commit`](https://pre-commit.com/).
-* Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet)
-* CI facilitated by [`Github Actions`](https://github.com/features/actions)
-* Automated CHANGELOG generation, [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) and [`PyPI releases`](https://pypi.org/) facilitated by [`Python Semantic Release`](https://github.com/relekang/python-semantic-release)
-* Preview documentation changes introduced via a PR on [`surge`](https://surge.sh/)
-* Automatically fix typos in your source code and documentation via [`Misspell Fixer`](https://github.com/sobolevn/misspell-fixer-action)
-* Beautiful [`YAML issue templates`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms)
-* Informative [`PR template`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) and [`Security Policy`](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository)
-* Inform new contributors about the project's guidelines using [`First Interaction`](https://github.com/actions/first-interaction)
-* Add informative comments on issues & PRs based on assigned labels using [`Label Commenter`](https://github.com/peaceiris/actions-label-commenter)
-* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1)
-* License scanning provided by [`FOSSA`](https://fossa.com/)
-* Automatically update the copyright year span using [`Update License Year`](https://github.com/FantasticFiasco/action-update-license-year)
-* Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/)
-* Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale)
-* Ready-to-use `.editorconfig` and `.gitignore`
-* Be always ready to code using automated dev environments hosted on [`Gitpod`](https://www.gitpod.io/)
+* Development tasks (lint, format, test, etc) provided by [`Poe The Poet`](https://github.com/nat-n/poethepoet).
+* CI facilitated by [`Github Actions`](https://github.com/features/actions).
+* Automated CHANGELOG generation, [`GitHub releases`](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) and [`PyPI releases`](https://pypi.org/) facilitated by [`Python Semantic Release`](https://github.com/relekang/python-semantic-release).
+* Preview documentation changes introduced via a PR on [`surge`](https://surge.sh/).
+* Automatically fix typos in your source code and documentation via [`Misspell Fixer`](https://github.com/sobolevn/misspell-fixer-action).
+* Beautiful [`YAML issue templates`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
+* Informative [`PR template`](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) and [`Security Policy`](https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository).
+* Inform new contributors about the project's guidelines using [`First Interaction`](https://github.com/actions/first-interaction).
+* Add informative comments on issues & PRs based on assigned labels using [`Label Commenter`](https://github.com/peaceiris/actions-label-commenter).
+* Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1).
+* License scanning provided by [`FOSSA`](https://fossa.com/).
+* Automatically update the copyright year span using [`Update License Year`](https://github.com/FantasticFiasco/action-update-license-year).
+* Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/).
+* Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale).
+* Ready-to-use `.editorconfig` and `.gitignore`.
+* Be always ready to code using automated dev environments hosted on [`Gitpod`](https://www.gitpod.io/).
 
 > The template supports Python 3.7 or higher.
 

@@ -26,10 +26,8 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 python-semantic-release = "*"
-wemake-python-styleguide = "*"
-flakeheaven = "*"
 isort = "*"
 mypy = "*"
 black = "*"
@@ -47,6 +45,7 @@ mkdocs-redirects = "*"
 mkdocstrings = { extras = ["python"], version = "*" }
 mdx-truly-sane-lists = "*"
 mike = "*"
+ruff = "*"
 
 [tool.semantic_release]
 version_toml = "pyproject.toml:tool.poetry.version"
@@ -63,7 +62,7 @@ format = { shell = "poetry run isort .; poetry run black .", help = "Format your
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
 test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
 type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
-lint = { cmd = "poetry run flakeheaven lint", help = "Lint your code for errors" }
+lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
 
@@ -114,38 +113,50 @@ show_error_codes = true
 show_error_context = true
 strict = true
 
-[tool.flakeheaven]
+
+[tool.ruff]
+select = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+ignore = []
+
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
 exclude = [
-  ".git",
-  ".github",
-  ".mypy_cache",
-  ".pytest_cache",
-  ".vscode",
-  ".venv",
-  "build",
-  "dist",
-  "docs",
-  "tests",
-  "__pycache__",
-  "README.md"
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
 ]
-format = "colored"
-show_source = false
-statistics = false
-docstring-convention = "google"
+per-file-ignores = {}
 
-accept_encodings = "utf-8"
-max_line_length = 99
+line-length = 99
 
-extended_default_ignore = []
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-[tool.flakeheaven.plugins]
-"flake8-*" = ["+*"]
-mccabe = ["+*"]
-"pep8-naming" = ["+*"]
-pycodestyle = ["+*"]
-pyflakes = ["+*"]
-"wemake-python-styleguide" = ["+*"]
+target-version = "py310"
 
-[tool.pydocstyle]
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.pydocstyle]
 convention = "google"
+
+[tool.ruff.flake8-quotes]
+docstring-quotes = "double"

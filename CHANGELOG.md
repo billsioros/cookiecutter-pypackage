@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.1.0 (2023-05-24)
+### Feature
+* Replace `flakeheaven` with `ruff` ([`85a6132`](https://github.com/billsioros/cookiecutter-pypackage/commit/85a613250e741038b9817971dc6e63e3f8ecad7a))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.0.2...v1.1.0)**
+
 ## v1.0.2 (2023-05-21)
 ### Fix
 * Enclose `secrets` in braces ([`4465b7c`](https://github.com/billsioros/cookiecutter-pypackage/commit/4465b7c44e902a0cbc4c814a37faa319f09743d9))

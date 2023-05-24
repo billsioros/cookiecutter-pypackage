@@ -1,8 +1,8 @@
 import re
 import sys
 
-PROJECT_REGEX = re.compile(r'^[A-Za-z0-9_.-]+$')
-PACKAGE_REGEX = re.compile(r'^[a-z][a-z0-9\-\_]+[a-z0-9]$')
+PROJECT_REGEX = re.compile(r"^[A-Za-z0-9_.-]+$")
+PACKAGE_REGEX = re.compile(r"^[a-z][a-z0-9\-\_]+[a-z0-9]$")
 SEMVER_REGEX = re.compile(
     r"""
         ^
@@ -33,9 +33,9 @@ def validate_project_name() -> None:
     Raises:
         ValueError: If `project` is not a valid Python module name
     """
-    if PROJECT_REGEX.fullmatch('{{cookiecutter.project_name}}') is None:
-        message = '`{0}` is not a valid GitHub repository name.'.format(
-            '{{cookiecutter.project_name}}',
+    if PROJECT_REGEX.fullmatch("{{cookiecutter.project_name}}") is None:
+        message = "`{}` is not a valid GitHub repository name.".format(
+            "{{cookiecutter.project_name}}",
         )
         raise ValueError(message)
 
@@ -49,9 +49,9 @@ def validate_package_name() -> None:
     Raises:
         ValueError: If `package_name` is not a valid Python module name
     """
-    if PACKAGE_REGEX.fullmatch('{{cookiecutter.package_name}}') is None:
-        message = '`{0}` is not a valid Python package name.'.format(
-            '{{cookiecutter.package_name}}',
+    if PACKAGE_REGEX.fullmatch("{{cookiecutter.package_name}}") is None:
+        message = "`{}` is not a valid Python package name.".format(
+            "{{cookiecutter.package_name}}",
         )
         raise ValueError(message)
 
@@ -62,9 +62,9 @@ def validate_semver() -> None:
     Raises:
         ValueError: If `version` is not in semver notation
     """
-    if SEMVER_REGEX.fullmatch('{{cookiecutter.version}}') is None:
-        message = '`{0}` is not in semver notation (https://semver.org/)'.format(
-            '{{cookiecutter.version}}',
+    if SEMVER_REGEX.fullmatch("{{cookiecutter.version}}") is None:
+        message = "`{}` is not in semver notation (https://semver.org/)".format(
+            "{{cookiecutter.version}}",
         )
         raise ValueError(message)
 
@@ -80,8 +80,8 @@ for validator in VALIDATORS:
         validator()
     except ValueError as ex:
         print(
-            'ERROR: {0}'.format(
+            "ERROR: {}".format(
                 ex,
-            )
-        )  # noqa: WPS421
+            ),
+        )
         sys.exit(1)

@@ -26,10 +26,8 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 python-semantic-release = "*"
-wemake-python-styleguide = "*"
-flakeheaven = "*"
 isort = "*"
 pre-commit = "*"
 poethepoet = "*"
@@ -56,7 +54,7 @@ clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache", help = "Clean
 format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
 hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
 test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite" }
-lint = { cmd = "poetry run flakeheaven lint", help = "Lint your code for errors" }
+lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
 
@@ -80,33 +78,3 @@ line-length = 99
 target-version = ["py37", "py38"]
 skip-string-normalization = true
 exclude = "{{cookiecutter.project_name}}"
-
-[tool.flakeheaven]
-exclude = [
-  ".git",
-  ".github",
-  ".pytest_cache",
-  ".vscode",
-  ".venv",
-  "docs",
-  "__pycache__",
-  "README.md",
-  "{{cookiecutter.project_name}}"
-]
-format = "colored"
-show_source = false
-statistics = false
-docstring-convention = "google"
-
-accept_encodings = "utf-8"
-max_line_length = 99
-
-extended_default_ignore = []
-
-[tool.flakeheaven.plugins]
-"flake8-*" = ["+*"]
-mccabe = ["+*"]
-"pep8-naming" = ["+*"]
-pycodestyle = ["+*"]
-pyflakes = ["+*"]
-"wemake-python-styleguide" = ["+*"]

@@ -4,12 +4,12 @@ ci:
   autofix_prs: true
   autoupdate_commit_msg: 'ci: `pre-commit.ci` auto update'
 repos:
-  - repo: https://github.com/humitos/mirrors-autoflake.git
-    rev: v1.1
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.1.1
     hooks:
-      - id: autoflake
-        args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable']
-        exclude: ^{{cookiecutter.project_name}}
+    - id: autoflake
+      args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable']
+      exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/pycqa/isort
     rev: 5.12.0
     hooks:
@@ -21,12 +21,6 @@ repos:
       - id: black
         language_version: python3
         exclude: ^{{cookiecutter.project_name}}
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.0.269
-    hooks:
-      - id: ruff
-        args: [--fix, --exit-non-zero-on-fix]
-        exclude: ^docs|tests|{{cookiecutter.project_name}}
   - repo: https://github.com/codespell-project/codespell
     rev: v2.2.4
     hooks:

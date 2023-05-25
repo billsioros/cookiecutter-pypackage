@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.1.1 (2023-05-25)
+### Fix
+* **instance.yml:** Set `python-version` to 3.9 ([`4cd2c98`](https://github.com/billsioros/cookiecutter-pypackage/commit/4cd2c98e9f231333fda620442b3079f5c4daebf0))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.1.0...v1.1.1)**
+
 ## v1.1.0 (2023-05-24)
 ### Feature
 * Replace `flakeheaven` with `ruff` ([`85a6132`](https://github.com/billsioros/cookiecutter-pypackage/commit/85a613250e741038b9817971dc6e63e3f8ecad7a))

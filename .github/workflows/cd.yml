@@ -16,7 +16,7 @@ jobs:
       - name: Create an empty distribution folder
         run: |
           mkdir dist
-      - uses: relekang/python-semantic-release@v7.33.5
+      - uses: relekang/python-semantic-release@v7.34.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}

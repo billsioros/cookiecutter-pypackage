@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.2.0 (2023-06-02)
+
+### Feature
+
+* Deprecate `stalebot` ([`20462f1`](https://github.com/billsioros/cookiecutter-pypackage/commit/20462f1349e03f9c2dcb53899349244936610756))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.1.1...v1.2.0)**
+
 ## v1.1.1 (2023-05-25)
 ### Fix
 * **instance.yml:** Set `python-version` to 3.9 ([`4cd2c98`](https://github.com/billsioros/cookiecutter-pypackage/commit/4cd2c98e9f231333fda620442b3079f5c4daebf0))

@@ -64,8 +64,7 @@ def test_bake_with_defaults(cookies):
         assert "tests" in found_toplevel_files
         assert ".editorconfig" in found_toplevel_files
         assert ".gitignore" in found_toplevel_files
-        assert ".gitpod.Dockerfile" in found_toplevel_files
-        assert ".gitpod.yml" in found_toplevel_files
+        assert ".devcontainer" in found_toplevel_files
         assert ".pre-commit-config.yaml" in found_toplevel_files
         assert "CHANGELOG.md" in found_toplevel_files
         assert "LICENSE" in found_toplevel_files

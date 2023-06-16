@@ -1,0 +1,83 @@
+{
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.mypy-type-checker",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "charliermarsh.ruff",
+        "njpwerner.autodocstring",
+        "teabyii.ayu",
+        "PKief.material-icon-theme",
+        "aaron-bond.better-comments",
+        "alefragnani.Bookmarks",
+        "streetsidesoftware.code-spell-checker",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "wayou.vscode-todo-highlight",
+        "editorconfig.editorconfig",
+        "christian-kohler.path-intellisense",
+        "eamodio.gitlens",
+        "bungcip.better-toml",
+        "redhat.vscode-yaml",
+        "almenon.arepl",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "git.confirmForcePush": false,
+        "git.autofetch": true,
+        "git.allowForcePush": true,
+        "python.formatting.provider": "black",
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.terminal.activateEnvironment": false,
+        "python.languageServer": "Pylance",
+        "python.linting.enabled": true,
+        "python.linting.mypyEnabled": true,
+        "python.analysis.enabled": true,
+        "[python]": {
+          "editor.formatOnType": true,
+          "editor.defaultFormatter": "ms-python.black-formatter"
+        },
+        "files.autoSave": "afterDelay",
+        "files.trimTrailingWhitespace": true,
+        "files.trimFinalNewlines": true,
+        "terminal.integrated.fontSize": 17,
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "zsh": {
+            "path": "/usr/bin/zsh",
+            "icon": "terminal",
+            "env": {}
+          }
+        },
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.cursorStyle": "line",
+        "editor.cursorBlinking": "smooth",
+        "editor.fontSize": 17,
+        "editor.formatOnPaste": true,
+        "editor.fontFamily": "'Fira Code', 'Source Code Pro', Consolas, 'Courier New', monospace",
+        "editor.suggestSelection": "first",
+        "editor.fontLigatures": true,
+        "editor.guides.indentation": true
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli": {},
+    "ghcr.io/devcontainers/features/docker-in-docker": {
+      "version": "latest",
+      "moby": true,
+      "dockerDashComposeVersion": "v1"
+    }
+  },
+  "postCreateCommand": "poetry install && poetry run pre-commit install --install-hooks",
+  "forwardPorts": [
+    8000
+  ],
+  "remoteUser": "root"
+}

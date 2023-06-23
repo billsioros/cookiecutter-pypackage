@@ -33,6 +33,12 @@
       alt="FOSSA Status"
     />
   </a>
+  <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/billsioros/cookiecutter-pypackage">
+    <img
+      src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode"
+      alt="Open in GitHub Codespaces"
+    />
+  </a>
   <a href="https://www.buymeacoffee.com/billsioros">
     <img
       src="https://img.shields.io/badge/Buy%20me%20a-coffee-FFDD00.svg?style=flat&logo=buymeacoffee"
@@ -83,7 +89,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/).
 * Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale).
 * Ready-to-use `.editorconfig` and `.gitignore`.
-* Be always ready to code using automated dev environments hosted on [`Gitpod`](https://www.gitpod.io/).
+* Be always ready to code using [`GitHub Codespaces`](https://github.com/features/codespaces).
 
 > The template supports Python 3.7 or higher.
 

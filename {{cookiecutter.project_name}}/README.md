@@ -44,10 +44,10 @@
       alt="PyPI - License"
     />
   </a>
-  <a href="https://gitpod.io/from-referrer/">
+  <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url={{ cookiecutter.github_repository }}">
     <img
-      src="https://img.shields.io/badge/Open%20on-Gitpod-blue?logo=gitpod&style=flat"
-      alt="Open on Gitpod"
+      src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode"
+      alt="Open in GitHub Codespaces"
     />
   </a>
   <a href="https://github.com/billsioros/cookiecutter-pypackage">

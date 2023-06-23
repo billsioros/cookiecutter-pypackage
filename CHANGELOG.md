@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.3.0 (2023-06-23)
+
+### Feature
+
+* Migrate from `Gitpod` to `GitHub codespaces` ([`6ef2ace`](https://github.com/billsioros/cookiecutter-pypackage/commit/6ef2ace9d20c4293d306214b9514de477dc5fe69))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.2.0...v1.3.0)**
+
 ## v1.2.0 (2023-06-02)
 
 ### Feature

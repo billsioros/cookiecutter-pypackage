@@ -5,7 +5,7 @@ ci:
   autoupdate_commit_msg: 'ci: `pre-commit.ci` auto update'
 repos:
   - repo: https://github.com/PyCQA/autoflake
-    rev: v2.1.1
+    rev: v2.2.0
     hooks:
     - id: autoflake
       args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable']
@@ -22,7 +22,7 @@ repos:
         language_version: python3
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.4
+    rev: v2.2.5
     hooks:
       - id: codespell
         files: \.(py|md)$
@@ -41,7 +41,7 @@ repos:
       - id: check-json
       - id: check-toml
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.2.2
+    rev: 3.5.2
     hooks:
       - id: commitizen
         stages: [commit-msg]
@@ -52,7 +52,7 @@ repos:
         stages: [commit-msg]
         args: [--ignore=B6, --msg-filename]
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.1
+    rev: 2.7.2
     hooks:
       - id: editorconfig-checker
   - repo: https://github.com/hadolint/hadolint
@@ -61,7 +61,7 @@ repos:
       - id: hadolint-docker
         args: ['--ignore', 'DL3006']
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.23.0
+    rev: 0.23.2
     hooks:
       - id: check-github-workflows
       - id: check-renovate

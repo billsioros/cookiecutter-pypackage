@@ -18,6 +18,7 @@ ENV ZSH="${HOME}/.oh-my-zsh"
 RUN rm -rf ${ZSH}
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 RUN sed -i 's/ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ${HOME}/.zshrc
+RUN curl https://raw.githubusercontent.com/romkatv/powerlevel10k/master/config/p10k-classic.zsh > ${HOME}/.p10k.zsh
 
 # Install Powerlevel10k theme
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH/themes/powerlevel10k

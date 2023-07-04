@@ -96,6 +96,7 @@ poetry install
 
 # Install pre-commit hooks
 pre-commit install --install-hooks
+pre-commit autoupdate
 ```
 
 ## :book: Documentation

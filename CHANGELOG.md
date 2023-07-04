@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.5.0 (2023-07-04)
+
+### Feature
+
+* Test against multiple `python` versions ([`34c99e0`](https://github.com/billsioros/cookiecutter-pypackage/commit/34c99e00b58462ff8d2adc03be5ceca92420b1ab))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.4.0...v1.5.0)**
+
 ## v1.4.0 (2023-07-04)
 
 ### Feature

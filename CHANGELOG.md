@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.4.0 (2023-07-04)
+
+### Feature
+
+* Additional `pre-commit` hooks ([`e0ee59d`](https://github.com/billsioros/cookiecutter-pypackage/commit/e0ee59d7dc57c986cc97556ac8325332df11f287))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.3.0...v1.4.0)**
+
 ## v1.3.0 (2023-06-23)
 
 ### Feature

@@ -27,7 +27,7 @@ testpaths = "tests"
 
 [tool.poetry]
 name = "cookiecutter-pypackage"
-version = "1.5.0"
+version = "1.5.1"
 description = "🐍🍪 Another Python Cookiecutter"
 readme = "README.md"
 authors = ["billsioros <billsioros97@gmail.com>"]

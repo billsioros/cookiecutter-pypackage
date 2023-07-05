@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.5.2 (2023-07-05)
+
+### Fix
+
+* Revert to `config:base` in `renovate.json` ([`367e772`](https://github.com/billsioros/cookiecutter-pypackage/commit/367e772cc1af8c99fd27ff46ad0992fbd0d9bb3f))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.5.1...v1.5.2)**
+
 ## v1.5.1 (2023-07-05)
 
 ### Fix

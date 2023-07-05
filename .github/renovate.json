@@ -3,7 +3,7 @@
     ":game_die: dependencies"
   ],
   "extends": [
-    "config:recommended",
+    "config:base",
     "schedule:nonOfficeHours"
   ],
   "packageRules": [

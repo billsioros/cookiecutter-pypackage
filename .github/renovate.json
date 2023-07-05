@@ -1,0 +1,32 @@
+{
+  "labels": [
+    ":game_die: dependencies"
+  ],
+  "extends": [
+    "config:recommended",
+    "schedule:nonOfficeHours"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
+      "autoApprove": true,
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "autoApprove": true,
+      "automerge": true
+    }
+  ],
+  "assigneesFromCodeOwners": true,
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}

@@ -4,53 +4,6 @@ requires = [
   "poetry-core>=1",
 ]
 
-[tool.black]
-line-length = 99
-target-version = ["py37", "py38"]
-skip-string-normalization = true
-
-[tool.isort]
-profile = "black"
-src_paths = ["src/{{cookiecutter.package_name}}", "tests"]
-line_length = 99
-known_first_party = "{{cookiecutter.package_name}}"
-
-[tool.pytest.ini_options]
-addopts = "-vv --color=yes"
-log_cli = false
-log_cli_date_format = "%Y-%m-%d %H:%M:%S"
-log_cli_format = "%(asctime)s %(levelname)s %(message)s"
-log_cli_level = "INFO"
-python_files = "test_*.py"
-python_functions = "test_*"
-testpaths = "tests"
-
-[tool.coverage.paths]
-source = ["src"]
-
-[tool.coverage.run]
-branch = true
-source = ["{{cookiecutter.package_name}}"]
-
-[tool.coverage.report]
-show_missing = true
-fail_under = 100
-exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
-ignore_errors = true
-omit = ["tests/*"]
-
-[tool.mypy]
-files = ["src/{{cookiecutter.package_name}}"]
-warn_unused_configs = true
-warn_return_any = true
-ignore_missing_imports = true
-pretty = true
-color_output = true
-show_column_numbers = true
-show_error_codes = true
-show_error_context = true
-strict = true
-
 [tool.poetry]
 name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
@@ -95,24 +48,10 @@ mdx-truly-sane-lists = "*"
 mike = "*"
 ruff = "*"
 
-[tool.semantic_release]
-version_toml = "pyproject.toml:tool.poetry.version"
-changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
-build_command = "python -m pip install poetry && poetry build"
-
-[tool.vulture]
-min_confidence = 95
-paths = ["src/{{cookiecutter.package_name}}", "tests"]
-
-[tool.poe.tasks]
-clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
-format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
-hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
-test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
-type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
-lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
-docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
-export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
+[tool.black]
+line-length = 99
+target-version = ["py37", "py38"]
+skip-string-normalization = true
 
 [tool.ruff]
 select = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
@@ -160,6 +99,67 @@ convention = "google"
 
 [tool.ruff.flake8-quotes]
 docstring-quotes = "double"
+
+[tool.isort]
+profile = "black"
+src_paths = ["src/{{cookiecutter.package_name}}", "tests"]
+line_length = 99
+known_first_party = "{{cookiecutter.package_name}}"
+
+[tool.pytest.ini_options]
+addopts = "-vv --color=yes"
+log_cli = false
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli_format = "%(asctime)s %(levelname)s %(message)s"
+log_cli_level = "INFO"
+python_files = "test_*.py"
+python_functions = "test_*"
+testpaths = "tests"
+
+[tool.coverage.paths]
+source = ["src"]
+
+[tool.coverage.run]
+branch = true
+source = ["{{cookiecutter.package_name}}"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
+ignore_errors = true
+omit = ["tests/*"]
+
+[tool.mypy]
+files = ["src/{{cookiecutter.package_name}}"]
+warn_unused_configs = true
+warn_return_any = true
+ignore_missing_imports = true
+pretty = true
+color_output = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+strict = true
+
+[tool.semantic_release]
+version_toml = "pyproject.toml:tool.poetry.version"
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+build_command = "python -m pip install poetry && poetry build"
+
+[tool.vulture]
+min_confidence = 95
+paths = ["src/{{cookiecutter.package_name}}", "tests"]
+
+[tool.poe.tasks]
+clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
+format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
+hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
+test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
+type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
+lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
+docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
+export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
 
 [tool.docformatter]
 black = true

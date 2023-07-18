@@ -16,7 +16,7 @@ repos:
       - id: isort
         exclude: ^{{cookiecutter.project_name}}
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.7.0
     hooks:
       - id: black
         language_version: python3
@@ -41,7 +41,7 @@ repos:
       - id: check-json
       - id: check-toml
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.5.2
+    rev: 3.5.3
     hooks:
       - id: commitizen
         stages: [commit-msg]
@@ -61,12 +61,12 @@ repos:
       - id: hadolint-docker
         args: ['--ignore', 'DL3006']
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.23.2
+    rev: 0.23.3
     hooks:
       - id: check-github-workflows
       - id: check-renovate
   - repo: https://github.com/PyCQA/docformatter
-    rev: v1.7.4
+    rev: v1.7.5
     hooks:
       - id: docformatter
         additional_dependencies: [tomli]

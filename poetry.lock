@@ -464,7 +464,7 @@ mkdocs = ">=1.4.1"
 
 [[package]]
 name = "mkdocs-redirects"
-version = "1.2.0"
+version = "1.2.1"
 description = "A MkDocs plugin for dynamic page redirects to prevent broken links."
 category = "dev"
 optional = false
@@ -1266,7 +1266,7 @@ mkdocs-minify-plugin = [
     {file = "mkdocs_minify_plugin-0.6.4-py3-none-any.whl", hash = "sha256:c0221053968a68418245228e04b0d5bc7e6b1a1940db721a52c7ec98d898242e"},
 ]
 mkdocs-redirects = [
-    {file = "mkdocs-redirects-1.2.0.tar.gz", hash = "sha256:ddd38267d49fdfa19fb2f25b4aed2fb53f0496c818bf3018009c8eaf6676a327"},
+    {file = "mkdocs-redirects-1.2.1.tar.gz", hash = "sha256:9420066d70e2a6bb357adf86e67023dcdca1857f97f07c7fe450f8f1fb42f861"},
 ]
 mypy-extensions = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},

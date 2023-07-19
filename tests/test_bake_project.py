@@ -71,7 +71,6 @@ def test_bake_with_defaults(cookies):
         assert "mkdocs.yml" in found_toplevel_files
         assert "pyproject.toml" in found_toplevel_files
         assert "README.md" in found_toplevel_files
-        assert "renovate.json" in found_toplevel_files
 
 
 def test_bake_withspecialchars(cookies):

@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.5.3 (2023-07-19)
+
+### Fix
+
+* Revert `relekang/python-semantic-release` update ([`d432aa5`](https://github.com/billsioros/cookiecutter-pypackage/commit/d432aa5152c769a2378eda5d6054e9d49665506e))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.5.2...v1.5.3)**
+
 ## v1.5.2 (2023-07-05)
 
 ### Fix

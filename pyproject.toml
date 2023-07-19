@@ -6,7 +6,7 @@ requires = [
 
 [tool.poetry]
 name = "cookiecutter-pypackage"
-version = "1.5.2"
+version = "1.5.3"
 description = "🐍🍪 Another Python Cookiecutter"
 readme = "README.md"
 authors = ["billsioros <billsioros97@gmail.com>"]

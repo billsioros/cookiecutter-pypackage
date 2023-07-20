@@ -27,30 +27,6 @@ body:
       label: Relevant stack trace
       description: Please provide us with the program's stack trace, if appropriate.
       render: shell
-  - type: dropdown
-    id: operating-system
-    attributes:
-      label: Operating System (OS)
-      multiple: true
-      description: In what OS(s) does the problem occur?
-      options:
-        - macOS
-        - Windows
-        - Linux
-    validations:
-      required: true
-  - type: dropdown
-    id: python-version
-    attributes:
-      label: Python version
-      multiple: true
-      description: In what python version(s) does the problem occur?
-      options:
-        - 3.7
-        - 3.8
-        - 3.9
-    validations:
-      required: true
   - type: checkboxes
     id: duplicate-issue
     attributes:
@@ -60,18 +36,10 @@ body:
         - label: I confirm that this is not a duplicate issue
           required: true
   - type: checkboxes
-    id: latest-version
-    attributes:
-      label: Have you upgraded to the latest version?
-      description: By submitting this issue, you confirm that you have already upgraded to the latest version
-      options:
-        - label: I confirm that I have upgraded to the latest version
-          required: true
-  - type: checkboxes
     id: code-of-conduct
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://billsioros.github.io/cookiecutter-pypackage/latest/CODE_OF_CONDUCT/)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://Group4Life.github.io/cookiecutter-pypackage/latest/CODE_OF_CONDUCT/)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true

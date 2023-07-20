@@ -11,8 +11,8 @@ description = "🐍🍪 Another Python Cookiecutter"
 readme = "README.md"
 authors = ["billsioros <billsioros97@gmail.com>"]
 license = "MIT"
-homepage = "https://billsioros.github.io/cookiecutter-pypackage"
-repository = "https://github.com/billsioros/cookiecutter-pypackage"
+homepage = "https://Group4Life.github.io/cookiecutter-pypackage"
+repository = "https://github.com/Group4Life/cookiecutter-pypackage"
 keywords = []
 classifiers = [
     "Programming Language :: Python",
@@ -22,8 +22,8 @@ classifiers = [
 ]
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/billsioros/cookiecutter-pypackage/issues"
-"Changelog" = "https://github.com/billsioros/cookiecutter-pypackage/releases"
+"Bug Tracker" = "https://github.com/Group4Life/cookiecutter-pypackage/issues"
+"Changelog" = "https://github.com/Group4Life/cookiecutter-pypackage/releases"
 
 [tool.poetry.dependencies]
 python = "^3.9"

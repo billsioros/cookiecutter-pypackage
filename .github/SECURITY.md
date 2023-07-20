@@ -9,4 +9,4 @@ include a fix for the issue generated with `git format-patch`. You may
 include a name and link, if you would like to be credited for the report.
 
 After fixing the issue, we will make a security release along with an
-announcement on [GitHub Discussions](https://github.com/billsioros/cookiecutter-pypackage/discussions).
+announcement on [GitHub Discussions](https://github.com/Group4Life/cookiecutter-pypackage/discussions).

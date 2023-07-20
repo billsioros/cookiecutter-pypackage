@@ -25,7 +25,7 @@ body:
     id: code-of-conduct
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://billsioros.github.io/cookiecutter-pypackage/latest/CODE_OF_CONDUCT/)
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://Group4Life.github.io/cookiecutter-pypackage/latest/CODE_OF_CONDUCT/)
       options:
         - label: I agree to follow this project's Code of Conduct
           required: true

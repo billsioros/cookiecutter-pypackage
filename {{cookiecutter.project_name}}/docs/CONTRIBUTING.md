@@ -4,8 +4,6 @@ Hello and thank you for considering contributing to **{{cookiecutter.project_nam
 
 Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved.
 
-This project follows the [all-contributors](https://allcontributors.org/) specification. You can read more [here](https://allcontributors.org/docs/en/bot/usage).
-
 ## Code of Conduct
 
 By participating and contributing to this project, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).

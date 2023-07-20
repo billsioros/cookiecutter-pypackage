@@ -50,7 +50,7 @@
       alt="Open in GitHub Codespaces"
     />
   </a>
-  <a href="https://github.com/billsioros/cookiecutter-pypackage">
+  <a href="https://github.com/Group4Life/cookiecutter-pypackage">
     <img
       src="https://img.shields.io/badge/cookiecutter-template-D4AA00.svg?style=flat&logo=cookiecutter"
       alt="Cookiecutter Template">
@@ -64,12 +64,6 @@
     <img
       src="https://img.shields.io/badge/Buy%20me%20a-coffee-FFDD00.svg?style=flat&logo=buymeacoffee"
       alt="Buy me a coffee">
-  </a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2F{{cookiecutter.github_user}}%2F{{cookiecutter.project_name}}?ref=badge_shield">
-    <img
-      src="https://app.fossa.com/api/projects/git%2Bgithub.com%2F{{cookiecutter.github_user}}%2F{{cookiecutter.project_name}}.svg?type=shield"
-      alt="FOSSA Status"
-    />
   </a>
 </p>
 
@@ -101,16 +95,6 @@ pre-commit autoupdate
 
 ## :book: Documentation
 
-The project's documentation can be found [here](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/).
-
-## :heart: Support the project
-
-Feel free to [**Buy me a coffee! ☕**](https://www.buymeacoffee.com/{{cookiecutter.github_user}}).
-
-## :sparkles: Contributing
-
 If you would like to contribute to the project, please go through the [Contributing Guidelines](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/latest/CONTRIBUTING/) first.
 
-## :label: Credits
-
-This project was generated with [`billsioros/cookiecutter-pypackage`](https://github.com/billsioros/cookiecutter-pypackage) cookiecutter template.
+The project's documentation can be found [here](https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}/).

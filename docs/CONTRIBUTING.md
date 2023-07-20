@@ -10,7 +10,7 @@ By participating and contributing to this project, you agree to uphold our [Code
 
 ## Getting Help
 
-In case all you need is an answer to a question, please refrain from opening an issue and instead visit the project's [discussion page](https://github.com/billsioros/cookiecutter-pypackage/discussions/categories/q-a).
+In case all you need is an answer to a question, please refrain from opening an issue and instead visit the project's [discussion page](https://github.com/Group4Life/cookiecutter-pypackage/discussions/categories/q-a).
 
 ## Getting Started
 
@@ -21,7 +21,7 @@ Contributions are made to this repository via Issues and Pull Requests (PRs). A 
 
 ### Issues
 
-[Issues](https://github.com/billsioros/cookiecutter-pypackage/issues) should be used to report problems with the library or request a new feature or documentation change. When you create a new Issue, a template will be loaded that will guide you through collecting and providing the required information.
+[Issues](https://github.com/Group4Life/cookiecutter-pypackage/issues) should be used to report problems with the library or request a new feature or documentation change. When you create a new Issue, a template will be loaded that will guide you through collecting and providing the required information.
 
 If you find an Issue that addresses the problem you're having, please add your own reproduction information to the existing issue rather than creating a new one. Adding a [reaction](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) can also help in indicating to our maintainers that a particular problem is affecting more than just the reporter.
 
@@ -32,11 +32,11 @@ PRs can be a quick way to get your fix or improvement slated for the next releas
 - Only fix/add the functionality in question **OR** address wide-spread whitespace/style issues, not both.
 - Address a single concern in the least number of changed lines as possible.
 - Be accompanied by a complete Pull Request template (loaded automatically when a PR is created).
-- Add [unit or integration tests](https://github.com/billsioros/cookiecutter-pypackage/tree/master/tests) for added or changed functionality.
+- Add [unit or integration tests](https://github.com/Group4Life/cookiecutter-pypackage/tree/master/tests) for added or changed functionality.
 - Any code related changes should be accompanied by corresponding changes to the project's documentation.
-- If your pull request introduces a new feature, the corresponding `README` [section](https://billsioros.github.io/cookiecutter-pypackage/latest/#features) must be updated to reflect this.
+- If your pull request introduces a new feature, the corresponding `README` [section](https://Group4Life.github.io/cookiecutter-pypackage/latest/#features) must be updated to reflect this.
 - Write clear, concise commit message(s) using the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format. [Why?](#writing-your-commit-message)
-- This project only accepts pull requests related to open issues. In case there is no relevant open issue, feel free to [create one](https://github.com/billsioros/cookiecutter-pypackage/issues/new/choose).
+- This project only accepts pull requests related to open issues. In case there is no relevant open issue, feel free to [create one](https://github.com/Group4Life/cookiecutter-pypackage/issues/new/choose).
 
 For changes that address core functionality or would require breaking changes (e.g. a major release), it's best to open an Issue to discuss your proposal first. This is not required but can save time creating and reviewing changes.
 
@@ -47,7 +47,7 @@ In general, we follow the ["fork-and-pull" Git workflow](https://github.com/susa
 3. Create a branch locally with a succinct but descriptive name
 4. Commit changes to the branch
 5. Push changes to your fork
-6. [Open a PR in our repository](https://github.com/billsioros/cookiecutter-pypackage/compare) and follow the PR template so that we can efficiently review the changes
+6. [Open a PR in our repository](https://github.com/Group4Life/cookiecutter-pypackage/compare) and follow the PR template so that we can efficiently review the changes
 
 ## Setting up a local development environment
 
@@ -59,7 +59,7 @@ The **cookiecutter-pypackage** project utilizes the [Poetry](https://python-poet
 
 ### Installing pre-commit hooks
 
-The project utilizes the [pre-commit](https://pre-commit.com/) framework. Having [created a virtual environment and installed the required dependencies](#installing-poetry), you may run `pre-commit install --install-hooks` to install the [git hook scripts](https://github.com/billsioros/cookiecutter-pypackage/blob/master/.pre-commit-config.yaml).
+The project utilizes the [pre-commit](https://pre-commit.com/) framework. Having [created a virtual environment and installed the required dependencies](#installing-poetry), you may run `pre-commit install --install-hooks` to install the [git hook scripts](https://github.com/Group4Life/cookiecutter-pypackage/blob/master/.pre-commit-config.yaml).
 
 ### Testing via `pytest`
 
@@ -94,7 +94,7 @@ Having made your changes, please run `poe docs` and make sure that no error is b
 
 ### Writing your commit message
 
-The project's version number and [Changelog](https://github.com/billsioros/cookiecutter-pypackage/blob/master/CHANGELOG.md), depend on a consistent commit history. As a result, your commit message's format is extremely important. Before opening a pull request, please make sure that your commits strictly follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format].
+The project's version number and [Changelog](https://github.com/Group4Life/cookiecutter-pypackage/blob/master/CHANGELOG.md), depend on a consistent commit history. As a result, your commit message's format is extremely important. Before opening a pull request, please make sure that your commits strictly follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format].
 
 ### Creating a pull request
 

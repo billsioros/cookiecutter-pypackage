@@ -4,8 +4,6 @@ Hello and thank you for considering contributing to **{{cookiecutter.project_nam
 
 Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved.
 
-This project follows the [all-contributors](https://allcontributors.org/) specification. You can read more [here](https://allcontributors.org/docs/en/bot/usage).
-
 ## Code of Conduct
 
 By participating and contributing to this project, you agree to uphold our [Code of Conduct](CODE_OF_CONDUCT.md).
@@ -71,9 +69,9 @@ The test suite can be run using `poetry run poe test`.
 
 #### (Optional) Installing pyenv
 
-[pyenv](https://github.com/pyenv/pyenv) is used, in the context of the **cookiecutter-pypackage** project, in order to determine the project's compatibility with various versions of Python. Installing `pyenv` is not strictly required, but it is recommended.
+[pyenv](https://github.com/pyenv/pyenv) is used, in the context of the **{{cookiecutter.project_name}}** project, in order to determine the project's compatibility with various versions of Python. Installing `pyenv` is not strictly required, but it is recommended.
 
-Having installed `pyenv` in the **global** namespace, you may now run the following snippet, in order to install Python 3.7, 3.8 and 3.9, which, at the time of writing this document, are the only Python versions, supported by **cookiecutter-pypackage**.
+Having installed `pyenv` in the **global** namespace, you may now run the following snippet, in order to install Python 3.7, 3.8 and 3.9, which, at the time of writing this document, are the only Python versions, supported by **{{cookiecutter.project_name}}**.
 
 ```bash
 pyenv install 3.7.10 3.8.9 3.9.4

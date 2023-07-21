@@ -27,12 +27,6 @@
       alt="GitHub"
     />
   </a>
-  <a href="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/dependency_review.yml">
-    <img
-      src="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/dependency_review.yml/badge.svg"
-      alt="Dependency Review"
-    />
-  </a>
   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/billsioros/cookiecutter-pypackage">
     <img
       src="https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode"

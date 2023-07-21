@@ -61,8 +61,6 @@ theme:
 plugins:
   - search
   - mkdocstrings:
-      watch:
-        - src/{{ cookiecutter.project_name }}
       default_handler: python
       handlers:
         python:
@@ -93,6 +91,9 @@ markdown_extensions:
   - toc:
       permalink: ¤
   - mdx_truly_sane_lists
+
+watch:
+  - src/{{ cookiecutter.project_name }}
 
 extra:
   social:

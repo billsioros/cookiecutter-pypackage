@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 <!--next-version-placeholder-->
 
+## v1.5.4 (2023-07-21)
+
+### Fix
+
+* Correct `mkdocs` watch dir ([`6d29693`](https://github.com/billsioros/cookiecutter-pypackage/commit/6d296930f73074484bf661eac0f77c2f16fcf861))
+
+**[See all commits in this version](https://github.com/billsioros/cookiecutter-pypackage/compare/v1.5.3...v1.5.4)**
+
 ## v1.5.3 (2023-07-19)
 
 ### Fix

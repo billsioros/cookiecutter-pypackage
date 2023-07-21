@@ -27,10 +27,10 @@
       alt="GitHub"
     />
   </a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage-instance?ref=badge_shield">
+  <a href="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/dependency_review.yml">
     <img
-      src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbillsioros%2Fcookiecutter-pypackage-instance.svg?type=shield"
-      alt="FOSSA Status"
+      src="https://github.com/billsioros/cookiecutter-pypackage/actions/workflows/dependency_review.yml/badge.svg"
+      alt="Dependency Review"
     />
   </a>
   <a href="https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/billsioros/cookiecutter-pypackage">
@@ -84,7 +84,7 @@ cookiecutter gh:billsioros/cookiecutter-pypackage
 * Inform new contributors about the project's guidelines using [`First Interaction`](https://github.com/actions/first-interaction).
 * Add informative comments on issues & PRs based on assigned labels using [`Label Commenter`](https://github.com/peaceiris/actions-label-commenter).
 * Manage project labels with [`GitHub Labeler`](crazy-max/ghaction-github-labeler@v3.1.1).
-* License scanning provided by [`FOSSA`](https://fossa.com/).
+* License scanning provided by [`GitHub Dependency Review`](https://github.com/actions/dependency-review-action).
 * Automatically update the copyright year span using [`Update License Year`](https://github.com/FantasticFiasco/action-update-license-year).
 * Pre-configured funding on [`Buy Me a Coffee`](https://www.buymeacoffee.com/).
 * Automatically close stale issues/PRs using [`Stale Bot`](https://github.com/apps/stale).

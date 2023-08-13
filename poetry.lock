@@ -713,7 +713,7 @@ yaml = ["PyYaml (>=5.2)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "8.0.5"
+version = "8.0.6"
 description = "Automatic Semantic Versioning for Python projects"
 category = "dev"
 optional = false
@@ -733,10 +733,10 @@ shellingham = ">=1.5.0.post1"
 tomlkit = ">=0.10,<1.0"
 
 [package.extras]
-dev = ["black", "isort", "tox"]
+dev = ["black", "pre-commit", "ruff (>=0.0.282)", "tox"]
 docs = ["Sphinx (<=6.0.0)", "furo (>=2023.3.27)", "sphinx-autobuild (==2021.03.14)", "sphinxcontrib-apidoc (==0.3.0)"]
 mypy = ["mypy", "types-requests"]
-test = ["coverage[toml] (>=6,<7)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-xdist (>=2,<3)", "requests-mock (>=1.10.0,<2)", "responses (==0.21.0)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
+test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
 
 [[package]]
 name = "python-slugify"
@@ -971,7 +971,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "585c360263469355313100896117ef6d037d2f95231e36593c8d0e74fbebc314"
+content-hash = "a2be8a0b88daac21a6edbbc03ed07cf6a737980fc72c96d199c0bdd687823517"
 
 [metadata.files]
 arrow = [
@@ -1381,8 +1381,8 @@ python-gitlab = [
     {file = "python_gitlab-3.15.0-py3-none-any.whl", hash = "sha256:8f8d1c0d387f642eb1ac7bf5e8e0cd8b3dd49c6f34170cee3c7deb7d384611f3"},
 ]
 python-semantic-release = [
-    {file = "python-semantic-release-8.0.5.tar.gz", hash = "sha256:04d9ed41f5b526b6fb0997c4f08c143a688604e88024667ea7e8135e795b2930"},
-    {file = "python_semantic_release-8.0.5-py3-none-any.whl", hash = "sha256:e976dabe9318de7f14f8d4920daede6014693fc18fd0f9c4673404dd614e6cf8"},
+    {file = "python-semantic-release-8.0.6.tar.gz", hash = "sha256:ce9c557ed0f811413764639135fa55675eb4f95dc4fd40e12dc7483e5eb53f5b"},
+    {file = "python_semantic_release-8.0.6-py3-none-any.whl", hash = "sha256:4f23c8794da34327d90290513b83fe630643260e41487f1c87af9853a3548ba4"},
 ]
 python-slugify = [
     {file = "python-slugify-8.0.1.tar.gz", hash = "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"},

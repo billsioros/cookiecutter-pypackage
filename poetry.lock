@@ -713,7 +713,7 @@ yaml = ["PyYaml (>=5.2)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "8.0.6"
+version = "8.0.7"
 description = "Automatic Semantic Versioning for Python projects"
 category = "dev"
 optional = false
@@ -971,7 +971,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "a2be8a0b88daac21a6edbbc03ed07cf6a737980fc72c96d199c0bdd687823517"
+content-hash = "6bd81153fa4695f38df4442be7500b0ee9746c061a6a20c74e07a176c1af9c73"
 
 [metadata.files]
 arrow = [
@@ -1381,8 +1381,8 @@ python-gitlab = [
     {file = "python_gitlab-3.15.0-py3-none-any.whl", hash = "sha256:8f8d1c0d387f642eb1ac7bf5e8e0cd8b3dd49c6f34170cee3c7deb7d384611f3"},
 ]
 python-semantic-release = [
-    {file = "python-semantic-release-8.0.6.tar.gz", hash = "sha256:ce9c557ed0f811413764639135fa55675eb4f95dc4fd40e12dc7483e5eb53f5b"},
-    {file = "python_semantic_release-8.0.6-py3-none-any.whl", hash = "sha256:4f23c8794da34327d90290513b83fe630643260e41487f1c87af9853a3548ba4"},
+    {file = "python-semantic-release-8.0.7.tar.gz", hash = "sha256:ba659a99d7f7ff11f7936cb9e5df117466c5161cc9a30d786270538ba0ea3798"},
+    {file = "python_semantic_release-8.0.7-py3-none-any.whl", hash = "sha256:e38a1233d04c6568c75dd9802bbd8011d7f7040b042584ed2c1f58e91349fe64"},
 ]
 python-slugify = [
     {file = "python-slugify-8.0.1.tar.gz", hash = "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"},

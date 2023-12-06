@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "COMMIT_MESSAGE=$(git log --format=%B --skip=1 --max-count=1)" >> $GITHUB_ENV
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.9
       - name: Install cookiecutter

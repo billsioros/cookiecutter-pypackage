@@ -760,11 +760,11 @@ yaml = ["PyYaml (>=5.2)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "8.7.0"
+version = "9.0.3"
 description = "Automatic Semantic Versioning for Python projects"
 category = "dev"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 
 [package.dependencies]
 click = ">=8,<9"
@@ -780,10 +780,10 @@ shellingham = ">=1.5.0.post1"
 tomlkit = ">=0.10,<1.0"
 
 [package.extras]
-dev = ["pre-commit", "ruff (==0.1.8)", "tox"]
+dev = ["pre-commit", "ruff (==0.1.11)", "tox"]
 docs = ["Sphinx (<=6.0.0)", "furo (>=2023.3.27)", "sphinx-autobuild (==2021.03.14)", "sphinxcontrib-apidoc (==0.3.0)"]
 mypy = ["mypy", "types-requests"]
-test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-clarity (>=1.0.1)", "pytest-cov (>=4,<5)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-pretty (>=1.2.0,<2)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
+test = ["coverage[toml] (>=6,<8)", "pytest (>=7,<8)", "pytest-clarity (>=1.0.1)", "pytest-cov (>=4,<5)", "pytest-env (>=1.0,<2.0)", "pytest-lazy-fixture (>=0.6.3,<0.7.0)", "pytest-mock (>=3,<4)", "pytest-pretty (>=1.2.0,<2)", "pytest-xdist (>=2,<4)", "requests-mock (>=1.10.0,<2)", "responses (==0.23.3)", "types-pytest-lazy-fixture (>=0.6.3.3)"]
 
 [[package]]
 name = "python-slugify"
@@ -1018,7 +1018,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1ccb017ded814961dbe1e66c44ca59d4993098fb3f72969f9cba10768f7b42de"
+content-hash = "a34656565c8547f6fd56c990a60304a75735cbb9729b55277f2c94313a86dab1"
 
 [metadata.files]
 annotated-types = [
@@ -1519,8 +1519,8 @@ python-gitlab = [
     {file = "python_gitlab-3.15.0-py3-none-any.whl", hash = "sha256:8f8d1c0d387f642eb1ac7bf5e8e0cd8b3dd49c6f34170cee3c7deb7d384611f3"},
 ]
 python-semantic-release = [
-    {file = "python-semantic-release-8.7.0.tar.gz", hash = "sha256:6bbd11b1e8ac70e0946ed6d257094c851b2507edfbc393eef6093d0ed1dbe0b4"},
-    {file = "python_semantic_release-8.7.0-py3-none-any.whl", hash = "sha256:a016b1cf43a5f3667ce2cfddd8e30b6210a2d52b0e2f6b487aae1164f2540eaa"},
+    {file = "python-semantic-release-9.0.3.tar.gz", hash = "sha256:c11ce2d805347ba29175a2c35072afa013cd2bf502e57193ac1ed79e14c057cc"},
+    {file = "python_semantic_release-9.0.3-py3-none-any.whl", hash = "sha256:13385d60546eaac80b3bfea18503d551936a3c5bd73f960d59d94d021a9e274c"},
 ]
 python-slugify = [
     {file = "python-slugify-8.0.1.tar.gz", hash = "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"},

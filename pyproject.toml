@@ -56,6 +56,15 @@ profile = "black"
 src_paths = ["cookiecutter-pypackage", "hooks", "tests"]
 line_length = 99
 
+[tool.docformatter]
+black = true
+non-strict = true
+non-cap = [
+  "cookiecutter-pypackage",
+]
+recursive = true
+in-place = true
+
 [tool.pytest.ini_options]
 addopts = "-vv --color=yes"
 log_cli = false
@@ -80,15 +89,6 @@ test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the
 lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
-
-[tool.docformatter]
-black = true
-non-strict = true
-non-cap = [
-  "cookiecutter-pypackage",
-]
-recursive = true
-in-place = true
 
 [tool.bandit]
 recursive = true

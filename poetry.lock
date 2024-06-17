@@ -776,7 +776,7 @@ yaml = ["PyYaml (>=6.0.1)"]
 
 [[package]]
 name = "python-semantic-release"
-version = "9.8.1"
+version = "9.8.2"
 description = "Automatic Semantic Versioning for Python projects"
 category = "dev"
 optional = false
@@ -1036,7 +1036,7 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "5ab1c35ee495235d68016a1fdb2d42f0edee19660da1802e272a817255d3aa54"
+content-hash = "ab793bfbdaf6d3cfc0176627170b3c8532a0274e560e6c409675bce04c72ce58"
 
 [metadata.files]
 annotated-types = [
@@ -1357,6 +1357,7 @@ mkdocs-minify-plugin = [
 ]
 mkdocs-redirects = [
     {file = "mkdocs-redirects-1.2.1.tar.gz", hash = "sha256:9420066d70e2a6bb357adf86e67023dcdca1857f97f07c7fe450f8f1fb42f861"},
+    {file = "mkdocs_redirects-1.2.1-py3-none-any.whl", hash = "sha256:497089f9e0219e7389304cffefccdfa1cac5ff9509f2cb706f4c9b221726dffb"},
 ]
 mypy-extensions = [
     {file = "mypy_extensions-1.0.0-py3-none-any.whl", hash = "sha256:4392f6c0eb8a5668a69e23d168ffa70f0be9ccfd32b5cc2d26a34ae5b844552d"},
@@ -1545,8 +1546,8 @@ python-gitlab = [
     {file = "python_gitlab-4.4.0-py3-none-any.whl", hash = "sha256:cdad39d016f59664cdaad0f878f194c79cb4357630776caa9a92c1da25c8d986"},
 ]
 python-semantic-release = [
-    {file = "python_semantic_release-9.8.1-py3-none-any.whl", hash = "sha256:26d6b06c55c75e2fcba4d6221f1ac6f6f27b99da8a8c355dad9cac9679476005"},
-    {file = "python_semantic_release-9.8.1.tar.gz", hash = "sha256:f6f15e7d7189b84ab95cc452212659803e715df8bbebbd9d81f479ede964e0b0"},
+    {file = "python_semantic_release-9.8.2-py3-none-any.whl", hash = "sha256:0804af87019c412d7840915e06be3a65a1e4bf4c5c49f02b3f5ce31e2f93a874"},
+    {file = "python_semantic_release-9.8.2.tar.gz", hash = "sha256:790b15c383eb93f280286f1f5d429386af1ad1ec23d6cd919c58b29faa8349ba"},
 ]
 python-slugify = [
     {file = "python-slugify-8.0.1.tar.gz", hash = "sha256:ce0d46ddb668b3be82f4ed5e503dbc33dd815d83e2eb6824211310d3fb172a27"},

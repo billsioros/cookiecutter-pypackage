@@ -29,7 +29,7 @@ classifiers = [
 python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
-python-semantic-release = "9.8.5"
+python-semantic-release = "9.8.6"
 isort = "*"
 pre-commit = "*"
 poethepoet = "*"

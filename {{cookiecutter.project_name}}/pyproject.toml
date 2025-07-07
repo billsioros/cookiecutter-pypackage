@@ -9,15 +9,15 @@ name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.project_description}}"
 readme = "README.md"
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+authors = [ "{{cookiecutter.author}} <{{cookiecutter.email}}>" ]
 license = "{{cookiecutter.license.upper()}}"
 homepage = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}"
 repository = "{{ cookiecutter.github_repository }}"
-keywords = []
+keywords = [  ]
 classifiers = [
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
 ]
 
 [tool.poetry.urls]
@@ -34,7 +34,7 @@ mypy = "*"
 black = "*"
 pre-commit = "*"
 poethepoet = "*"
-coverage = {extras = ["toml"], version = "*" }
+coverage = { extras = [ "toml" ], version = "*" }
 pytest = "*"
 pytest-cov = "*"
 pytest-sugar = "*"
@@ -43,68 +43,162 @@ mkdocs = "*"
 mkdocs-material = "*"
 mkdocs-minify-plugin = "*"
 mkdocs-redirects = "*"
-mkdocstrings = { extras = ["python"], version = "*" }
+mkdocstrings = { extras = [ "python" ], version = "*" }
 mdx-truly-sane-lists = "*"
 mike = "*"
 ruff = "*"
 
 [tool.black]
 line-length = 99
-target-version = ["py37", "py38"]
+target-version = [ "py37", "py38" ]
 skip-string-normalization = true
 
 [tool.ruff]
-select = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
-ignore = []
-
-fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
-unfixable = []
-
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
-per-file-ignores = {}
+target-version = "py310"
 
 line-length = 99
 
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
+]
+select = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "N",
+  "Q",
+  "S",
+  "T",
+  "W",
+  "ANN",
+  "ARG",
+  "BLE",
+  "COM",
+  "DJ",
+  "DTZ",
+  "EM",
+  "ERA",
+  "EXE",
+  "FBT",
+  "ICN",
+  "INP",
+  "ISC",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "PYI",
+  "RET",
+  "RSE",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "YTT",
+]
+ignore = [  ]
+
+fixable = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "N",
+  "Q",
+  "S",
+  "T",
+  "W",
+  "ANN",
+  "ARG",
+  "BLE",
+  "COM",
+  "DJ",
+  "DTZ",
+  "EM",
+  "ERA",
+  "EXE",
+  "FBT",
+  "ICN",
+  "INP",
+  "ISC",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "PYI",
+  "RET",
+  "RSE",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "YTT",
+]
+unfixable = [  ]
+
+per-file-ignores = {}
+
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
-target-version = "py310"
-
-[tool.ruff.mccabe]
-max-complexity = 10
-
-[tool.ruff.pydocstyle]
-convention = "google"
-
-[tool.ruff.flake8-quotes]
-docstring-quotes = "double"
+flake8-quotes.docstring-quotes = "double"
+mccabe.max-complexity = 10
+pydocstyle.convention = "google"
 
 [tool.isort]
 profile = "black"
-src_paths = ["src/{{cookiecutter.package_name}}", "tests"]
+src_paths = [ "src/{{cookiecutter.package_name}}", "tests" ]
 line_length = 99
 known_first_party = "{{cookiecutter.package_name}}"
+
+[tool.docformatter]
+black = true
+non-strict = true
+non-cap = [
+  "{{cookiecutter.package_name}}",
+]
+recursive = true
+in-place = true
 
 [tool.pytest.ini_options]
 addopts = "-vv --color=yes"
@@ -117,21 +211,21 @@ python_functions = "test_*"
 testpaths = "tests"
 
 [tool.coverage.paths]
-source = ["src"]
+source = [ "src" ]
 
 [tool.coverage.run]
 branch = true
-source = ["{{cookiecutter.package_name}}"]
+source = [ "{{cookiecutter.package_name}}" ]
 
 [tool.coverage.report]
 show_missing = true
 fail_under = 100
-exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
+exclude_lines = [ "if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:" ]
 ignore_errors = true
-omit = ["tests/*"]
+omit = [ "tests/*" ]
 
 [tool.mypy]
-files = ["src/{{cookiecutter.package_name}}"]
+files = [ "src/{{cookiecutter.package_name}}" ]
 warn_unused_configs = true
 warn_return_any = true
 ignore_missing_imports = true
@@ -149,7 +243,7 @@ build_command = "python -m pip install poetry && poetry build"
 
 [tool.vulture]
 min_confidence = 95
-paths = ["src/{{cookiecutter.package_name}}", "tests"]
+paths = [ "src/{{cookiecutter.package_name}}", "tests" ]
 
 [tool.poe.tasks]
 clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
@@ -161,15 +255,6 @@ lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
 docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
 export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
 
-[tool.docformatter]
-black = true
-non-strict = true
-non-cap = [
-  "{{cookiecutter.package_name}}",
-]
-recursive = true
-in-place = true
-
 [tool.bandit]
 recursive = true
-exclude_dirs = ["tests"]
+exclude_dirs = [ "tests" ]

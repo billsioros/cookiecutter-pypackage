@@ -8,88 +8,82 @@ requires = [
 name = "cookiecutter-pypackage"
 version = "1.5.4"
 description = "🐍🍪 Another Python Cookiecutter"
-readme = "README.md"
-authors = ["billsioros <billsioros97@gmail.com>"]
 license = "MIT"
+authors = [ "billsioros <billsioros97@gmail.com>" ]
+readme = "README.md"
 homepage = "https://billsioros.github.io/cookiecutter-pypackage"
 repository = "https://github.com/billsioros/cookiecutter-pypackage"
 keywords = []
 classifiers = [
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
 ]
-
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/billsioros/cookiecutter-pypackage/issues"
-"Changelog" = "https://github.com/billsioros/cookiecutter-pypackage/releases"
-
-[tool.poetry.dependencies]
-python = "^3.9"
-
-[tool.poetry.group.dev.dependencies]
-python-semantic-release = "10.6.2"
-isort = "*"
-pre-commit = "*"
-poethepoet = "*"
-pytest = "*"
-pytest-sugar = "*"
-pytest-clarity = "*"
-mkdocs = "*"
-mkdocs-material = "*"
-mkdocs-minify-plugin = "*"
-mkdocs-redirects = "*"
-mdx-truly-sane-lists = "*"
-mike = "*"
-pytest-cookies = "*"
-black = "*"
+dependencies.python = "^3.9"
+group.dev.dependencies.black = "*"
+group.dev.dependencies.isort = "*"
+group.dev.dependencies.mdx-truly-sane-lists = "*"
+group.dev.dependencies.mike = "*"
+group.dev.dependencies.mkdocs = "*"
+group.dev.dependencies.mkdocs-material = "*"
+group.dev.dependencies.mkdocs-minify-plugin = "*"
+group.dev.dependencies.mkdocs-redirects = "*"
+group.dev.dependencies.poethepoet = "*"
+group.dev.dependencies.pre-commit = "*"
+group.dev.dependencies.pytest = "*"
+group.dev.dependencies.pytest-clarity = "*"
+group.dev.dependencies.pytest-cookies = "*"
+group.dev.dependencies.pytest-sugar = "*"
+group.dev.dependencies.python-semantic-release = "10.6.2"
+urls."Bug Tracker" = "https://github.com/billsioros/cookiecutter-pypackage/issues"
+urls.Changelog = "https://github.com/billsioros/cookiecutter-pypackage/releases"
 
 [tool.black]
+target-version = [ "py37", "py38" ]
 line-length = 99
-target-version = ["py37", "py38"]
-skip-string-normalization = true
 exclude = "{{cookiecutter.project_name}}"
+skip-string-normalization = true
 
 [tool.isort]
 profile = "black"
-src_paths = ["cookiecutter-pypackage", "hooks", "tests"]
 line_length = 99
-
-[tool.pytest.ini_options]
-addopts = "-vv --color=yes"
-log_cli = false
-log_cli_date_format = "%Y-%m-%d %H:%M:%S"
-log_cli_format = "%(asctime)s %(levelname)s %(message)s"
-log_cli_level = "INFO"
-python_files = "test_*.py"
-python_functions = "test_*"
-testpaths = "tests"
-
-[tool.semantic_release]
-upload_to_pypi = false
-version_toml = "pyproject.toml:tool.poetry.version"
-changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
-build_command = false
-
-[tool.poe.tasks]
-clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache", help = "Clean up any auxiliary files" }
-format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
-hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
-test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite" }
-lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
-docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
-export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
+src_paths = [ "cookiecutter-pypackage", "hooks", "tests" ]
 
 [tool.docformatter]
+in-place = true
+recursive = true
 black = true
 non-strict = true
 non-cap = [
   "cookiecutter-pypackage",
 ]
-recursive = true
-in-place = true
 
 [tool.bandit]
+exclude_dirs = [ "tests" ]
 recursive = true
-exclude_dirs = ["tests"]
+
+[tool.pytest]
+ini_options.testpaths = "tests"
+ini_options.python_files = "test_*.py"
+ini_options.python_functions = "test_*"
+ini_options.addopts = "-vv --color=yes"
+ini_options.log_cli = false
+ini_options.log_cli_level = "INFO"
+ini_options.log_cli_format = "%(asctime)s %(levelname)s %(message)s"
+ini_options.log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.semantic_release]
+version_toml = "pyproject.toml:tool.poetry.version"
+build_command = false
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+upload_to_pypi = false
+
+[tool.poe]
+tasks.clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache", help = "Clean up any auxiliary files" }
+tasks.format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
+tasks.hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
+tasks.test = { cmd = "poetry run pytest --cov=cookiecutter-pypackage", help = "Run the test suite" }
+tasks.lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
+tasks.docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
+tasks.export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }

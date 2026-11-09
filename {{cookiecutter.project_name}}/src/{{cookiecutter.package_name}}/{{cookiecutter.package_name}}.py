@@ -1,6 +1,5 @@
 """{{cookiecutter.project_description}}."""
 
-
 def factorial(integer: int) -> int:
     """Return the factorial of a given integer.
 

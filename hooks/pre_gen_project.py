@@ -4,23 +4,14 @@ import sys
 PROJECT_REGEX = re.compile(r"^[A-Za-z0-9_.-]+$")
 PACKAGE_REGEX = re.compile(r"^[a-z][a-z0-9\-\_]+[a-z0-9]$")
 SEMVER_REGEX = re.compile(
-    r"""
-        ^
-        (?P<major>0|[1-9]\d*)
-        \.
-        (?P<minor>0|[1-9]\d*)
-        \.
-        (?P<patch>0|[1-9]\d*)
-        (?:-(?P<prerelease>
-            (?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)
-            (?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*
-        ))?
-        (?:\+(?P<build>
-            [0-9a-zA-Z-]+
-            (?:\.[0-9a-zA-Z-]+)*
-        ))?
-        $
-    """,
+    r"""^ (?P<major>0|[1-9]\d*) \. (?P<minor>0|[1-9]\d*) \. (?P<patch>0|[1-9]\d*)
+    (?:-(?P<prerelease> (?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)
+
+    (?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))* ))? (?:\+(?P<build>
+    [0-9a-zA-Z-]+     (?:\.[0-9a-zA-Z-]+)* ))? $
+    """
+
+       ,
     re.VERBOSE,
 )
 

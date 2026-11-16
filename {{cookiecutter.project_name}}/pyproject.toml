@@ -8,168 +8,242 @@ requires = [
 name = "{{cookiecutter.project_name}}"
 version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.project_description}}"
-readme = "README.md"
-authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
 license = "{{cookiecutter.license.upper()}}"
+authors = [ "{{cookiecutter.author}} <{{cookiecutter.email}}>" ]
+readme = "README.md"
 homepage = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.project_name}}"
 repository = "{{ cookiecutter.github_repository }}"
 keywords = []
 classifiers = [
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
 ]
-
-[tool.poetry.urls]
-"Bug Tracker" = "{{ cookiecutter.github_repository }}/issues"
-"Changelog" = "{{ cookiecutter.github_repository }}/releases"
-
-[tool.poetry.dependencies]
-python = ">=3.7,<4.0"
-
-[tool.poetry.group.dev.dependencies]
-python-semantic-release = "*"
-isort = "*"
-mypy = "*"
-black = "*"
-pre-commit = "*"
-poethepoet = "*"
-coverage = {extras = ["toml"], version = "*" }
-pytest = "*"
-pytest-cov = "*"
-pytest-sugar = "*"
-pytest-clarity = "*"
-mkdocs = "*"
-mkdocs-material = "*"
-mkdocs-minify-plugin = "*"
-mkdocs-redirects = "*"
-mkdocstrings = { extras = ["python"], version = "*" }
-mdx-truly-sane-lists = "*"
-mike = "*"
-ruff = "*"
+dependencies.python = ">=3.7,<4.0"
+group.dev.dependencies.black = "*"
+group.dev.dependencies.coverage = { extras = [ "toml" ], version = "*" }
+group.dev.dependencies.isort = "*"
+group.dev.dependencies.mdx-truly-sane-lists = "*"
+group.dev.dependencies.mike = "*"
+group.dev.dependencies.mkdocs = "*"
+group.dev.dependencies.mkdocs-material = "*"
+group.dev.dependencies.mkdocs-minify-plugin = "*"
+group.dev.dependencies.mkdocs-redirects = "*"
+group.dev.dependencies.mkdocstrings = { extras = [ "python" ], version = "*" }
+group.dev.dependencies.mypy = "*"
+group.dev.dependencies.poethepoet = "*"
+group.dev.dependencies.pre-commit = "*"
+group.dev.dependencies.pytest = "*"
+group.dev.dependencies.pytest-clarity = "*"
+group.dev.dependencies.pytest-cov = "*"
+group.dev.dependencies.pytest-sugar = "*"
+group.dev.dependencies.python-semantic-release = "*"
+group.dev.dependencies.ruff = "*"
+urls."Bug Tracker" = "{{ cookiecutter.github_repository }}/issues"
+urls.Changelog = "{{ cookiecutter.github_repository }}/releases"
 
 [tool.black]
+target-version = [ "py37", "py38" ]
 line-length = 99
-target-version = ["py37", "py38"]
 skip-string-normalization = true
 
 [tool.ruff]
-select = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
-ignore = []
-
-fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
-unfixable = []
-
-exclude = [
-    ".bzr",
-    ".direnv",
-    ".eggs",
-    ".git",
-    ".git-rewrite",
-    ".hg",
-    ".mypy_cache",
-    ".nox",
-    ".pants.d",
-    ".pytype",
-    ".ruff_cache",
-    ".svn",
-    ".tox",
-    ".venv",
-    "__pypackages__",
-    "_build",
-    "buck-out",
-    "build",
-    "dist",
-    "node_modules",
-    "venv",
-]
-per-file-ignores = {}
-
-line-length = 99
-
-dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
-
 target-version = "py310"
-
-[tool.ruff.mccabe]
-max-complexity = 10
-
-[tool.ruff.pydocstyle]
-convention = "google"
-
-[tool.ruff.flake8-quotes]
-docstring-quotes = "double"
+line-length = 99
+exclude = [
+  ".bzr",
+  ".direnv",
+  ".eggs",
+  ".git",
+  ".git-rewrite",
+  ".hg",
+  ".mypy_cache",
+  ".nox",
+  ".pants.d",
+  ".pytype",
+  ".ruff_cache",
+  ".svn",
+  ".tox",
+  ".venv",
+  "__pypackages__",
+  "_build",
+  "buck-out",
+  "build",
+  "dist",
+  "node_modules",
+  "venv",
+]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+fixable = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "N",
+  "Q",
+  "S",
+  "T",
+  "W",
+  "ANN",
+  "ARG",
+  "BLE",
+  "COM",
+  "DJ",
+  "DTZ",
+  "EM",
+  "ERA",
+  "EXE",
+  "FBT",
+  "ICN",
+  "INP",
+  "ISC",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "PYI",
+  "RET",
+  "RSE",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "YTT",
+]
+flake8-quotes.docstring-quotes = "double"
+ignore = []
+mccabe.max-complexity = 10
+per-file-ignores = {}
+pydocstyle.convention = "google"
+select = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "I",
+  "N",
+  "Q",
+  "S",
+  "T",
+  "W",
+  "ANN",
+  "ARG",
+  "BLE",
+  "COM",
+  "DJ",
+  "DTZ",
+  "EM",
+  "ERA",
+  "EXE",
+  "FBT",
+  "ICN",
+  "INP",
+  "ISC",
+  "NPY",
+  "PD",
+  "PGH",
+  "PIE",
+  "PL",
+  "PT",
+  "PTH",
+  "PYI",
+  "RET",
+  "RSE",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TCH",
+  "TID",
+  "TRY",
+  "UP",
+  "YTT",
+]
+unfixable = []
 
 [tool.isort]
 profile = "black"
-src_paths = ["src/{{cookiecutter.package_name}}", "tests"]
 line_length = 99
 known_first_party = "{{cookiecutter.package_name}}"
-
-[tool.pytest.ini_options]
-addopts = "-vv --color=yes"
-log_cli = false
-log_cli_date_format = "%Y-%m-%d %H:%M:%S"
-log_cli_format = "%(asctime)s %(levelname)s %(message)s"
-log_cli_level = "INFO"
-python_files = "test_*.py"
-python_functions = "test_*"
-testpaths = "tests"
-
-[tool.coverage.paths]
-source = ["src"]
-
-[tool.coverage.run]
-branch = true
-source = ["{{cookiecutter.package_name}}"]
-
-[tool.coverage.report]
-show_missing = true
-fail_under = 100
-exclude_lines = ["if self.debug:", "pragma: no cover", "raise NotImplementedError", "if __name__ == .__main__.:"]
-ignore_errors = true
-omit = ["tests/*"]
-
-[tool.mypy]
-files = ["src/{{cookiecutter.package_name}}"]
-warn_unused_configs = true
-warn_return_any = true
-ignore_missing_imports = true
-pretty = true
-color_output = true
-show_column_numbers = true
-show_error_codes = true
-show_error_context = true
-strict = true
-
-[tool.semantic_release]
-version_toml = "pyproject.toml:tool.poetry.version"
-changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
-build_command = "python -m pip install poetry && poetry build"
-
-[tool.vulture]
-min_confidence = 95
-paths = ["src/{{cookiecutter.package_name}}", "tests"]
-
-[tool.poe.tasks]
-clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
-format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
-hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
-test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
-type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
-lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
-docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
-export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
+src_paths = [ "src/{{cookiecutter.package_name}}", "tests" ]
 
 [tool.docformatter]
+in-place = true
+recursive = true
 black = true
 non-strict = true
 non-cap = [
   "{{cookiecutter.package_name}}",
 ]
-recursive = true
-in-place = true
+
+[tool.vulture]
+paths = [ "src/{{cookiecutter.package_name}}", "tests" ]
+min_confidence = 95
 
 [tool.bandit]
+exclude_dirs = [ "tests" ]
 recursive = true
-exclude_dirs = ["tests"]
+
+[tool.mypy]
+files = [ "src/{{cookiecutter.package_name}}" ]
+ignore_missing_imports = true
+warn_return_any = true
+strict = true
+show_error_context = true
+show_column_numbers = true
+pretty = true
+color_output = true
+warn_unused_configs = true
+show_error_codes = true
+
+[tool.pytest]
+ini_options.testpaths = "tests"
+ini_options.python_files = "test_*.py"
+ini_options.python_functions = "test_*"
+ini_options.addopts = "-vv --color=yes"
+ini_options.log_cli = false
+ini_options.log_cli_level = "INFO"
+ini_options.log_cli_format = "%(asctime)s %(levelname)s %(message)s"
+ini_options.log_cli_date_format = "%Y-%m-%d %H:%M:%S"
+
+[tool.coverage]
+run.source = [ "{{cookiecutter.package_name}}" ]
+run.branch = true
+paths.source = [ "src" ]
+report.fail_under = 100
+report.omit = [ "tests/*" ]
+report.exclude_lines = [
+  "if __name__ == .__main__.:",
+  "if self.debug:",
+  "pragma: no cover",
+  "raise NotImplementedError"
+]
+report.show_missing = true
+report.ignore_errors = true
+
+[tool.semantic_release]
+version_toml = "pyproject.toml:tool.poetry.version"
+build_command = "python -m pip install poetry && poetry build"
+changelog_components = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+
+[tool.poe]
+tasks.clean = { cmd = "rm -rf ./**/__pycache__ dist site .pytest_cache .mypy_cache .coverage", help = "Clean up any auxiliary files" }
+tasks.format = { shell = "poetry run isort .; poetry run black .", help = "Format your codebase" }
+tasks.hooks = { cmd = "poetry run pre-commit run --all-files", help = "Run all pre-commit hooks" }
+tasks.test = { cmd = "poetry run pytest --cov={{cookiecutter.package_name}}", help = "Run the test suite and produce a coverage report" }
+tasks.type-check = { cmd = "poetry run mypy", help = "Run static type checking on your codebase" }
+tasks.lint = { cmd = "poetry run ruff check src", help = "Lint your code for errors" }
+tasks.docs = { shell = "python -c 'import webbrowser; webbrowser.open(\"http://127.0.0.1:8000\")'; poetry run mkdocs serve", help = "Build and serve the documentation" }
+tasks.export = { cmd = "poetry export --without-hashes --dev -o requirements.txt" }
